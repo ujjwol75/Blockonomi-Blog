@@ -1,0 +1,12 @@
+.input > input{
+    position: relative;  
+}
+.search{
+    position: absolute;
+    bottom: 0px;
+    right: 0;
+}
+
+.mainad{
+text-align: center;
+}
