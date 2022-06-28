@@ -32,7 +32,7 @@ const NewsWrap = () => {
         <Col>
           <Row>
             {newswrapdata?.results?.slice(0, 4).map((curElem, index) => (
-              <Col md={6} sm={12}>
+              <Col md={6} sm={12} key={index}>
                 <NewsImage
                   width="240px"
                   title={curElem.title}
