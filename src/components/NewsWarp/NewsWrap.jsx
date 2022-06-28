@@ -1,44 +1,50 @@
 import React from "react";
 import { Col, Row } from "react-bootstrap";
-import News from "../News/News";
 import NewsImage from "../News/NewsImage";
 import style from "./newswrap.module.css";
-import axios from 'axios';
+
+import useGetHook from "../CustomHooks/useGetHook";
+import { APIS } from "../../../pages/api/hello";
 
 const NewsWrap = () => {
 
-  axios.get('https://insidecrypto.news/api/category/')
-    .then(res=>{
-      const newsdata = res.data;
-      console.log(newsdata.results)
-    })
+
+  const { isLoading: navigationLoading, data: newswrapdata } = useGetHook({
+    queryKey: "newswrapdata",
+    url: APIS.posts,
+  });
+  console.log("newswrapdata", newswrapdata?.results);
 
   return (
     <div className={style.newswrapcontainer}>
       <Row>
         <Col>
-           <NewsImage font="16px" description="" />
+          <NewsImage
+            font="16px"
+            description={newswrapdata?.results[0].description}
+            title={newswrapdata?.results[0].title}
+            image={newswrapdata?.results[0].image}
+            height="400px"
+            color="white"
+          />
         </Col>
+
         <Col>
           <Row>
-            <Col >
-             <NewsImage width="240px" description=""/>
-            </Col>
-            <Col>
-              <NewsImage width="240px" description=""/>
-            </Col>
-          </Row>
-          <Row style={{marginTop:'100px'}}>
-            <Col >
-             <NewsImage width="240px" description=""/>
-            </Col>
-            <Col>
-              <NewsImage width="240px" description=""/>
-            </Col>
+            {newswrapdata?.results?.slice(0, 4).map((curElem, index) => (
+              <Col md={6} sm={12}>
+                <NewsImage
+                  width="240px"
+                  title={curElem.title}
+                  image={curElem.image}
+                  height="200px"
+                  color="white"
+                />
+              </Col>
+            ))}
           </Row>
         </Col>
       </Row>
-      
     </div>
   );
 };
