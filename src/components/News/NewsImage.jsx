@@ -9,15 +9,15 @@ const NewsImageTitle = (props) => {
   return (
     <div className={style.newsbox}>
       <Link href={`/detailpage/${props.blogId}`}>
-      <a href="" style={{textDecoration:'none'}}>
-      <div className={style.imgdiv} style={{cursor:'pointer', maxWidth:'100%', height:props.height}}>
-        <img src={props.image} alt="" style={{width: '100%', maxHeight:props.height}} />
+      <a href="" style={{textDecoration:'none', color:'black'}}>
+      <div className={style.imgdiv} style={{cursor:'pointer', width:'100%', height:"props?.height"}}>
+        <img src={props.image} alt="" style={{height:props.height}} className={style.image}/>
         <span className={style.textimage}>METAVERSE</span>
       </div>
       
       
       
-        <NewsTitle width={props.width} font={props.font} description={props.description} date={props.date} author={props.author} title={props.title} color={props.color}/>
+        <NewsTitle width={props.width} font={props.font} description={props.description} date={props.date} author={props.author} title={props.title} color={props.color} content={props.content}/>
         </a>
       
       </Link>

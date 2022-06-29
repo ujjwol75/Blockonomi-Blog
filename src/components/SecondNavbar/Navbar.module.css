@@ -41,14 +41,22 @@ background-color: #253137;
 }
 
 
-@media only screen and (max-width:700px) {
+@media only screen and (max-width:600px) {
     .barIcon{
         display: block;
        
     }
-    .barListdiv a{
+    
+    .barListDiv a{
         text-decoration: none;
+        color: black;
     }
+    .crossIcon{
+        color: white !important;
+        background-color: black;
+        padding: 3px;
+    }
+    
 }
 
 .barDiv{
@@ -87,5 +95,8 @@ background-color: #253137;
     top: 0;
     right: 0;
     color: black;
-    background-color: red;
+    /* background-color: red; */
+}
+.navitem{
+    cursor: pointer;
 }

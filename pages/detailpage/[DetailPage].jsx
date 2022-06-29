@@ -13,7 +13,6 @@ import { APIS } from '../api/hello'
 const DetailPage = () => {
   const router = useRouter();
   const {DetailPage} = router.query
-  console.log(DetailPage)
 
 
   const { isLoading: singlePostsLoading, data: singlePostsData } = useGetHook({
@@ -21,7 +20,6 @@ const DetailPage = () => {
     url: `${APIS.posts}${DetailPage}`,
   });
   // {curElem?.slice(0,5)}
-  console.log('singlepostdata', singlePostsData)
 
   return (
     <div className="detailpage">

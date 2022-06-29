@@ -8,7 +8,7 @@ import NewsCategory from "../src/components/NewsCategory/NewsCategory";
 
 export default function Home() {
   return (
-    <div>
+    <div className="c">
       <TopNavbar />
       <hr className="hrline" />
       <SecondNavBar />

@@ -1,10 +1,10 @@
 import Link from "next/link";
 import { useRouter } from "next/router";
 import React, { useState } from "react";
-import { Button, Col, Nav, NavDropdown, Row } from "react-bootstrap";
+import { Button, Col, Container, Nav, NavDropdown, Row } from "react-bootstrap";
 import { GrFacebookOption } from "react-icons/gr";
 import { AiOutlineBars } from "react-icons/ai";
-
+import ScrappedData from "../../../pages/scrappedData/ScrappedData";
 import { ImCross } from "react-icons/im";
 
 import { FaTwitter, FaLinkedinIn, FaSearchengin } from "react-icons/fa";
@@ -26,23 +26,22 @@ const SecondNavBar = () => {
 
   const handleClick=()=>{
     setSearch(!search)
-    console.log('search')
   }
-  console.log('navtitle', navigationListData?.results)
   return (
+    <Container >
     <Nav
       variant="pills"
       activeKey="1"
       style={{
         display: "flex",
-        textAlign: "center",
-        justifyContent: "center",
+        textAlign: "start",
+        justifyContent: "start",
         alignItems: "center",
       }}
     >
       <Nav.Item>
         <Nav.Link eventKey="2" title="Item" className={style.barIcon}>
-          <AiOutlineBars onClick={() => setBarIcon(!barIcon)} />
+          <AiOutlineBars onClick={() => setBarIcon(!barIcon)} style={{color:'black', fontSize:'20px'}}/>
           {barIcon && (
             <>
               <div className={style.barDiv}>
@@ -82,6 +81,10 @@ const SecondNavBar = () => {
           </Nav.Item>
         </Link>
       ))}
+       <Link href="/scrappedData/ScrappedData/">
+          <span className={style.navitem}>Price</span>
+      </Link> 
+     
       <Nav.Item>
         <Nav.Link eventKey="3">
           <Button variant="warning">Buy Crypto</Button>
@@ -102,6 +105,7 @@ const SecondNavBar = () => {
         </Nav.Link>
       </Nav.Item>
     </Nav>
+    </Container>
   );
 };
 

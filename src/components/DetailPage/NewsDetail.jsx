@@ -10,7 +10,6 @@ import LatestNews from "./LatestNews";
 import NewsDetailParagraph from "./NewsDetailParagraph";
 
 const NewsDetail = (props) => {
-  console.log('props.singlepost',props.singlepost)
 
   const {isLoading: navigationLoading, data: latestNewsData} = useGetHook(
     {
@@ -18,7 +17,6 @@ const NewsDetail = (props) => {
       url:APIS.posts
   }
   )
-  console.log('latestNewsData', latestNewsData)
   return (
     <>
     {/* {props.singlepost((map)=>{ */}
