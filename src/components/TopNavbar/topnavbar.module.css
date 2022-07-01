@@ -1,22 +1,17 @@
-.container{
-    display: block;
-}
 @media only screen and (max-width: 1200px){
  .container{
-    display: none;
-    /* background-color: red; */
+    display: block;
  }
 }
 @media only screen and (max-width: 900px){
     .container{
        display: none;
-       /* background-color: red; */
     }
    }
 
-   @media only screen and (max-width: 425px){
+   @media only screen and (max-width: 360px){
     .container{
        display: none;
-       /* background-color: red; */
     }
    }
+

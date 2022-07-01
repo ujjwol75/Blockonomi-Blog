@@ -13,11 +13,10 @@ const NewsWrap = () => {
   });
 
   return (
-    // <Container fluid>
       <div className={style.newswrapcontainer}>
         <Row>
-          <Col>
-            <NewsImage
+          <Col md='12' sm='12' lg='6' xl='6'>
+          <NewsImage
               font="16px"
               description={newswrapdata?.results[0].description}
               title={newswrapdata?.results[0].title}
@@ -25,27 +24,35 @@ const NewsWrap = () => {
               content={newswrapdata?.results[0].content}
               color="white"
               className={style.newsimage}
+              id={newswrapdata?.results[0].id}
+              contentlength="1000"
             />
           </Col>
 
-          <Col>
+
+          <Col sm='12' md='12' lg='6' xl='6' >
+            <div className={style.newswrapimg}>
             <Row>
               {newswrapdata?.results?.slice(0, 4).map((curElem, index) => (
-                <Col md={6} sm={12} key={index}>
+                <Col md='6' sm='6' xs='6' xl='6' key={index}>
                   <NewsImage
-                    width="240px"
+                    width="100%"
                     title={curElem.title}
                     image={curElem.image}
                     height="200px"
                     color="white"
+                    id={curElem.id}
                   />
                 </Col>
               ))}
             </Row>
+            </div>
+            
           </Col>
+          
+
         </Row>
       </div>
-    // </Container>
   );
 };
 

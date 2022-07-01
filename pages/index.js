@@ -5,19 +5,62 @@ import Wrap from "../src/components/Wrap/Wrap";
 import NewsWrap from "../src/components/NewsWarp/NewsWrap";
 import Footer from "../src/components/Footer/Footer";
 import NewsCategory from "../src/components/NewsCategory/NewsCategory";
+import usePostHook from "../src/components/CustomHooks/usePostHook";
+import { APIS } from "./api/hello";
+import { Col, Container, Row } from "react-bootstrap";
+import PaginationComponent from "../src/components/Pagination/PaginationComponent";
+import useGetHook from "../src/components/CustomHooks/useGetHook";
+import { useState } from "react";
 
 export default function Home() {
+  const [page, setPage] = useState(1)
+  const {
+    mutate: createMutate,
+    isPostError: errorMessage,
+    isPostSuccess: successMessage,
+    postData: postData,
+  } = usePostHook({
+    queryKey: 'suscribeToNewsLetter',
+  });
+
+  const handleNewsLetterClick = (email) => {
+   
+    const url = APIS.newsLetter;
+    const formData = {
+      email: email,
+    };
+    console.log('data: ' , formData)
+    try {
+      createMutate({ url, formData });
+      
+    } catch (e) {
+      console.log(e);
+    }
+    if(successMessage){
+      consoe.log('success: ' , successMessage)
+    }
+  };
+
+  const { data: scribedPostCoinBitCoinList } = useGetHook({
+    queryKey: `filterDataWithPagination${page}`,
+    url: `${APIS.posts}?page=${page}`,
+  });
+
+  console.log('data::::', scribedPostCoinBitCoinList)
+
   return (
-    <div className="c">
+    <Container fluid>
       <TopNavbar />
       <hr className="hrline" />
       <SecondNavBar />
       <hr />
       <Wrap />
       <NewsWrap />
-      <News />
-      <NewsCategory />
-      <Footer />
-    </div>
+      <News data={scribedPostCoinBitCoinList}/>
+      {/* <NewsCategory /> */}
+      <PaginationComponent page={page} setPage={setPage} />
+      <Footer handleNewsLetterClick={handleNewsLetterClick}/>
+    </Container>
+    
   );
 }

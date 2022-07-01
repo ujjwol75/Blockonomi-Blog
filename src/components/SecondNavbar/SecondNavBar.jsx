@@ -24,88 +24,124 @@ const SecondNavBar = () => {
     }
   );
 
-  const handleClick=()=>{
-    setSearch(!search)
-  }
+  const handleClick = () => {
+    setSearch(!search);
+  };
   return (
-    <Container >
-    <Nav
-      variant="pills"
-      activeKey="1"
-      style={{
-        display: "flex",
-        textAlign: "start",
-        justifyContent: "start",
-        alignItems: "center",
-      }}
-    >
-      <Nav.Item>
-        <Nav.Link eventKey="2" title="Item" className={style.barIcon}>
-          <AiOutlineBars onClick={() => setBarIcon(!barIcon)} style={{color:'black', fontSize:'20px'}}/>
-          {barIcon && (
-            <>
-              <div className={style.barDiv}>
-                <Row>
-                  <Col className={style.barList}>
-                    <div className={style.barListDiv}><a href="">About</a></div>
-                    <div className={style.barListDiv}><a href="">Advertise</a></div>
-                    <div className={style.barListDiv}><a href="">Submit</a></div>
-                    <div className={style.barListDiv}><a href="">Release</a></div>
-                  </Col>
-                  <Col>
-                    <ImCross
-                      onClick={() => setBarIcon(false)}
-                      className={style.crossIcon}
-                    />
-                  </Col>
-                </Row>
-              </div>
-            </>
-          )}
-        </Nav.Link>
-      </Nav.Item>
-      <Link href="/">
-      <Nav.Item>
-        <Nav.Link href="#/home">
-          <img src="../../logo.png" alt="" className={style.imglogo} />
-        </Nav.Link>
-      </Nav.Item>
-      </Link>
-      
-      {navigationListData?.results?.map((item, index) => (
-        <Link key={index} href={`/DetailPage/${item.category_id}`}>
+    <div className={style.secondnavbar}>
+      <div>
+        <Nav.Item>
+          <Nav.Link eventKey="2" title="Item" className={style.barIcon}>
+            <AiOutlineBars
+              onClick={() => setBarIcon(!barIcon)}
+              style={{
+                color: "black",
+                fontSize: "20px",
+                transitionDelay: "4s",
+              }}
+            />
+            {barIcon && (
+              <>
+                <div className={style.barDiv}>
+                  <Row>
+                    <Col className={style.barList}>
+                      <div className={style.barListDiv}>
+                        <a href="">About</a>
+                      </div>
+                      <hr style={{ width: "200px" }} />
+                      <div className={style.barListDiv}>
+                        <a href="">Advertise</a>
+                      </div>
+                      <hr style={{ width: "200px" }} />
+                      <div className={style.barListDiv}>
+                        <a href="">Submit</a>
+                      </div>
+                      <hr style={{ width: "200px" }} />
+                      <div className={style.barListDiv}>
+                        <a href="">Release</a>
+                      </div>
+                      <hr style={{ width: "200px" }} />
+                      <Button>Claim Free Crypto</Button>
+                      <hr style={{ width: "200px" }} />
+                      <Button variant="warning">Buy Crypto</Button>
+                      <hr style={{ width: "200px" }} />
+                      <Button variant="dark">Gamble With Crypto</Button>
+                      <hr style={{ width: "200px" }} />
+                    </Col>
+                    <Col>
+                      <ImCross
+                        onClick={() => setBarIcon(false)}
+                        className={style.crossIcon}
+                      />
+                    </Col>
+                  </Row>
+                </div>
+              </>
+            )}
+          </Nav.Link>
+        </Nav.Item>
+      </div>
+
+      <div>
+        <Link href="/">
           <Nav.Item>
-            <Nav.Link eventKey="2" title="Item">
-              {item.title}
+            <Nav.Link href="#/home">
+              <img src="../../logo.png" alt="" className={style.imglogo} />
             </Nav.Link>
           </Nav.Item>
         </Link>
-      ))}
-       <Link href="/scrappedData/ScrappedData/">
-          <span className={style.navitem}>Price</span>
-      </Link> 
-     
-      <Nav.Item>
+      </div>
+
+      <div className={style.navbarlinks}>
+        {navigationListData?.results?.map((item, index) => (
+          <Link key={index} href={`/DetailPage/${item.category_id}`}>
+            <Nav.Item>
+              <Nav.Link eventKey="2" title="Item">
+                <span style={{ color: "black" }}>{item.title}</span>
+              </Nav.Link>
+            </Nav.Item>
+          </Link>
+        ))}
+        <Link href="/scrappedData/ScrappedData/">
+          <span className={style.navitem}>Scrapped News</span>
+        </Link>
+
+        <Nav.Item>
+          <Nav.Link eventKey="3">
+            <Button variant="warning">Buy Crypto</Button>
+          </Nav.Link>
+        </Nav.Item>
+        <Nav.Item>
+          <Nav.Link eventKey="3">
+            <Button variant="dark">Gamble With Crypto</Button>
+          </Nav.Link>
+        </Nav.Item>
+      </div>
+      <div>
+        <Nav.Item>
         <Nav.Link eventKey="3">
-          <Button variant="warning">Buy Crypto</Button>
+          <div className={style.socialmedia}>
+            <GrFacebookOption style={{ width: "2rem", color: "black" }} />
+            <FaTwitter style={{ width: "2rem", color: "black" }} />
+            <FaLinkedinIn
+              style={{
+                width: "2rem",
+                borderRight: "1px solid gray",
+                color: "black",
+              }}
+            />
+
+            <FaSearchengin
+              style={{ width: "2rem", color: "black" }}
+              onClick={handleClick}
+            />
+            {search && <SearchPopover search={search} setSearch={setSearch} />}
+          </div>
         </Nav.Link>
       </Nav.Item>
-      <Nav.Item>
-        <Nav.Link eventKey="3">
-          <Button variant="dark">Gamble With Crypto</Button>
-        </Nav.Link>
-      </Nav.Item>
-      <Nav.Item>
-        <Nav.Link eventKey="3">
-          <GrFacebookOption style={{ width: "2rem" }} />
-          <FaTwitter style={{ width: "2rem" }} />
-          <FaLinkedinIn style={{ width: "2rem" }} />
-          <FaSearchengin style={{ width: "2rem" }} onClick={handleClick}/>
-          {search && <SearchPopover search={search} setSearch={setSearch} />}
-        </Nav.Link>
-      </Nav.Item>
-    </Nav>
-    </Container>
+      </div>
+      
+    </div>
   );
 };
 

@@ -10,15 +10,12 @@ const News = (props) => {
   const [getData, setGetData] = useState([]);
   const [isLoaded, setIsLoaded] = useState(false);
 
-  const { isLoading: navigationLoading, data: newsdata } = useGetHook({
-    queryKey: "newsdata",
-    url: APIS.posts,
-  });
+  console.log('datas', props.data)
   return (
 
-    <Container fluid='md'>
+    <Container className={style.container}>
     <Row>
-        <Col md={9} sm={12}>
+        <Col md={9} sm={12} >
           <Row>
           {props?.search && <h3 style={{marginBottom:'20px'}}>Your Search on KeyWord <span style={{fontWeight:'bold'}}>{props.searchpage}</span></h3>}
           
@@ -34,7 +31,7 @@ const News = (props) => {
                     author={items.author}
                     image={items.image}
                     height="250px"
-                    blogId={items.id}
+                    id={items.id}
                     title={items.title}
                     color="black"
                     // width="100%"
@@ -45,7 +42,7 @@ const News = (props) => {
               )}</>
             : 
             <>
-            {newsdata?.results?.map((items, key) => (
+            {props?.data?.results?.map((items, key) => (
               <Col md={6} key={key}>
                 <div>
                   <NewsImage
@@ -55,11 +52,12 @@ const News = (props) => {
                     image={items.image}
                     
                     height="250px"
-                    blogId={items.id}
+                    id={items.id}
                     title={items.title}
                     color="black"
                     // width="100%"
                     content={items.content}
+                    contentlength="200"
                   />
                 </div>
               </Col>

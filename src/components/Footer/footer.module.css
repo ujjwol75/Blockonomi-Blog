@@ -7,14 +7,18 @@
     align-items: center;
     justify-content: center;
     padding: 3%;
-    max-width: 100%;
+    width: 100%;
     margin-top: 20px;
+}
+.footerlink{
+    margin-top: -50px;
 }
 .icon{
    display: flex;
    flex-direction: row;
    padding: 5%;
    max-width: 100%;
+   margin-top: -40px;
 }
 .footerlink a{
     display: inline;
@@ -24,8 +28,89 @@
     color: white;
     padding-right: 10px;
 }
-@media only screen and (max-width:500px) {
+@media only screen and (max-width:640px) {
     .icon{
         max-width: 80%;
+        color: gray;
     }
+    .footerimg{
+        width: "100%";
+        color: "white";
+        margin-top:'20px';
+    }
+    .footerlink a{
+        font-size: 13px;
+    }
+    .icon{
+        margin-top: 10px;
+    }
+    .footerlink{
+        margin-top: 5px;
+    }
+    .forminput input{
+    padding: 1px 1px;
+    
+    }
+}
+
+@media only screen and (max-width:768px) {
+    .icon{
+        max-width: 80%;
+        color: gray;
+    }
+    .footerimg{
+        width: "100%";
+        color: "white";
+        margin-top:'20px';
+    }
+    .footerlink a{
+        font-size: 13px;
+    }
+    .icon{
+        margin-top: 10px;
+    }
+    .footerlink{
+        margin-top: 5px;
+    }
+    .forminput input{
+    padding: 1px 1px;
+    
+    }
+}
+
+@media only screen and (max-width:1024px) {
+    .icon{
+        max-width: 80%;
+        color: gray;
+    }
+    .footerimg{
+        width: "100%";
+        color: "white";
+        /* margin-top:'20px'; */
+    }
+    .footerlink a{
+        font-size: 13px;
+    }
+    .footerlink{
+        margin-top: 5px;
+    }
+    .forminput input{
+    padding: 1px 1px;
+    
+    }
+}
+.forminput{
+    margin-top: 25px;
+    display: flex;
+    justify-content: center;
+    
+    
+}
+
+@media only screen and (max-width:1200px) {
+/* .forminput input{
+    padding: 6px 6px;
+    margin-right: 6px;
+    border-radius: 10px;
+} */
 }

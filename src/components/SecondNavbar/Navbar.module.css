@@ -27,51 +27,102 @@ background-color: #253137;
     display: block;
 
 }
-.imglogo{
-    max-width: 100%;
-}
+
 
 @media only screen and (min-width:1200px) {
     .barIcon{
         display: none;
-        /* font-size: '40px'; */
        
+    }
+    .imglogo{
+        width: 100%;
     }
     
 }
 
+.navitems{
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    justify-conten: space-between;
+    align-items: center;
 
-@media only screen and (max-width:600px) {
-    .barIcon{
-        display: block;
+    /* justify-content: space-between; */
+
+}
+.navbarlinks{
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+@media only screen and (max-width:640px) {
+    /* .barIcon{
+        display: flex;
        
-    }
+    } */
     
     .barListDiv a{
         text-decoration: none;
         color: black;
+        font-size: 17px;
+        font-weight: bold;
     }
     .crossIcon{
         color: white !important;
         background-color: black;
         padding: 3px;
     }
-    
+    .navbarlinks{
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        align-items: center;
+        display: none;
+        
+    }
+    .imglogo{
+        width: 100%;
+    }
+    .navitems{
+        display: flex;
+        flex-direction: row;
+    }
+    .socialmedia{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        text-align: center;
+        align-items: center;
+        color: black;
+    }
+    .secondnavbar{
+        margin-bottom: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
 }
 
 .barDiv{
-    width: 150px;
+    width: 250px;
     height: 100vh;
     background-color: white;
     position: fixed;
     left: 0;
     top: 0;
     z-index: 10;
-    padding-top: 10%;
-    padding-left: 5%;
+    /* padding-top: 10%; */
+    /* padding-left: 5%; */
+    overflow-y: scroll;
     /* justify-items: center; */
     color: black;
     font-size: 20px;
+    overflow-x: hidden;
     
     
 }
@@ -83,20 +134,34 @@ background-color: #253137;
     text-align: center;
     justify-content: center;
     flex-direction: column;
+    margin-bottom: 30px;
 
 }
-.barListdiv{
+/* .barListdiv{
    padding: 5%;
 
-}
+} */
 
 .crossIcon{
     position: absolute;
-    top: 0;
-    right: 0;
+    top: 6px;
+    right: 8px;
     color: black;
-    /* background-color: red; */
+
 }
 .navitem{
     cursor: pointer;
+    color: black;
+}
+
+.secondnavbar{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+}
+
+.secondnavbar{
+    display: flex;
+    justify-content: space-between;
 }

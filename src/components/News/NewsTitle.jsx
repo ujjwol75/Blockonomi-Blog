@@ -1,10 +1,7 @@
 import React from "react";
 import style from "./news.module.css";
 
-
 const NewsTitle = (props) => {
-  console.log("author", props.author);
-
   return (
     <>
       <div
@@ -12,7 +9,6 @@ const NewsTitle = (props) => {
         style={{ width: props.width, color: props.color }}
       >
         <h1 style={{ fontSize: "17px" }}>{props.title}</h1>
-
         <h3
           style={{
             fontSize: "12px",
@@ -32,14 +28,16 @@ const NewsTitle = (props) => {
           </span>{" "}
           <span>{props?.date ? <span>{props?.date}</span> : ""}</span>
         </h3>
-
         {/* <span>{props?.description ? <p>{props?.description}</p> : ""}</span> */}
-        <div
-          dangerouslySetInnerHTML={{
-            __html: props?.content?.slice(0,310), 
-          }}
-        />
-        ...
+        <div className={style.contenthtmldiv}>
+          <div
+            className={style.contenthtml}
+            dangerouslySetInnerHTML={{
+              __html: props?.content?.slice(0, props.contentlength),
+            }}
+          />
+        </div>
+        
       </div>
     </>
   );

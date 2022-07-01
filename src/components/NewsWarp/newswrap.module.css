@@ -3,22 +3,30 @@
     background-color: #151515;
     color: white;
     width: 100%;
+    overflow-x: scroll;
     justify-content: center;
     min-height: 100vh;
     padding: 5% 5%; 
     margin-bottom: 30px;
 }
-.newsimage{
-    height: '400px';
-}
 
-@media screen  and (max-width:700px){
+@media screen  and (max-width:640px){
     .newswrapcontainer{
         display: flex;
-        flex-direction: column;
-        flex-wrap: wrap;
     }
     .newsimage{
         height: '200px';
     }
+    .wrapcol{
+        width: 100%;
+    }
+    .wrapcol2{
+        display: flex;
+        flex-direction: row;
+    }
+}
+
+
+.newswrapimg{
+    width: 100%;
 }

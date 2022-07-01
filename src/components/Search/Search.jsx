@@ -1,5 +1,6 @@
 import { useRouter } from "next/router";
 import React, { useState } from "react";
+import SecondNavBar from "../SecondNavbar/SecondNavBar";
 
 const Search = (props) => {
   const [keyPress, setKeyPress] = useState(false);

@@ -7,58 +7,68 @@
     align-items: center;
     text-align: center;
     justify-content: center;
-    /* flex-wrap: wrap; */
-    
 }
-@media only screen and (max-width:700px) {
-    .wrap{
-        padding-left: 280px;
-        overflow: scroll;
 
+@media only screen and (max-width:640px) {
+    .bitcoincol{
+        display: none;
     }
+    .barimg{
+        width: 100px;
+    }
+    .wrap{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        text-align: center;
+        align-items: center;
+    }
+
+}
+
+
+@media only screen and (max-width:768px) {
+    .bitcoincol{
+        display: none;
+    }
+    .barimg{
+        width: 100px;
+    }
+    .wrap{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        text-align: center;
+        align-items: center;
+    }
+
+}
+
+@media only screen and (max-width:1024px) {
+    .wraprow{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+    .barimg{
+        width: 100px;
+    }
+
 }
 .wraprow{
-    /* background-color: red; */
     flex-direction: row;
     display: flex;
-    max-width: 100%;
-    flex-direction: row;
-    
-    margin-right: 50px !important;
-    
 }
 
-@media only screen and (max-width:700px){
-    .wraprow{
-        width: 100%;
-        
-    }
+.wrapimg{
+    width: 20px;
 }
-.row{
-    flex-direction: row;
-    display: flex;
-}
-.col{
+
+.wrapcol{
     display: flex;
     flex-direction: column;
-    /* border-right: 2px solid white; */
 }
-.barimg{
-    width: 80px;
-}
-.barimg img{
-    width: 100%;
-}
-.wrapbox{
-    border: gray;
-    border-right: 1px solid white;
-    margin-left: 5px;
-}
-.wrap_wraprow__1BH88 {
-    flex-direction: row;
-    display: flex;
-    max-width: 100%;
-    flex-direction: row;
-    flex-wrap: wrap;
-    margin-right: 27px !important;
+
+.btcspan{
+    color: gray;
 }

@@ -1,5 +1,6 @@
 import { useRouter } from 'next/router'
 import React, { useState } from 'react'
+import { Container } from 'react-bootstrap'
 import useGetHook from '../../src/components/CustomHooks/useGetHook'
 import MainSearch from '../../src/components/Search/MainSearch'
 import { APIS } from '../api/hello'
@@ -19,7 +20,7 @@ const SearchPage = () => {
       });
 console.log('searchpagedata',searchpagedata)
   return (
-    <div>
+    <div style={{width:'100%'}}>
         <MainSearch data={searchpagedata} search={search} searchpage={SearchPage}/>
     </div>
   )

@@ -1,11 +1,10 @@
 import React from "react";
-import { Col, Row } from "react-bootstrap";
+import { Col, Container, Row } from "react-bootstrap";
 import { APIS } from "../../../pages/api/hello";
 import AdvertisementImageContent from "../Advertisement/AdvertisementImageContent";
 import AdvertisementTable from "../Advertisement/AdvertisementTable";
 import useGetHook from "../CustomHooks/useGetHook";
 import Footer from "../Footer/Footer";
-import style from "./detailpage.module.css"
 import LatestNews from "./LatestNews";
 import NewsDetailParagraph from "./NewsDetailParagraph";
 
@@ -17,35 +16,35 @@ const NewsDetail = (props) => {
       url:APIS.posts
   }
   )
+  console.log('singlepost', props.data)
   return (
     <>
-    {/* {props.singlepost((map)=>{ */}
-      <div className={style.newsdetail}>
-      <div className={style.newsdetailrow}>
-        <div style={{ height:'500px'}}>
-          <img src={props?.singlepost?.image} alt="" style={{width:'100%'}}/>
-          <NewsDetailParagraph description={props?.singlepost?.description}/>
-          {/* <NewsDetailParagraph title={props?.singlepost?.title}/> */}
-        </div>
-        <div className={style.mainad}>
+    <Container style={{marginTop:'20px', flexWrap:'wrap'}}>
+        <Row>
+          <Col md='8' sm='12'>
+          <div style={{maxWidth:'100%'}}>
+          <img src={props?.singlepost?.image} alt="" style={{width:'100%', boxShadow: '0px 5px 10px 0px rgba(0, 0, 0, 0.5), height:{props.height}' }}/>
+          </div>
+          <NewsDetailParagraph content={props?.singlepost?.content} contentlength={props.contentlength}/>
+
+          </Col>
+
+          <Col md='4' sm='12'>
           <AdvertisementImageContent />
           <p style={{fontWeight:'bold', fontSize:'20px', marginTop:'10px'}}>Latest News</p>
           {latestNewsData?.results?.slice(0,3)?.map((curEle, index)=>
-          <LatestNews image={curEle?.image} title={curEle?.title} created={curEle?.created} key={index}/>
+          <LatestNews image={curEle?.image} title={curEle?.title} created={curEle?.created} key={index} id={curEle?.id}/>
           )}
-          
           <AdvertisementImageContent />
           <AdvertisementTable />
-        </div>
-      </div>
-    </div>
+          </Col>
+        </Row>
+
+      </Container>
+      
+    {/* <Footer /> */}
+
     {/* })} */}
-    
-
-    <div>
-        <AdvertisementImageContent />
-    </div>
-
     
     </>
   );
