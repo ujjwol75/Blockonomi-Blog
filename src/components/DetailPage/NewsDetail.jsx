@@ -23,9 +23,9 @@ const NewsDetail = (props) => {
         <Row>
           <Col md='8' sm='12'>
           <div style={{maxWidth:'100%'}}>
-          <img src={props?.singlepost?.image} alt="" style={{width:'100%', boxShadow: '0px 5px 10px 0px rgba(0, 0, 0, 0.5), height:{props.height}' }}/>
+          <img src={props?.data?.image} alt="" style={{width:'100%', boxShadow: '0px 5px 10px 0px rgba(0, 0, 0, 0.5), height:{props.height}' }}/>
           </div>
-          <NewsDetailParagraph content={props?.singlepost?.content} contentlength={props.contentlength}/>
+          <NewsDetailParagraph content={props?.data?.content} contentlength={props.contentlength} />
 
           </Col>
 

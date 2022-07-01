@@ -6,10 +6,10 @@ import Link from 'next/link'
 
 const NewsImageTitle = (props) => {
  
-  console.log('propskoid', props.id)
+  console.log('propskoid', props.slug)
   return (
     <div className={style.newsbox}>
-      <Link href={`/detailpage/${props.id}`}>
+      <Link href={`/detailpage/${props.slug}`}>
       <a href="" style={{textDecoration:'none', color:'black'}}>
       <div className={style.imgdiv} style={{cursor:'pointer', maxHeight:"props?.height"}}>
         <img src={props.image} alt="" style={{height:props.height}} className={style.image}/>

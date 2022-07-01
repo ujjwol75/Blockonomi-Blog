@@ -11,6 +11,7 @@ const News = (props) => {
   const [isLoaded, setIsLoaded] = useState(false);
 
   console.log('datas', props.data)
+  console.log('slug', props?.data?.results[0].slug)
   return (
 
     <Container className={style.container}>
@@ -31,7 +32,8 @@ const News = (props) => {
                     author={items.author}
                     image={items.image}
                     height="250px"
-                    id={items.id}
+                    // id={items.id}
+                    slug={items.slug}
                     title={items.title}
                     color="black"
                     // width="100%"
@@ -50,7 +52,7 @@ const News = (props) => {
                     date={items.publish_date}
                     author={items.author}
                     image={items.image}
-                    
+                    slug={items.slug}
                     height="250px"
                     id={items.id}
                     title={items.title}

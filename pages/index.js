@@ -46,7 +46,7 @@ export default function Home() {
     url: `${APIS.posts}?page=${page}`,
   });
 
-  console.log('data::::', scribedPostCoinBitCoinList)
+  console.log('data::::', scribedPostCoinBitCoinList?.results[0].slug)
 
   return (
     <Container fluid>
