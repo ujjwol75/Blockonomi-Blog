@@ -26,6 +26,7 @@ const NewsWrap = () => {
               className={style.newsimage}
               id={newswrapdata?.results[0].id}
               contentlength="1000"
+              slug={newswrapdata?.results[0].slug}
             />
           </Col>
 
@@ -42,6 +43,7 @@ const NewsWrap = () => {
                     height="200px"
                     color="white"
                     id={curElem.id}
+                    slug={curElem.slug}
                   />
                 </Col>
               ))}
