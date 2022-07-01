@@ -9,7 +9,6 @@ const SearchPage = () => {
     const router = useRouter()
     const { SearchPage } = router.query;
     const [search, setSearch] = useState(true)
-    console.log('searchKeyword',SearchPage)
 
     const {
         isLoading: searchListLoader,
@@ -18,7 +17,7 @@ const SearchPage = () => {
         queryKey: `searchpagedata${SearchPage}`,
         url: `${APIS.posts}?search=${SearchPage}`
       });
-console.log('searchpagedata',searchpagedata)
+
   return (
     <div style={{width:'100%'}}>
         <MainSearch data={searchpagedata} search={search} searchpage={SearchPage}/>

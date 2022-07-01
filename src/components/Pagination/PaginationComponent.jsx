@@ -16,15 +16,7 @@ const PaginationComponent = (props) => {
     props.setPage(props.page+1)
   }
 
-  console.log('page:', props.page)
 
-  // pagination 
-  // const { data: scribedPostCoinBitCoinList } = useGetHook({
-  //   queryKey: `filterDataWithPagination${page}`,
-  //   url: `${APIS.posts}?page=${page}`,
-  // });
-
-  // console.log('scribedDataWithPagination', scribedPostCoinBitCoinList);
 
   return (
     <div className={style.paginationmain}>

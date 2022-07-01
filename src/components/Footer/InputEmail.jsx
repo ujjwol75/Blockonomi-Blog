@@ -6,7 +6,6 @@ const InputEmail = (props) => {
 
   const [formValue, setFormValue] = useState("");
   const handleForm = () => {
-    console.log("hello");
   };
   const handleClick = (e) => {
     e.preventDefault()

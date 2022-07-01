@@ -2,7 +2,7 @@ import React from 'react'
 import { Col, Row } from 'react-bootstrap'
 
 const LatestNewsCard = (props) => {
-  console.log('latestenewscardprops.id', props.id)
+
   return (
     <div style={{width:'320px', margin:'20px 0 20px 0'}}>
         <Row>

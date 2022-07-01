@@ -16,7 +16,6 @@ const NewsDetail = (props) => {
       url:APIS.posts
   }
   )
-  console.log('singlepost', props.data)
   return (
     <>
     <Container style={{marginTop:'20px', flexWrap:'wrap'}}>
@@ -33,7 +32,7 @@ const NewsDetail = (props) => {
           <AdvertisementImageContent />
           <p style={{fontWeight:'bold', fontSize:'20px', marginTop:'10px'}}>Latest News</p>
           {latestNewsData?.results?.slice(0,3)?.map((curEle, index)=>
-          <LatestNews image={curEle?.image} title={curEle?.title} created={curEle?.created} key={index} id={curEle?.id}/>
+          <LatestNews image={curEle?.image} title={curEle?.title} created={curEle?.created} key={index} id={curEle?.id} slug={curEle?.slug}/>
           )}
           <AdvertisementImageContent />
           <AdvertisementTable />

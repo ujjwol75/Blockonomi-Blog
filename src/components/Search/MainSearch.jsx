@@ -7,7 +7,6 @@ import NewsImageTitle from "../News/NewsImage";
 import { Col, Container, Row } from "react-bootstrap";
 
 const MainSearch = (props) => {
-  console.log("props.data", props.data);
   return (
     <div>
       <TopNavbar />

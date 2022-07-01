@@ -29,12 +29,12 @@ export default function Home() {
     const formData = {
       email: email,
     };
-    console.log('data: ' , formData)
+
     try {
       createMutate({ url, formData });
       
     } catch (e) {
-      console.log(e);
+
     }
     if(successMessage){
       consoe.log('success: ' , successMessage)
@@ -46,7 +46,7 @@ export default function Home() {
     url: `${APIS.posts}?page=${page}`,
   });
 
-  console.log('data::::', scribedPostCoinBitCoinList?.results[0].slug)
+
 
   return (
     <Container fluid>

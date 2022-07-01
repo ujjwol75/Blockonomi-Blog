@@ -6,7 +6,6 @@ import Link from 'next/link'
 
 const NewsImageTitle = (props) => {
  
-  console.log('propskoid', props.slug)
   return (
     <div className={style.newsbox}>
       <Link href={`/detailpage/${props.slug}`}>

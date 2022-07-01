@@ -13,7 +13,6 @@ const usePostHook = ({ queryKey }) => {
     isError: isPostError,
   } = useMutation(postApiData, {
     onSuccess: (data) => {
-      console.log('post data:',data);
       setData(data);
     },
     onError: (error) => {},

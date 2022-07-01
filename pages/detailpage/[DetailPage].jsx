@@ -20,7 +20,6 @@ const DetailPage = () => {
     url: `${APIS.posts}${DetailPage}`,
   });
 
-  console.log('singlepost::', singlePostsData)
 
   return (
     <>

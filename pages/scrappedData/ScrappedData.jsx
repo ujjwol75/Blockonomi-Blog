@@ -13,7 +13,8 @@ const ScrappedData = () => {
     queryKey: "news",
     url: APIS.posts,
   });
-  console.log("news", news);
+
+  console.log('slugmaster', news?.results[0].slug)
   return (
     <>
       <TopNavbar />
@@ -23,9 +24,8 @@ const ScrappedData = () => {
       <Container>
         <Row>
           {news?.results?.map((item, key) => (
-
             <Col md="4" key={key}>
-              <Link href={`/detailpage/${item.id}`}>
+             
                 <ScrappedMain
                   image={item.image}
                   height="200px"
@@ -34,8 +34,11 @@ const ScrappedData = () => {
                   title={item.title}
                   contentlength="200"
                   id={item.id}
+                  slug={item.slug}
                 />
-            </Link>
+         
+                
+            {/* </Link> */}
             </Col>
           ))}
         </Row>

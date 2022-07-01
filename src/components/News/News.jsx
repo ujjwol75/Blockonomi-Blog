@@ -10,8 +10,7 @@ const News = (props) => {
   const [getData, setGetData] = useState([]);
   const [isLoaded, setIsLoaded] = useState(false);
 
-  console.log('datas', props.data)
-  console.log('slug', props?.data?.results[0].slug)
+
   return (
 
     <Container className={style.container}>
