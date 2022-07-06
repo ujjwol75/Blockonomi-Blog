@@ -24,6 +24,7 @@ export default function Home() {
   });
 
   const handleNewsLetterClick = (email) => {
+  
    
     const url = APIS.newsLetter;
     const formData = {
@@ -56,9 +57,10 @@ export default function Home() {
       <hr />
       <Wrap />
       <NewsWrap />
-      <News data={scribedPostCoinBitCoinList}/>
+
+      <News data={scribedPostCoinBitCoinList} page={page} setPage={setPage}/>
       {/* <NewsCategory /> */}
-      <PaginationComponent page={page} setPage={setPage} />
+      
       <Footer handleNewsLetterClick={handleNewsLetterClick}/>
     </Container>
     

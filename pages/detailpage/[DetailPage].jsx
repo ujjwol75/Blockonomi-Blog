@@ -43,6 +43,7 @@ const DetailPage = () => {
         </Container>
 
     </Row>
+    
     </Container>
     <Footer/>
 

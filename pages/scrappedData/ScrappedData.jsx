@@ -3,6 +3,7 @@ import React from "react";
 import { Col, Container, Row } from "react-bootstrap";
 import useGetHook from "../../src/components/CustomHooks/useGetHook";
 import Footer from "../../src/components/Footer/Footer";
+import PaginationComponent from "../../src/components/Pagination/PaginationComponent";
 import ScrappedMain from "../../src/components/Scrapped/ScrappedMain";
 import SecondNavBar from "../../src/components/SecondNavbar/SecondNavBar";
 import TopNavbar from "../../src/components/TopNavbar/TopNavbar";
@@ -42,6 +43,7 @@ const ScrappedData = () => {
             </Col>
           ))}
         </Row>
+
       </Container>
       <Footer />
     </>

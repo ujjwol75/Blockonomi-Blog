@@ -22,7 +22,7 @@ const InputEmail = (props) => {
           value={formValue}
           onChange={(e) => setFormValue(e.target.value)}
         />
-        <Button variant="warning" onClick={handleClick}>
+        <Button variant="warning" onClick={handleClick} className={style.button}>
           SIGN ME UP
         </Button>
       </form>

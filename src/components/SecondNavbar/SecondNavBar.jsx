@@ -58,7 +58,9 @@ const SecondNavBar = () => {
                       </div>
                       <hr style={{ width: "200px" }} />
                       <div className={style.barListDiv}>
-                        <a href="">Release</a>
+                        <Link href="/scrappedData/ScrappedData/">
+                        <a href="">Scrapped News</a>
+                        </Link>
                       </div>
                       <hr style={{ width: "200px" }} />
                       <Button>Claim Free Crypto</Button>

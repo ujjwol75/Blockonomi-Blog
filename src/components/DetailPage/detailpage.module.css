@@ -8,6 +8,7 @@
 }
 .detailparagraph{
     margin-top: 20px;
+    width: 100%;
 }
 .newsdetailrow{
     display: flex;
@@ -20,16 +21,15 @@
     flex-wrap: wrap;
     }
     .detailcontent{
-        width: 100px;
+        width: 100%;
     } 
     .detailcontentmain{
-        width: 700px;
         overflow-y: scroll;
     }
 }
 
 @media only screen and (max-width:1200px) {
     .detailcontent{
-        width: 600px;
+        overflow-y: scroll;
     } 
 }

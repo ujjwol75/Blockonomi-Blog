@@ -25,7 +25,7 @@ const NewsWrap = () => {
               color="white"
               className={style.newsimage}
               id={newswrapdata?.results[0].id}
-              contentlength="1000"
+              contentlength="350"
               slug={newswrapdata?.results[0].slug}
             />
           </Col>
@@ -34,13 +34,13 @@ const NewsWrap = () => {
           <Col sm='12' md='12' lg='6' xl='6' >
             <div className={style.newswrapimg}>
             <Row>
-              {newswrapdata?.results?.slice(0, 4).map((curElem, index) => (
+              {newswrapdata?.results?.slice(4, 8).map((curElem, index) => (
                 <Col md='6' sm='6' xs='6' xl='6' key={index}>
                   <NewsImage
                     width="100%"
                     title={curElem.title}
                     image={curElem.image}
-                    height="200px"
+                    height="150px"
                     color="white"
                     id={curElem.id}
                     slug={curElem.slug}

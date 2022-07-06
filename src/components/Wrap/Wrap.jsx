@@ -7,16 +7,16 @@ const Wrap = () => {
     <div style={{ backgroundColor: "lightblue" }}>
       <div className={style.wrap} lg='3'>
         <Row>
-          <Col sm='12' md='6' lg='4' xl='3'>
+          <Col sm='12' md='6' lg='3' xl='3'>
             <Bitcoin />
           </Col>
-          <Col sm='12' md='6' lg='4' xl='3' className={style.bitcoincol}>
+          <Col sm='12' md='6' lg='3' xl='3' className={style.bitcoincol}>
             <Bitcoin />
           </Col>
-          <Col sm='12' md='6' lg='4' xl='3' className={style.bitcoincol}>
+          <Col sm='12' md='6' lg='3' xl='3' className={style.bitcoincol}>
             <Bitcoin />
           </Col>
-          <Col sm='12' md='6' lg='4' xl='3' className={style.bitcoincol}>
+          <Col sm='12' md='6' lg='3' xl='3' className={style.bitcoincol}>
             <Bitcoin />
           </Col>
         </Row>

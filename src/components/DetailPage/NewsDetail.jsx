@@ -20,7 +20,7 @@ const NewsDetail = (props) => {
     <>
     <Container style={{marginTop:'20px', flexWrap:'wrap'}}>
         <Row>
-          <Col md='8' sm='12'>
+          <Col md={12} sm={12} lg={8}>
           <div style={{maxWidth:'100%'}}>
           <img src={props?.data?.image} alt="" style={{width:'100%', boxShadow: '0px 5px 10px 0px rgba(0, 0, 0, 0.5), height:{props.height}' }}/>
           </div>
@@ -28,7 +28,7 @@ const NewsDetail = (props) => {
 
           </Col>
 
-          <Col md='4' sm='12'>
+          <Col md={12} sm={12} lg={4}>
           <AdvertisementImageContent />
           <p style={{fontWeight:'bold', fontSize:'20px', marginTop:'10px'}}>Latest News</p>
           {latestNewsData?.results?.slice(0,3)?.map((curEle, index)=>

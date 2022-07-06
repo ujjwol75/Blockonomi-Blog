@@ -23,6 +23,36 @@
     border: none;
     border-bottom: 1px solid gray;
 }
+
+@media only screen and (max-width:800px){
+    .search input{
+        position: absolute;
+        padding:30px 30px;
+        font-size: 30px;
+        color: black;
+        /* outline: none; */
+        top:100px;
+        left: 14%;
+        outline: white;
+        border: none;
+        border-bottom: 1px solid gray;
+    }
+}
+
+@media only screen and (max-width:360px){
+    .search input{
+        position: absolute;
+        padding:30px 30px;
+        font-size: 20px;
+        color: black;
+        /* outline: none; */
+        top:100px;
+        left: 14%;
+        outline: white;
+        border: none;
+        border-bottom: 1px solid gray;
+    }
+}
 .cross{
     position: absolute;
     right: 10px;

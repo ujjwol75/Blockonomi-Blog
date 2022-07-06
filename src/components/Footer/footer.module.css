@@ -76,6 +76,9 @@
     padding: 1px 1px;
     
     }
+    .button{
+        font-size: 12px;
+    }
 }
 
 @media only screen and (max-width:1024px) {
@@ -94,23 +97,10 @@
     .footerlink{
         margin-top: 5px;
     }
-    .forminput input{
-    padding: 1px 1px;
-    
-    }
+
 }
 .forminput{
     margin-top: 25px;
     display: flex;
-    justify-content: center;
-    
-    
 }
 
-@media only screen and (max-width:1200px) {
-/* .forminput input{
-    padding: 6px 6px;
-    margin-right: 6px;
-    border-radius: 10px;
-} */
-}

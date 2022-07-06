@@ -44,7 +44,7 @@ background-color: #253137;
     display: flex;
     flex-direction: row;
     text-align: center;
-    justify-conten: space-between;
+    justify-content: space-between;
     align-items: center;
 
     /* justify-content: space-between; */
@@ -109,6 +109,7 @@ background-color: #253137;
 }
 
 .barDiv{
+    padding-top: 12%;
     width: 250px;
     height: 100vh;
     background-color: white;
@@ -116,6 +117,7 @@ background-color: #253137;
     left: 0;
     top: 0;
     z-index: 10;
+    padding-left: 10px;
     /* padding-top: 10%; */
     /* padding-left: 5%; */
     overflow-y: scroll;
@@ -164,4 +166,48 @@ background-color: #253137;
 .secondnavbar{
     display: flex;
     justify-content: space-between;
+}
+
+@media only screen and (max-width:1120px) {
+    .barListDiv a{
+        text-decoration: none;
+        color: black;
+        font-size: 17px;
+        font-weight: bold;
+    }
+    .crossIcon{
+        color: white !important;
+        background-color: black;
+        padding: 3px;
+    }
+    .navbarlinks{
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        align-items: center;
+        display: none;
+        
+    }
+    .imglogo{
+        width: 100%;
+    }
+    .navitems{
+        display: flex;
+        flex-direction: row;
+    }
+    .socialmedia{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        text-align: center;
+        align-items: center;
+        color: black;
+    }
+    .secondnavbar{
+        margin-bottom: 10px;
+        display: flex;
+        /* justify-content: center; */
+        align-items: center;
+    }
+
 }
