@@ -4,6 +4,8 @@ import { BsFacebook } from "react-icons/bs";
 import { AiFillTwitterCircle } from "react-icons/ai";
 import { Button, Container } from "react-bootstrap";
 import InputEmail from "./InputEmail";
+import MainContact from "../../../pages/contact/MainContact";
+import Link from "next/link";
 
 const Footer = (props) => {
   
@@ -31,7 +33,9 @@ const Footer = (props) => {
       </div>
       <div className={style.footerlink}>
         <a href="">ABOUT</a>
-        <a href="">CONTACT</a>
+        <Link href="/contact/MainContact">
+        <a >CONTACT</a>
+        </Link>
         <a href="">DEALS</a>
         <a href="">ADVERTISE</a>
         <a href="">TERMS & CONDITIONS</a>

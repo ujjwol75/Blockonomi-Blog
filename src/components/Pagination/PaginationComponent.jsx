@@ -6,7 +6,9 @@ import { APIS } from "../../../pages/api/hello";
 
 const PaginationComponent = (props) => {
   const handlePrevious = () => {
-    props.setPage(props.page - 1);
+    if(props.page>=2){
+      props.setPage(props.page - 1);
+    }
   };
 
   const handleNext = () => {

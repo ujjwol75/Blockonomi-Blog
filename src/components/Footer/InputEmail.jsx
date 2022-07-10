@@ -5,8 +5,7 @@ import style from "./footer.module.css";
 const InputEmail = (props) => {
 
   const [formValue, setFormValue] = useState("");
-  const handleForm = () => {
-  };
+
   const handleClick = (e) => {
     e.preventDefault()
     props.handleNewsLetterClick(formValue)
@@ -15,7 +14,7 @@ const InputEmail = (props) => {
   
   return (
     <Container>
-      <form action="" className={style.forminput} onSubmit={handleForm}>
+      <form action="" className={style.forminput} onSubmit={handleClick}>
         <input
           type="email"
           placeholder="Your email address"

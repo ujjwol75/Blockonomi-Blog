@@ -1,12 +1,12 @@
 import React from "react";
 import Footer from "../Footer/Footer";
-import News from "../News/News";
 import SecondNavBar from "../SecondNavbar/SecondNavBar";
 import TopNavbar from "../TopNavbar/TopNavbar";
 import NewsImageTitle from "../News/NewsImage";
 import { Col, Container, Row } from "react-bootstrap";
 
 const MainSearch = (props) => {
+  console.log("props?.data?.results?", props?.data?.results);
   return (
     <div>
       <TopNavbar />
@@ -22,13 +22,12 @@ const MainSearch = (props) => {
                 id={item.id}
                 title={item.title}
                 height="250px"
+                slug={item.slug}
               />
             </Col>
           ))}
         </Row>
       </Container>
-
-      {/* <News data={props.data} search={props.search} searchpage={props.searchpage} contentlength='1'/> */}
       <Footer />
     </div>
   );

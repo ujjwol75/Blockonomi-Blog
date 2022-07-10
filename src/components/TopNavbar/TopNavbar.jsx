@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import React from 'react'
 import { Button, Col, Row } from 'react-bootstrap'
 import Container from 'react-bootstrap/Container';
@@ -13,7 +14,9 @@ const TopNavbar = () => {
             <Nav.Link href="#home" className='text-dark mx-2 text-sm'>About</Nav.Link>
             <Nav.Link href="#link" className='text-dark mx-2'>Advertise</Nav.Link>
             <Nav.Link href="#home" className='text-dark mx-2'>Submit Press Release</Nav.Link>
+            <Link href="contact/MainContact">
             <Nav.Link href="#link" className='text-dark mx-2'>Contact</Nav.Link>
+            </Link>
           </Nav>
         </div>
           

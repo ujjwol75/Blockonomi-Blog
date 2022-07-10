@@ -27,6 +27,7 @@ const NewsWrap = () => {
               id={newswrapdata?.results[0].id}
               contentlength="350"
               slug={newswrapdata?.results[0].slug}
+              height="400px"
             />
           </Col>
 

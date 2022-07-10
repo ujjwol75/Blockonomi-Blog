@@ -14,6 +14,8 @@ import { useState } from "react";
 
 export default function Home() {
   const [page, setPage] = useState(1)
+
+  // email post 
   const {
     mutate: createMutate,
     isPostError: errorMessage,
@@ -42,6 +44,7 @@ export default function Home() {
     }
   };
 
+  // pagination 
   const { data: scribedPostCoinBitCoinList } = useGetHook({
     queryKey: `filterDataWithPagination${page}`,
     url: `${APIS.posts}?page=${page}`,

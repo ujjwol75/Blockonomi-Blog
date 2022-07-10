@@ -1,5 +1,6 @@
 export const APIS={
   navigation:'/navigation/',
   posts: '/posts/',
-  newsLetter: '/newsletter-subscription/'
+  newsLetter: '/newsletter-subscription/',
+  contactUs: '/contact-us/'
 }

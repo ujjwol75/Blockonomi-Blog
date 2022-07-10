@@ -1,5 +1,5 @@
 import Link from "next/link";
-import React from "react";
+import React, { useState } from "react";
 import { Col, Container, Row } from "react-bootstrap";
 import useGetHook from "../../src/components/CustomHooks/useGetHook";
 import Footer from "../../src/components/Footer/Footer";
@@ -10,9 +10,17 @@ import TopNavbar from "../../src/components/TopNavbar/TopNavbar";
 import { APIS } from "../api/hello";
 
 const ScrappedData = () => {
+  const [page, setPage] = useState(1)
+
   const { isLoading: navigationLoading, data: news } = useGetHook({
     queryKey: "news",
     url: APIS.posts,
+  });
+
+  // pagination 
+  const { data: scribedPostCoinBitCoinList } = useGetHook({
+    queryKey: `filterDataWithPagination${page}`,
+    url: `${APIS.posts}?page=${page}`,
   });
 
   console.log('slugmaster', news?.results[0].slug)
