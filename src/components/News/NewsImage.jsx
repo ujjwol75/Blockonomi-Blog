@@ -11,7 +11,7 @@ const NewsImageTitle = (props) => {
       <Link href={`/detailpage/${props.slug}`}>
       <a href="" style={{textDecoration:'none', color:'black'}}>
       <div className={style.imgdiv} style={{cursor:'pointer', maxHeight:"props?.height"}}>
-        <img src={props.image} alt="" style={{height:props.height}} className={style.image}/>
+        <img src={props.image} alt="hero image" style={{height:props.height}} className={style.image} />
         <span className={style.textimage}>METAVERSE</span>
       </div>
 

@@ -69,9 +69,10 @@
         height: 300px;
     }
 
-     .contenthtmldiv{
+     /* .contenthtmldiv{
         width: 100px;
-    }
+    } */
+
 
 }
 
@@ -96,5 +97,24 @@
         /* width: 200px; */
         overflow-y: scroll;
     }
+}
+
+
+
+@media only screen and (max-width:868px){
+    .mainnewsrow{
+        flex-wrap: wrap;
+    }
+    .news{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+       
+    }
+    .image{
+        height: 300px;
+    }
+
 }
 

@@ -4,16 +4,16 @@ import TopNavbar from "../src/components/TopNavbar/TopNavbar";
 import Wrap from "../src/components/Wrap/Wrap";
 import NewsWrap from "../src/components/NewsWarp/NewsWrap";
 import Footer from "../src/components/Footer/Footer";
-import NewsCategory from "../src/components/NewsCategory/NewsCategory";
 import usePostHook from "../src/components/CustomHooks/usePostHook";
 import { APIS } from "./api/hello";
-import { Col, Container, Row } from "react-bootstrap";
-import PaginationComponent from "../src/components/Pagination/PaginationComponent";
+import {  Container, } from "react-bootstrap";
 import useGetHook from "../src/components/CustomHooks/useGetHook";
 import { useState } from "react";
 
 export default function Home() {
   const [page, setPage] = useState(1)
+
+  // email post 
   const {
     mutate: createMutate,
     isPostError: errorMessage,
@@ -24,6 +24,7 @@ export default function Home() {
   });
 
   const handleNewsLetterClick = (email) => {
+  
    
     const url = APIS.newsLetter;
     const formData = {
@@ -41,6 +42,7 @@ export default function Home() {
     }
   };
 
+  // pagination 
   const { data: scribedPostCoinBitCoinList } = useGetHook({
     queryKey: `filterDataWithPagination${page}`,
     url: `${APIS.posts}?page=${page}`,
@@ -56,9 +58,10 @@ export default function Home() {
       <hr />
       <Wrap />
       <NewsWrap />
-      <News data={scribedPostCoinBitCoinList}/>
+
+      <News data={scribedPostCoinBitCoinList} page={page} setPage={setPage}/>
       {/* <NewsCategory /> */}
-      <PaginationComponent page={page} setPage={setPage} />
+      
       <Footer handleNewsLetterClick={handleNewsLetterClick}/>
     </Container>
     

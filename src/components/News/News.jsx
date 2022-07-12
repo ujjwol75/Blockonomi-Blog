@@ -5,6 +5,7 @@ import Advertisement from "../Advertisement/Advertisement";
 import { Row, Col, Container } from "react-bootstrap";
 import useGetHook from "../CustomHooks/useGetHook";
 import { APIS } from "../../../pages/api/hello";
+import PaginationComponent from "../Pagination/PaginationComponent";
 
 const News = (props) => {
   const [getData, setGetData] = useState([]);
@@ -15,7 +16,7 @@ const News = (props) => {
 
     <Container className={style.container}>
     <Row>
-        <Col md={9} sm={12} >
+        <Col md={8} sm={12} lg={8} xl={8}>
           <Row>
           {props?.search && <h3 style={{marginBottom:'20px'}}>Your Search on KeyWord <span style={{fontWeight:'bold'}}>{props.searchpage}</span></h3>}
           
@@ -56,7 +57,6 @@ const News = (props) => {
                     id={items.id}
                     title={items.title}
                     color="black"
-                    // width="100%"
                     content={items.content}
                     contentlength="200"
                   />
@@ -64,10 +64,14 @@ const News = (props) => {
               </Col>
             ))}</>}
 
+            <div>
+            <PaginationComponent page={props.page} setPage={props.setPage} />
+            </div>
+
             
           </Row>
         </Col>
-        <Col md={3} sm={12}>
+        <Col md={4} sm={12} lg={4} xl={4}>
           <Advertisement />
           <Advertisement />
           <Advertisement />
