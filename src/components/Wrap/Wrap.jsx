@@ -96,13 +96,14 @@ const Wrap = () => {
           </Col>
         </Row>
         <Col sm='4' md='3' lg='2' xl="2" className={style.bitcoincol} style={{ textAlign: 'center', marginLeft: "8px" }}>
-          {nuCoinData?.results?.map((item) => (
-
-            <Bitcoin
-              title={item?.name}
-              price={item?.price_rate}
-              changeDay={parseFloat(item?.price_change).toFixed(2)}
-            />
+          {nuCoinData?.results?.map((item, key) => (
+            <div key={key}>
+              <Bitcoin
+                title={item?.name}
+                price={item?.price_rate}
+                changeDay={parseFloat(item?.price_change).toFixed(2)}
+              />
+            </div>
           ))}
         </Col>
       </div>
