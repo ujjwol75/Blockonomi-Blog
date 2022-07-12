@@ -7,7 +7,7 @@ import style from "../News/news.module.css"
 import NewsTitle from '../News/NewsTitle';
 import Link from 'next/link';
 
-const index = () => {
+const NFT = () => {
   const nftUrl = 'https://economictimes.indiatimes.com/topic/nft/news';
 
   const { isLoading: allScribbedPostsLoading, data: allScribbedPosts } =
@@ -16,7 +16,6 @@ const index = () => {
       url: `${APIS.scrappedPost}?source=${nftUrl}`,
       parma: 'params',
     });
-  console.log(allScribbedPosts, "allScribbedPosts")
 
   return (
     <>
@@ -49,4 +48,4 @@ const index = () => {
   );
 };
 
-export default index;
+export default NFT;

@@ -24,7 +24,6 @@ const ScrappedData = () => {
     url: `${APIS.posts}?page=${page}`,
   });
 
-  console.log('slugmaster', news?.results[0].slug)
   return (
     <>
       <TopNavbar />

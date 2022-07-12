@@ -1,6 +1,6 @@
 import Head from 'next/head';
 import React from 'react';
-import MarketLivePage from '../../src/components/MarketLivePage';
+import MarketLivePage from '../../src/components/MarketLivePage/MarketLivePage';
 import SecondNavBar from "../../src/components/SecondNavbar/SecondNavBar";
 import TopNavbar from "../../src/components/TopNavbar/TopNavbar";
 import Wrap from "../../src/components/Wrap/Wrap";

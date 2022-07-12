@@ -30,8 +30,7 @@ const Detail = () => {
       url: `${APIS.scrappedPost}${sId}`,
     });
 
-  // useEffect(() => { }, [sId]);
-  console.log(singlePageScrappedData, "singlePageScrappedData")
+
   return (
     <>
       <TopNavbar />

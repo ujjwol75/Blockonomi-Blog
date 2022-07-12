@@ -1,7 +1,8 @@
-import React, { useState, useEffect } from 'react'
+
 import axios from 'axios';
+import { useEffect, useState } from 'react';
 import styles from '../MarketLivePage/Market.module.css';
-const index = () => {
+const MarketLivePage = () => {
 
   const [limit, setLimit] = useState(10)
 
@@ -133,7 +134,7 @@ const index = () => {
             }}>
             {marketListData?.Data?.map((item, index) => {
               return (
-                <tr>
+                <tr key={index}>
                   <td style={{
                     border: "1px solid #c5cedb",
                     textAlign: "center",
@@ -196,7 +197,7 @@ const index = () => {
           </tbody>
           <tfoot>
             <tr>
-              <td colspan="7" className="py-2">
+              <td colSpan="7" className="py-2">
                 Sources: <a href="https://min-api.cryptocompare.com/" rel="external"> Crypto API</a> &amp;
                 <a href="https://www.cryptocompare.com/" rel="external">Cryptocompare</a>.
                 Data is current as of <strong>{fullDate}</strong>
@@ -231,4 +232,4 @@ const index = () => {
   )
 }
 
-export default index
+export default MarketLivePage
