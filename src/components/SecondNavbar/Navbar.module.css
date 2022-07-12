@@ -1,27 +1,31 @@
-.navbar{
-    background:red;
+.navbar {
+    background: red;
 }
-.navbar > ul >li{
+
+.navbar>ul>li {
     position: relative;
     float: left;
 }
-.navbar >ul {
+
+.navbar>ul {
     list-style: none;
 }
-.navbar > ul >li>a{
-    font-size:18px;
-    padding:10px 15px;
-    color:#000;
+
+.navbar>ul>li>a {
+    font-size: 18px;
+    padding: 10px 15px;
+    color: #000;
     text-decoration: none;
     display: block;
 }
-.navbar > ul >li>a:hover{
-background-color: #253137;
-  color: #fff;
+
+.navbar>ul>li>a:hover {
+    background-color: #253137;
+    color: #fff;
 
 }
 
-.navbar >ul >li>ul>li{
+.navbar>ul>li>ul>li {
     position: absolute;
     background-color: #fff;
     display: block;
@@ -30,17 +34,18 @@ background-color: #253137;
 
 
 @media only screen and (min-width:1200px) {
-    .barIcon{
+    .barIcon {
         display: none;
-       
+
     }
-    .imglogo{
+
+    .imglogo {
         width: 100%;
     }
-    
+
 }
 
-.navitems{
+.navitems {
     display: flex;
     flex-direction: row;
     text-align: center;
@@ -50,7 +55,8 @@ background-color: #253137;
     /* justify-content: space-between; */
 
 }
-.navbarlinks{
+
+.navbarlinks {
     display: flex;
     flex-direction: row;
     text-align: center;
@@ -65,34 +71,39 @@ background-color: #253137;
         display: flex;
        
     } */
-    
-    .barListDiv a{
+
+    .barListDiv a {
         text-decoration: none;
         color: black;
         font-size: 17px;
         font-weight: bold;
     }
-    .crossIcon{
+
+    .crossIcon {
         color: white !important;
         background-color: black;
         padding: 3px;
     }
-    .navbarlinks{
+
+    .navbarlinks {
         display: flex;
         justify-content: center;
         text-align: center;
         align-items: center;
         display: none;
-        
+
     }
-    .imglogo{
+
+    .imglogo {
         width: 100%;
     }
-    .navitems{
+
+    .navitems {
         display: flex;
         flex-direction: row;
     }
-    .socialmedia{
+
+    .socialmedia {
         display: flex;
         flex-direction: row;
         justify-content: center;
@@ -100,7 +111,8 @@ background-color: #253137;
         align-items: center;
         color: black;
     }
-    .secondnavbar{
+
+    .secondnavbar {
         margin-bottom: 10px;
         display: flex;
         justify-content: center;
@@ -108,7 +120,7 @@ background-color: #253137;
     }
 }
 
-.barDiv{
+.barDiv {
     padding-top: 12%;
     width: 250px;
     height: 100vh;
@@ -125,13 +137,15 @@ background-color: #253137;
     color: black;
     font-size: 20px;
     overflow-x: hidden;
-    
-    
+
+
 }
-.barListdiv a{
+
+.barListdiv a {
     text-decoration: none;
 }
-.barList{
+
+.barList {
     display: flex;
     text-align: center;
     justify-content: center;
@@ -139,63 +153,67 @@ background-color: #253137;
     margin-bottom: 30px;
 
 }
+
 /* .barListdiv{
    padding: 5%;
 
 } */
 
-.crossIcon{
+.crossIcon {
     position: absolute;
     top: 6px;
     right: 8px;
     color: black;
 
 }
-.navitem{
+
+.navitem {
     cursor: pointer;
     color: black;
 }
 
-.secondnavbar{
+.secondnavbar {
     display: flex;
     flex-direction: row;
-    justify-content: center;
-
-}
-
-.secondnavbar{
-    display: flex;
     justify-content: space-between;
+
 }
+
+
 
 @media only screen and (max-width:1120px) {
-    .barListDiv a{
+    .barListDiv a {
         text-decoration: none;
         color: black;
         font-size: 17px;
         font-weight: bold;
     }
-    .crossIcon{
+
+    .crossIcon {
         color: white !important;
         background-color: black;
         padding: 3px;
     }
-    .navbarlinks{
+
+    .navbarlinks {
         display: flex;
         justify-content: center;
         text-align: center;
         align-items: center;
         display: none;
-        
+
     }
-    .imglogo{
+
+    .imglogo {
         width: 100%;
     }
-    .navitems{
+
+    .navitems {
         display: flex;
         flex-direction: row;
     }
-    .socialmedia{
+
+    .socialmedia {
         display: flex;
         flex-direction: row;
         justify-content: center;
@@ -203,7 +221,8 @@ background-color: #253137;
         align-items: center;
         color: black;
     }
-    .secondnavbar{
+
+    .secondnavbar {
         margin-bottom: 10px;
         display: flex;
         /* justify-content: center; */

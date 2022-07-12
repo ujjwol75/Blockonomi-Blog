@@ -1,4 +1,4 @@
-.footer{
+.footer {
     background-color: black;
     color: white;
     text-align: center;
@@ -10,17 +10,20 @@
     width: 100%;
     margin-top: 20px;
 }
-.footerlink{
+
+.footerlink {
     margin-top: -50px;
 }
-.icon{
-   display: flex;
-   flex-direction: row;
-   padding: 5%;
-   max-width: 100%;
-   margin-top: -40px;
+
+.icon {
+    display: flex;
+    flex-direction: row;
+    padding: 3%;
+    max-width: 100%;
+    margin-top: -40px;
 }
-.footerlink a{
+
+.footerlink a {
     display: inline;
     width: 100%;
     text-decoration: none;
@@ -28,79 +31,94 @@
     color: white;
     padding-right: 10px;
 }
+
 @media only screen and (max-width:640px) {
-    .icon{
+    .icon {
         max-width: 80%;
         color: gray;
     }
-    .footerimg{
+
+    .footerimg {
         width: "100%";
         color: "white";
-        margin-top:'20px';
+        margin-top: '20px';
     }
-    .footerlink a{
+
+    .footerlink a {
         font-size: 13px;
     }
-    .icon{
+
+    .icon {
         margin-top: 10px;
     }
-    .footerlink{
+
+    .footerlink {
         margin-top: 5px;
     }
-    .forminput input{
-    padding: 1px 1px;
-    
+
+    .forminput input {
+        padding: 1px 1px;
+
     }
 }
 
 @media only screen and (max-width:768px) {
-    .icon{
+    .icon {
         max-width: 80%;
         color: gray;
     }
-    .footerimg{
+
+    .footerimg {
         width: "100%";
         color: "white";
-        margin-top:'20px';
+        margin-top: '20px';
     }
-    .footerlink a{
+
+    .footerlink a {
         font-size: 13px;
     }
-    .icon{
+
+    .icon {
         margin-top: 10px;
     }
-    .footerlink{
+
+    .footerlink {
         margin-top: 5px;
     }
-    .forminput input{
-    padding: 1px 1px;
-    
+
+    .forminput input {
+        padding: 1px 1px;
+
     }
-    .button{
+
+    .button {
         font-size: 12px;
     }
 }
 
 @media only screen and (max-width:1024px) {
-    .icon{
+    .icon {
         max-width: 80%;
         color: gray;
     }
-    .footerimg{
+
+    .footerimg {
         width: "100%";
         color: "white";
         /* margin-top:'20px'; */
     }
-    .footerlink a{
+
+    .footerlink a {
         font-size: 13px;
     }
-    .footerlink{
+
+    .footerlink {
         margin-top: 5px;
     }
 
 }
-.forminput{
+
+.forminput {
     margin-top: 25px;
     display: flex;
 }
-

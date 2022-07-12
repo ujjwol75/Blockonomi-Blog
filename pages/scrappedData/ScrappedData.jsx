@@ -7,6 +7,7 @@ import PaginationComponent from "../../src/components/Pagination/PaginationCompo
 import ScrappedMain from "../../src/components/Scrapped/ScrappedMain";
 import SecondNavBar from "../../src/components/SecondNavbar/SecondNavBar";
 import TopNavbar from "../../src/components/TopNavbar/TopNavbar";
+import Wrap from "../../src/components/Wrap/Wrap";
 import { APIS } from "../api/hello";
 
 const ScrappedData = () => {
@@ -30,32 +31,29 @@ const ScrappedData = () => {
       <hr />
       <SecondNavBar />
       <hr />
+      <Wrap />
+      <hr />
       <Container>
         <Row>
           {news?.results?.map((item, key) => (
             <Col md="4" key={key}>
-             
-                <ScrappedMain
-                  image={item.image}
-                  height="200px"
-                  author={item.author}
-                  date={item.date}
-                  title={item.title}
-                  contentlength="200"
-                  id={item.id}
-                  slug={item.slug}
-                />
-         
-                
-            {/* </Link> */}
+              <ScrappedMain
+                image={item.image}
+                height="200px"
+                author={item.author}
+                date={item.date}
+                title={item.title}
+                contentlength="200"
+                id={item.id}
+                slug={item.slug}
+              />
             </Col>
           ))}
         </Row>
-
       </Container>
       <Footer />
     </>
-    // </div>
+
   );
 };
 
