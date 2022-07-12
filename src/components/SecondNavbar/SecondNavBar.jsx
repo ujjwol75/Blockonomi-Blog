@@ -59,7 +59,7 @@ const SecondNavBar = () => {
                       <hr style={{ width: "200px" }} />
                       <div className={style.barListDiv}>
                         <Link href="/scrappedData/ScrappedData/">
-                        <a href="">Scrapped News</a>
+                          <a href="">Scrapped News</a>
                         </Link>
                       </div>
                       <hr style={{ width: "200px" }} />
@@ -88,7 +88,14 @@ const SecondNavBar = () => {
         <Link href="/">
           <Nav.Item>
             <Nav.Link href="#/home">
-              <img src="../../logo.png" alt="" className={style.imglogo} />
+              <div style={{ width: "120px" }}>
+                <img
+                  src="../../logo1.png"
+                  alt="" className={style.imglogo}
+                  width="100%"
+                  height="100%"
+                />
+              </div>
             </Nav.Link>
           </Nav.Item>
         </Link>
@@ -121,28 +128,28 @@ const SecondNavBar = () => {
       </div>
       <div>
         <Nav.Item>
-        <Nav.Link eventKey="3">
-          <div className={style.socialmedia}>
-            <GrFacebookOption style={{ width: "2rem", color: "black" }} />
-            <FaTwitter style={{ width: "2rem", color: "black" }} />
-            <FaLinkedinIn
-              style={{
-                width: "2rem",
-                borderRight: "1px solid gray",
-                color: "black",
-              }}
-            />
+          <Nav.Link eventKey="3">
+            <div className={style.socialmedia}>
+              <GrFacebookOption style={{ width: "2rem", color: "black" }} />
+              <FaTwitter style={{ width: "2rem", color: "black" }} />
+              <FaLinkedinIn
+                style={{
+                  width: "2rem",
+                  borderRight: "1px solid gray",
+                  color: "black",
+                }}
+              />
 
-            <FaSearchengin
-              style={{ width: "2rem", color: "black" }}
-              onClick={handleClick}
-            />
-            {search && <SearchPopover search={search} setSearch={setSearch} />}
-          </div>
-        </Nav.Link>
-      </Nav.Item>
+              <FaSearchengin
+                style={{ width: "2rem", color: "black" }}
+                onClick={handleClick}
+              />
+              {search && <SearchPopover search={search} setSearch={setSearch} />}
+            </div>
+          </Nav.Link>
+        </Nav.Item>
       </div>
-      
+
     </div>
   );
 };

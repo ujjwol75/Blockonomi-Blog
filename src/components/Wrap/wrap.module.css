@@ -1,22 +1,25 @@
-.wrap{
+.wrap {
+    width: 100%;
     background-color: black;
     display: flex;
     flex-direction: row;
     color: white;
-    padding: 10px;
+    padding: 4px;
     align-items: center;
     text-align: center;
     justify-content: center;
 }
 
 @media only screen and (max-width:640px) {
-    .bitcoincol{
+    .bitcoincol {
         display: none;
     }
-    .barimg{
+
+    .barimg {
         width: 100px;
     }
-    .wrap{
+
+    .wrap {
         display: flex;
         flex-direction: row;
         justify-content: center;
@@ -28,13 +31,15 @@
 
 
 @media only screen and (max-width:768px) {
-    .bitcoincol{
+    .bitcoincol {
         display: none;
     }
-    .barimg{
+
+    .barimg {
         width: 100px;
     }
-    .wrap{
+
+    .wrap {
         display: flex;
         flex-direction: row;
         justify-content: center;
@@ -45,30 +50,40 @@
 }
 
 @media only screen and (max-width:1024px) {
-    .wraprow{
+    .wraprow {
         display: flex;
         flex-direction: row;
         justify-content: center;
     }
-    .barimg{
+
+    .barimg {
         width: 100px;
     }
 
 }
-.wraprow{
+
+.wraprow {
     flex-direction: row;
     display: flex;
 }
 
-.wrapimg{
+.wrapimg {
     width: 20px;
 }
 
-.wrapcol{
+.wrapcol {
     display: flex;
     flex-direction: column;
 }
 
-.btcspan{
+.btcspan {
     color: gray;
+}
+
+.percentage {
+    color: #F14865;
+}
+
+.perc {
+    color: yellowgreen;
 }

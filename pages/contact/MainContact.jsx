@@ -5,6 +5,7 @@ import usePostHook from '../../src/components/CustomHooks/usePostHook'
 import Footer from '../../src/components/Footer/Footer'
 import SecondNavBar from '../../src/components/SecondNavbar/SecondNavBar'
 import TopNavbar from '../../src/components/TopNavbar/TopNavbar'
+import Wrap from '../../src/components/Wrap/Wrap'
 import { APIS } from '../api/hello'
 
 const MainContact = () => {
@@ -18,25 +19,26 @@ const MainContact = () => {
   });
 
   const handleContact = (fullname, email, phone, message) => {
-  
-   
+
+
     const url = APIS.contactUs;
     const formData = {
       full_name: fullname,
-      email:email,
-      phone_number:phone,
-      message:message
+      email: email,
+      phone_number: phone,
+      message: message
     };
 
     try {
       createMutate({ url, formData });
-      
+
     } catch (e) {
 
     }
-    if(successMessage){
-      console.log('success: ' , successMessage)
-    }
+    // if (successMessage) {
+    //   console.log('success: ', successMessage)
+    //   alert(successMessage)
+    // }
   };
 
   return (
@@ -45,7 +47,9 @@ const MainContact = () => {
       <hr />
       <SecondNavBar />
       <hr />
-      <Contact handleContact={handleContact}/>
+      <Wrap />
+      <hr />
+      <Contact handleContact={handleContact} />
       <Footer />
     </Container>
   )

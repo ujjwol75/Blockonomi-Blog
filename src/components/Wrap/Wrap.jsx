@@ -1,113 +1,113 @@
-import React from "react";
+import axios from "axios";
+import React, { useEffect, useState } from "react";
 import { Col, Container, Row } from "react-bootstrap";
 import Bitcoin from "./Bitcoin";
 import style from "./wrap.module.css";
 const Wrap = () => {
+  const [headerData, setHeaderData] = useState();
+  const [nuCoinData, setNuCoinData] = useState();
+
+  const url = `https://min-api.cryptocompare.com/data/pricemultifull?fsyms=BTC,ETH,BNB,SOL,XRP,DOGE&tsyms=USD`;
+
+  const getHeaderData = async () => {
+    await axios.get(url)
+      .then((response) => {
+        const data = response.data;
+        setHeaderData(data)
+      })
+  }
+
+  useEffect(() => {
+    getHeaderData();
+  }, []);
+
+  //For Nu-coin
+  const nuCoinUrl = `https://insidecrypto.news/api/nu-coin/`;
+
+  const getNuCoinData = async () => {
+    await axios.get(nuCoinUrl)
+      .then((response) => {
+        const data = response.data;
+        setNuCoinData(data)
+      })
+  }
+
+  useEffect(() => {
+    getNuCoinData();
+  }, []);
+
+
   return (
     <div style={{ backgroundColor: "lightblue" }}>
-      <div className={style.wrap} lg='3'>
+      <div className={style.wrap}>
         <Row>
-          <Col sm='12' md='6' lg='3' xl='3'>
-            <Bitcoin />
+          <Col sm='4' md='3' lg='2' xl="2">
+            <Bitcoin
+              title={"BTC"}
+              price={headerData?.RAW?.BTC?.USD?.PRICE}
+              changeDay={parseFloat(headerData?.RAW?.BTC?.USD?.CHANGEDAY).toFixed(2)}
+            />
           </Col>
-          <Col sm='12' md='6' lg='3' xl='3' className={style.bitcoincol}>
-            <Bitcoin />
+          <Col sm='4' md='3' lg='2' xl="2" className={style.bitcoincol}>
+            <Bitcoin
+              title={"ETH"}
+              price={headerData?.RAW?.ETH?.USD?.PRICE}
+              changeDay={parseFloat(headerData?.RAW?.ETH?.USD?.CHANGEDAY).toFixed(2)}
+
+
+            />
           </Col>
-          <Col sm='12' md='6' lg='3' xl='3' className={style.bitcoincol}>
-            <Bitcoin />
+          <Col sm='4' md='3' lg='2' xl="2" className={style.bitcoincol}>
+
+            <Bitcoin
+              title={"BNB"}
+              price={headerData?.RAW?.BNB?.USD?.PRICE}
+              changeDay={parseFloat(headerData?.RAW?.BNB?.USD?.CHANGEDAY).toFixed(2)}
+
+
+            />
+
+
+
           </Col>
-          <Col sm='12' md='6' lg='3' xl='3' className={style.bitcoincol}>
-            <Bitcoin />
+          <Col sm='4' md='3' lg='1' xl="2" className={style.bitcoincol}>
+            <Bitcoin
+              title={"SOL"}
+              price={headerData?.RAW?.SOL?.USD?.PRICE}
+              changeDay={parseFloat(headerData?.RAW?.BNB?.USD?.CHANGEDAY).toFixed(2)}
+
+            />
+          </Col>
+          <Col sm='4' md='3' lg='1' xl="2" className={style.bitcoincol}>
+            <Bitcoin
+              title={"XRP"}
+              price={headerData?.RAW?.XRP?.USD?.PRICE}
+              changeDay={parseFloat(headerData?.RAW?.XRP?.USD?.CHANGEDAY).toFixed(2)}
+
+            />
+          </Col>
+          <Col sm='4' md='3' lg='2' xl="2" className={style.bitcoincol}>
+            <Bitcoin
+              title={"DOGE"}
+              price={headerData?.RAW?.DOGE?.USD?.PRICE}
+              changeDay={parseFloat(headerData?.RAW?.DOGE?.USD?.CHANGEDAY).toFixed(2)}
+
+            />
           </Col>
         </Row>
+        <Col sm='4' md='3' lg='2' xl="2" className={style.bitcoincol} style={{ textAlign: 'center', marginLeft: "8px" }}>
+          {nuCoinData?.results?.map((item) => (
+
+            <Bitcoin
+              title={item?.name}
+              price={item?.price_rate}
+              changeDay={parseFloat(item?.price_change).toFixed(2)}
+            />
+          ))}
+        </Col>
       </div>
     </div>
   );
 };
-//     <Container fluid='sm'>
-// <div className={style.wrap}>
-
-// <div className={style.wraprow} xs={4}>
-//   <div className={style.col}>
-//     <div className={style.row}>
-//       <div style={{width:'25px'}}>
-// <img
-//   src="../../bitcoin.webp"
-//   alt=""
-//   style={{ marginRight: "4px", width:'100%' }}
-// />
-//       </div>
-
-//       <span className={style.btcspan} >BTC/USD</span>
-//     </div>
-//     <span style={{ marginTop: "10px", fontSize:'14px' }}>$20,599.69</span>
-//   </div>
-//   <div className={style.barimg}>
-//   <img src="../../chart.png" alt="" style={{width:'100px'}}/>
-//   </div>
-
-//   </div>
-
-//   <div className={style.wraprow}>
-//   <div className={style.col}>
-//     <div className={style.row}>
-//     <div style={{width:'25px'}}>
-//       <img
-//         src="../../bitcoin.webp"
-//         alt=""
-//         style={{ marginRight: "4px", width:'100%' }}
-//       />
-//       </div>
-//       <span className={style.btcspan}>BTC/USD</span>
-//     </div>
-//     <span style={{ marginTop: "10px", fontSize:'14px' }}>$20,599.69</span>
-//   </div>
-//   <div className={style.barimg}>
-//   <img src="../../chart.png" alt="" style={{width:'100px'}}/>
-//   </div>
-//   </div>
-
-//   <div className={style.wraprow}>
-//   <div className={style.col}>
-//     <div className={style.row}>
-//     <div style={{width:'25px'}}>
-//       <img
-//         src="../../bitcoin.webp"
-//         alt=""
-//         style={{ marginRight: "4px", width:'100%' }}
-//       />
-//       </div>
-//       <span className={style.btcspan}>BTC/USD</span>
-//     </div>
-//     <span style={{ marginTop: "10px", fontSize:'14px' }}>$20,599.69</span>
-//   </div>
-//   <div className={style.barimg}>
-//   <img src="../../chart.png" alt="" style={{width:'100px'}}/>
-//   </div>
-//   </div>
-
-//   <div className={style.wraprow} >
-//   <div className={style.col}>
-//     <div className={style.row}>
-//     <div style={{maxWidth:'25px'}}>
-//       <img
-//         src="../../bitcoin.webp"
-//         alt=""
-//         style={{ marginRight: "4px", width:'100%' }}
-//       />
-//       </div>
-//       <span className={style.btcspan}>BTC/USD</span>
-//     </div>
-//     <span style={{ marginTop: "10px", fontSize:'14px' }}>$20,599.69</span>
-//   </div>
-//   <div className={style.barimg}>
-//   <img src="../../chart.png" alt="" style={{width:'100px'}}/>
-//   </div>
-//   </div>
-// </div>
-//     </Container>
-
-//   );
-// };
 
 export default Wrap;
