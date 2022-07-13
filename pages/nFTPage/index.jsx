@@ -10,7 +10,7 @@ const Nft = () => {
   return (
     <div>
       <Head>
-        <title>NFT:Inside Crypto</title>
+        <title>NFT:The Crypto Insider</title>
       </Head>
       <TopNavbar />
       <hr className="hrline" />

@@ -1,3 +1,4 @@
+import Head from 'next/head'
 import React from 'react'
 import { Container } from 'react-bootstrap'
 import Contact from '../../src/components/contactcomponent/Contact'
@@ -42,6 +43,11 @@ const MainContact = () => {
   };
 
   return (
+    <>
+    
+    <Head>
+        <title>Contact:The Crypto Insider</title>
+      </Head>
     <Container fluid>
       <TopNavbar />
       <hr />
@@ -51,7 +57,8 @@ const MainContact = () => {
       <hr />
       <Contact handleContact={handleContact} />
       <Footer />
-    </Container>
+      </Container>
+      </>
   )
 }
 
