@@ -2,15 +2,13 @@ import React from "react";
 import { Col, Container, Row } from "react-bootstrap";
 import { APIS } from "../../../pages/api/hello";
 import AdvertisementImageContent from "../Advertisement/AdvertisementImageContent";
-import AdvertisementTable from "../Advertisement/AdvertisementTable";
 import useGetHook from "../CustomHooks/useGetHook";
-import Footer from "../Footer/Footer";
 import LatestNews from "./LatestNews";
 import NewsDetailParagraph from "./NewsDetailParagraph";
 
 const NewsDetail = (props) => {
 
-  const { isLoading: navigationLoading, data: latestNewsData } = useGetHook(
+  const { data: latestNewsData } = useGetHook(
     {
       queryKey: 'latestNewsData',
       url: APIS.posts
@@ -29,21 +27,14 @@ const NewsDetail = (props) => {
           </Col>
 
           <Col md={12} sm={12} lg={4}>
-            <AdvertisementImageContent />
             <p style={{ fontWeight: 'bold', fontSize: '20px', marginTop: '10px' }}>Latest News</p>
-            {latestNewsData?.results?.slice(0, 3)?.map((curEle, index) =>
+            {latestNewsData?.results?.slice(0, 7)?.map((curEle, index) =>
               <LatestNews image={curEle?.image} title={curEle?.title} created={curEle?.created} key={index} id={curEle?.id} slug={curEle?.slug} />
             )}
-            <AdvertisementImageContent />
-            <AdvertisementTable />
           </Col>
         </Row>
 
       </Container>
-
-      {/* <Footer /> */}
-
-      {/* })} */}
 
     </>
   );

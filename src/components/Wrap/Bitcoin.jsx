@@ -27,7 +27,7 @@ const Bitcoin = (props) => {
           </span>
         )}
       </div>
-      <span>{`$ ${price}`}</span>
+      <span className="p-2">{price}</span>
       {/* <img src="../../chart.png" alt="" /> */}
     </div>
   )

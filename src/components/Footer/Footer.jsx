@@ -1,15 +1,50 @@
-import React, { useState } from "react";
+import React from "react";
 import style from "./footer.module.css";
 import { BsFacebook } from "react-icons/bs";
 import { AiFillTwitterCircle } from "react-icons/ai";
-import { Button, Container } from "react-bootstrap";
 import InputEmail from "./InputEmail";
-import MainContact from "../../../pages/contact/MainContact";
 import Link from "next/link";
+import usePostHook from "../CustomHooks/usePostHook";
+import { APIS } from "../../../pages/api/hello";
 
 const Footer = (props) => {
+  // email post 
+  const {
+    mutate: createMutate,
+    isPostError: errorMessage,
+    isPostSuccess: successMessage,
+    postData: postData,
+  } = usePostHook({
+    queryKey: 'suscribeToNewsLetter',
+  });
+  console.log(postData, "postData")
+
+  const handleNewsLetterClick = (email, setEmail) => {
 
 
+    const url = APIS.newsLetter;
+    const formData = {
+      email: email,
+    };
+
+    try {
+      createMutate({ url, formData });
+      if (successMessage) {
+        alert('success: ', successMessage)
+        setEmail('')
+      }
+      if (errorMessage) {
+        alert('error: ', "Either email is not valid or already exists")
+        setEmail('')
+
+      }
+
+
+    } catch (e) {
+
+    }
+
+  };
   return (
     <div className={style.footer}>
       <p style={{ fontSize: '14px', color: 'gray' }}>
@@ -25,11 +60,16 @@ const Footer = (props) => {
       </div>
 
       <div style={{ marginTop: '20px', marginBottom: '20px' }}>
-        <InputEmail handleNewsLetterClick={props.handleNewsLetterClick} />
+        <InputEmail handleNewsLetterClick={handleNewsLetterClick} />
       </div>
       <div className={style.icon}>
-        <BsFacebook style={{ fontSize: '26px', marginRight: '10px' }} />
-        <AiFillTwitterCircle style={{ fontSize: '30px' }} />
+        <Link href='https://www.facebook.com/nutechcity'>
+          <BsFacebook style={{ fontSize: '26px', marginRight: '10px' }} />
+        </Link>
+        <Link href='https://twitter.com/nugenesisou'>
+          <AiFillTwitterCircle style={{ fontSize: '30px' }} />
+        </Link>
+
       </div>
       <div style={{ fontSize: '12px', color: 'gray' }}>The Crypto Insider™ COPYRIGHT © 2017 - 2022 . ALL RIGHTS RESERVED.</div>
     </div>

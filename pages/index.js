@@ -13,34 +13,7 @@ import { useState } from "react";
 export default function Home() {
   const [page, setPage] = useState(1)
 
-  // email post 
-  const {
-    mutate: createMutate,
-    isPostError: errorMessage,
-    isPostSuccess: successMessage,
-    postData: postData,
-  } = usePostHook({
-    queryKey: 'suscribeToNewsLetter',
-  });
-
-  const handleNewsLetterClick = (email) => {
-  
-   
-    const url = APIS.newsLetter;
-    const formData = {
-      email: email,
-    };
-
-    try {
-      createMutate({ url, formData });
-      
-    } catch (e) {
-
-    }
-    if(successMessage){
-      consoe.log('success: ' , successMessage)
-    }
-  };
+ 
 
   // pagination 
   const { data: scribedPostCoinBitCoinList } = useGetHook({
@@ -58,12 +31,8 @@ export default function Home() {
       <hr />
       <Wrap />
       <NewsWrap />
-
       <News data={scribedPostCoinBitCoinList} page={page} setPage={setPage}/>
-      {/* <NewsCategory /> */}
-      
-      <Footer handleNewsLetterClick={handleNewsLetterClick}/>
+      <Footer/>
     </Container>
-    
   );
 }
