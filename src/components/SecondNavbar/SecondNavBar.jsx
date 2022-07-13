@@ -1,10 +1,8 @@
 import Link from "next/link";
-import { useRouter } from "next/router";
 import React, { useState } from "react";
-import { Button, Col, Container, Nav, NavDropdown, Row } from "react-bootstrap";
+import { Col, Nav, Row } from "react-bootstrap";
 import { GrFacebookOption } from "react-icons/gr";
 import { AiOutlineBars } from "react-icons/ai";
-import ScrappedData from "../../../pages/scrappedData/ScrappedData";
 import { ImCross } from "react-icons/im";
 
 import { FaTwitter, FaLinkedinIn, FaSearchengin } from "react-icons/fa";
@@ -14,10 +12,9 @@ import { APIS } from "../../../pages/api/hello";
 import SearchPopover from "../Search/SearchPopover";
 
 const SecondNavBar = () => {
-  const handleSelect = (eventKey) => alert(`selected ${eventKey}`);
   const [barIcon, setBarIcon] = useState(false);
   const [search, setSearch] = useState(false);
-  const { isLoading: navigationLoading, data: navigationListData } = useGetHook(
+  const { data: navigationListData } = useGetHook(
     {
       queryKey: "navigationListData",
       url: APIS.navigation,
@@ -46,22 +43,27 @@ const SecondNavBar = () => {
         </div>
 
         <div className={style.navbarlinks}>
-          <Link href="/nFTPage">
-            <span className={style.navitem}>NFT News</span>
-          </Link>
-
-          {navigationListData?.results?.map((item, index) => (
-            <Link key={index} href={`/DetailPage/${item.category_id}`}>
-              <Nav.Item>
-                <Nav.Link eventKey="2" title="Item">
-                  <span style={{ color: "black" }}>{item.title}</span>
-                </Nav.Link>
-              </Nav.Item>
+          <div>
+            <Link href="/nFTPage">
+              <span className={style.navitem}>NFT News</span>
             </Link>
-          ))}
-          <Link href="/scrappedData/ScrappedData/">
-            <span className={style.navitem}>Scrapped News</span>
-          </Link>
+          </div>
+          <div>
+
+            {navigationListData?.results?.map((item, index) => (
+              <Link key={index} href={`/research/${item.category_id}`}>
+
+                <span style={{ color: "black" }}>{item.title}</span>
+
+              </Link>
+            ))}
+          </div>
+          <div>
+            <Link href="/scrappedData/ScrappedData/">
+              <span className={style.navitem}>Scrapped News</span>
+            </Link>
+          </div>
+
 
           {/* <Nav.Item>
           <Nav.Link eventKey="3">
@@ -132,15 +134,24 @@ const SecondNavBar = () => {
           <Nav.Item>
             <Nav.Link eventKey="3">
               <div className={style.socialmedia}>
-                <GrFacebookOption style={{ width: "2rem", color: "black" }} />
-                <FaTwitter style={{ width: "2rem", color: "black" }} />
-                <FaLinkedinIn
-                  style={{
-                    width: "2rem",
-                    borderRight: "1px solid gray",
-                    color: "black",
-                  }}
-                />
+                <Link href='https://www.facebook.com/nutechcity'>
+                  <GrFacebookOption style={{ width: "2rem", color: "black" }} />
+                </Link>
+                <Link href='https://twitter.com/nugenesisou'>
+
+                  <FaTwitter style={{ width: "2rem", color: "black" }} />
+                </Link>
+                <Link href='https://www.linkedin.com/company/nugenesis/'>
+
+                  <FaLinkedinIn
+                    style={{
+                      width: "2rem",
+                      borderRight: "1px solid gray",
+                      color: "black",
+                    }}
+                  />
+                </Link>
+
 
                 <FaSearchengin
                   style={{ width: "2rem", color: "black" }}

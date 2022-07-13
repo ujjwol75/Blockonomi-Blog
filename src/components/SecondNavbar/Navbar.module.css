@@ -57,13 +57,18 @@
 }
 
 .navbarlinks {
-    display: flex;
+    display: inline-flex;
     flex-direction: row;
     text-align: center;
     justify-content: center;
     align-items: center;
     justify-content: space-between;
 
+
+}
+
+.navbarlinks>div {
+    margin: 6px;
 }
 
 @media only screen and (max-width:640px) {

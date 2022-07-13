@@ -1,0 +1,46 @@
+import Head from 'next/head';
+import { useRouter } from 'next/router';
+import React from 'react';
+import { Container } from 'react-bootstrap';
+import useGetHook from '../../src/components/CustomHooks/useGetHook';
+import Footer from '../../src/components/Footer/Footer';
+import Research from '../../src/components/Research/Research';
+import SecondNavBar from '../../src/components/SecondNavbar/SecondNavBar';
+import TopNavbar from '../../src/components/TopNavbar/TopNavbar';
+import Wrap from '../../src/components/Wrap/Wrap';
+import { APIS } from '../api/hello';
+const Detail = () => {
+  const router = useRouter();
+  const { postid } = router.query;
+
+  const {
+    isLoading: singlePageLoader,
+    data: singlePageData,
+    isError,
+  } = useGetHook({
+    queryKey: `singlePageData${postid}`,
+    url: `${APIS.posts}?categories=${postid}`,
+  });
+  console.log(singlePageData)
+  return (
+    <div>
+      <Head>
+        <title>Research:The Crypto Insider</title>
+      </Head>
+      <TopNavbar />
+      <hr className="hrline" />
+      <SecondNavBar />
+      <hr />
+      <Wrap />
+      <Container>
+        <Research
+          singlePageLoader={singlePageLoader}
+          singlePageData={singlePageData}
+        />
+      </Container>
+      <Footer />
+    </div>
+  );
+};
+
+export default Detail;

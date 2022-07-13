@@ -40,72 +40,71 @@ const Wrap = () => {
   return (
     <div style={{ backgroundColor: "lightblue" }}>
       <div className={style.wrap}>
-        <Row>
-          <Col sm='4' md='3' lg='2' xl="2">
+        <div >
+          <div>
             <Bitcoin
               title={"BTC"}
-              price={headerData?.RAW?.BTC?.USD?.PRICE}
+              price={`$${headerData?.RAW?.BTC?.USD?.PRICE}`}
               changeDay={parseFloat(headerData?.RAW?.BTC?.USD?.CHANGEDAY).toFixed(2)}
             />
-          </Col>
-          <Col sm='4' md='3' lg='2' xl="2" className={style.bitcoincol}>
+          </div>
+
+          <div>
             <Bitcoin
               title={"ETH"}
-              price={headerData?.RAW?.ETH?.USD?.PRICE}
+              price={`$${headerData?.RAW?.ETH?.USD?.PRICE}`}
               changeDay={parseFloat(headerData?.RAW?.ETH?.USD?.CHANGEDAY).toFixed(2)}
 
 
             />
-          </Col>
-          <Col sm='4' md='3' lg='2' xl="2" className={style.bitcoincol}>
-
+          </div>
+          <div>
             <Bitcoin
               title={"BNB"}
-              price={headerData?.RAW?.BNB?.USD?.PRICE}
+              price={`$${headerData?.RAW?.BNB?.USD?.PRICE}`}
               changeDay={parseFloat(headerData?.RAW?.BNB?.USD?.CHANGEDAY).toFixed(2)}
 
 
             />
-
-
-
-          </Col>
-          <Col sm='4' md='3' lg='1' xl="2" className={style.bitcoincol}>
+          </div>
+          <div>
             <Bitcoin
               title={"SOL"}
-              price={headerData?.RAW?.SOL?.USD?.PRICE}
+              price={`$${headerData?.RAW?.SOL?.USD?.PRICE}`}
               changeDay={parseFloat(headerData?.RAW?.BNB?.USD?.CHANGEDAY).toFixed(2)}
 
             />
-          </Col>
-          <Col sm='4' md='3' lg='1' xl="2" className={style.bitcoincol}>
+          </div>
+          <div>
             <Bitcoin
               title={"XRP"}
-              price={headerData?.RAW?.XRP?.USD?.PRICE}
+              price={`$${headerData?.RAW?.XRP?.USD?.PRICE}`}
               changeDay={parseFloat(headerData?.RAW?.XRP?.USD?.CHANGEDAY).toFixed(2)}
-
             />
-          </Col>
-          <Col sm='4' md='3' lg='2' xl="2" className={style.bitcoincol}>
+          </div>
+          <div>
             <Bitcoin
               title={"DOGE"}
-              price={headerData?.RAW?.DOGE?.USD?.PRICE}
+              price={`$${headerData?.RAW?.DOGE?.USD?.PRICE}`}
               changeDay={parseFloat(headerData?.RAW?.DOGE?.USD?.CHANGEDAY).toFixed(2)}
 
+
             />
-          </Col>
-        </Row>
-        <Col sm='4' md='3' lg='2' xl="2" className={style.bitcoincol} style={{ textAlign: 'center', marginLeft: "8px" }}>
-          {nuCoinData?.results?.map((item, key) => (
-            <div key={key}>
-              <Bitcoin
-                title={item?.name}
-                price={item?.price_rate}
-                changeDay={parseFloat(item?.price_change).toFixed(2)}
-              />
-            </div>
-          ))}
-        </Col>
+          </div>
+          <div>
+            {nuCoinData?.results?.map((item, key) => (
+              <div key={key}>
+                <Bitcoin
+                  title={item?.name}
+                  price={item?.price_rate}
+                  changeDay={parseFloat(item?.price_change).toFixed(2)}
+                />
+              </div>
+            ))}
+          </div>
+        </div>
+
+
       </div>
     </div>
   );
