@@ -12,7 +12,7 @@ const index = () => {
   return (
     <div>
       <Head>
-        <title>Live Market:Inside Crypto</title>
+        <title>Live Market:The Crypto Insider</title>
       </Head>
       <Container fluid>
         <TopNavbar />

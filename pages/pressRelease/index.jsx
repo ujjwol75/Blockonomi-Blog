@@ -11,7 +11,7 @@ const index = () => {
   return (
     <>
       <Head>
-        <title>Press Release:Blockonomi</title>
+        <title>Press Release:The Crypto Insider</title>
       </Head>
       <Container fluid>
         <TopNavbar />

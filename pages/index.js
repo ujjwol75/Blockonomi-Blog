@@ -9,6 +9,7 @@ import { APIS } from "./api/hello";
 import {  Container, } from "react-bootstrap";
 import useGetHook from "../src/components/CustomHooks/useGetHook";
 import { useState } from "react";
+import Head from "next/head";
 
 export default function Home() {
   const [page, setPage] = useState(1)
@@ -24,6 +25,10 @@ export default function Home() {
 
 
   return (
+    <>
+    <Head>
+        <title>The Crypto Insider</title>
+      </Head>
     <Container fluid>
       <TopNavbar />
       <hr className="hrline" />
@@ -33,6 +38,8 @@ export default function Home() {
       <NewsWrap />
       <News data={scribedPostCoinBitCoinList} page={page} setPage={setPage}/>
       <Footer/>
-    </Container>
+      </Container>
+    </>
+      
   );
 }
