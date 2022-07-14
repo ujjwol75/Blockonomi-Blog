@@ -28,22 +28,20 @@ const SecondNavBar = () => {
     <>
 
       <div className={style.secondnavbar}>
-
-        
-
-        <div className={style.navbarlinks}>
-        <div style={{ width: "140px", marginLeft: "70px" }}>
-          <Link href="/">
+      <Link href="/">
             <div style={{ width: "100px" }}>
               <img
                 src="../../mainLogo.png"
                 alt="" className={style.imglogo}
-                width="60%"
-                height="60%"
+                width="100%"
+                height="100%"
               />
             </div>
           </Link>
-        </div>
+        
+
+        <div className={style.navbarlinks}>
+        
         <div>
             <Link href="/scrappedData/ScrappedData/">
               <span className={style.navitem}>News</span>
