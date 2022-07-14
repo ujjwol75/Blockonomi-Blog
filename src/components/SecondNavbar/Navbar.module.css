@@ -175,6 +175,7 @@
 .navitem {
     cursor: pointer;
     color: black;
+    margin-right: 20px;
 }
 
 .secondnavbar {
@@ -187,6 +188,10 @@
 
 
 @media only screen and (max-width:1120px) {
+    .secondnavbar{
+        margin-top: 6px;
+        margin: 6px 0 0 100px;
+    }
     .barListDiv a {
         text-decoration: none;
         color: black;
@@ -230,8 +235,9 @@
     .secondnavbar {
         margin-bottom: 10px;
         display: flex;
-        /* justify-content: center; */
+
         align-items: center;
     }
 
 }
+

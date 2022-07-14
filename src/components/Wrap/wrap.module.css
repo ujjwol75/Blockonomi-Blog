@@ -1,5 +1,5 @@
 .wrap {
-    width: 100%;
+
     background-color: black;
     display: flex;
     flex-direction: row;
@@ -34,8 +34,9 @@
         justify-content: center;
         text-align: center;
         align-items: center;
+        overflow-x: scroll;
+        padding-left: 292px;
     }
-
 }
 
 
@@ -54,6 +55,7 @@
         justify-content: center;
         text-align: center;
         align-items: center;
+        overflow-x: scroll;
     }
 
 }
@@ -68,6 +70,17 @@
     .barimg {
         width: 100px;
     }
+
+    .wrap {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        text-align: center;
+        align-items: center;
+        overflow-x: scroll;
+
+    }     
+
 
 }
 

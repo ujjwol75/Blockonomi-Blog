@@ -6,7 +6,6 @@ import useGetHook from '../../src/components/CustomHooks/useGetHook';
 import Footer from '../../src/components/Footer/Footer';
 import Research from '../../src/components/Research/Research';
 import SecondNavBar from '../../src/components/SecondNavbar/SecondNavBar';
-import TopNavbar from '../../src/components/TopNavbar/TopNavbar';
 import Wrap from '../../src/components/Wrap/Wrap';
 import { APIS } from '../api/hello';
 const Detail = () => {
@@ -27,8 +26,7 @@ const Detail = () => {
       <Head>
         <title>Research:The Crypto Insider</title>
       </Head>
-      <TopNavbar />
-      <hr className="hrline" />
+  
       <SecondNavBar />
       <hr />
       <Wrap />

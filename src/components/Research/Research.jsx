@@ -25,7 +25,7 @@ const Research = (props) => {
                         <span className={style.textimage}>METAVERSE</span>
                       </div>
 
-                      <NewsTitle width={item?.width} font={item?.font} description={item?.description} date={item?.date} author={item?.author} title={item?.title} color={item?.color} content={item?.content} contentlength={item?.contentlength} />
+                      <NewsTitle width={item?.width} font={item?.font} description={item?.description} date={item?.date} author={item?.author} title={item?.title} color={item?.color} content={item?.content} contentlength={item?.contentlength} height="250px"/>
                     </a>
 
                   </Link>
