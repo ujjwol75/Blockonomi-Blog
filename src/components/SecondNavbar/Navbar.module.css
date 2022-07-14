@@ -175,6 +175,7 @@
 .navitem {
     cursor: pointer;
     color: black;
+    margin-right: 20px;
 }
 
 .secondnavbar {

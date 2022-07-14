@@ -5,7 +5,6 @@ import useGetHook from "../../src/components/CustomHooks/useGetHook";
 import Footer from "../../src/components/Footer/Footer";
 import ScrappedMain from "../../src/components/Scrapped/ScrappedMain";
 import SecondNavBar from "../../src/components/SecondNavbar/SecondNavBar";
-import TopNavbar from "../../src/components/TopNavbar/TopNavbar";
 import Wrap from "../../src/components/Wrap/Wrap";
 import { APIS } from "../api/hello";
 
@@ -28,8 +27,6 @@ const ScrappedData = () => {
       <Head>
         <title>The Crypto Insider</title>
       </Head>
-      <TopNavbar />
-      <hr />
       <SecondNavBar />
       <hr />
       <Wrap />

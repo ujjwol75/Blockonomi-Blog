@@ -1,10 +1,9 @@
 import News from "../src/components/News/News";
 import SecondNavBar from "../src/components/SecondNavbar/SecondNavBar";
-import TopNavbar from "../src/components/TopNavbar/TopNavbar";
+
 import Wrap from "../src/components/Wrap/Wrap";
 import NewsWrap from "../src/components/NewsWarp/NewsWrap";
 import Footer from "../src/components/Footer/Footer";
-import usePostHook from "../src/components/CustomHooks/usePostHook";
 import { APIS } from "./api/hello";
 import {  Container, } from "react-bootstrap";
 import useGetHook from "../src/components/CustomHooks/useGetHook";
@@ -30,8 +29,6 @@ export default function Home() {
         <title>The Crypto Insider</title>
       </Head>
     <Container fluid>
-      <TopNavbar />
-      <hr className="hrline" />
       <SecondNavBar />
       <hr />
       <Wrap />

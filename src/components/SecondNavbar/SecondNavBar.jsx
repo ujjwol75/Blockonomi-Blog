@@ -29,23 +29,24 @@ const SecondNavBar = () => {
 
       <div className={style.secondnavbar}>
 
+        
+
+        <div className={style.navbarlinks}>
         <div style={{ width: "140px", marginLeft: "70px" }}>
           <Link href="/">
             <div style={{ width: "100px" }}>
               <img
                 src="../../mainLogo.png"
                 alt="" className={style.imglogo}
-                width="100%"
-                height="100%"
+                width="60%"
+                height="60%"
               />
             </div>
           </Link>
         </div>
-
-        <div className={style.navbarlinks}>
-          <div>
-            <Link href="/nFTPage">
-              <span className={style.navitem}>NFT News</span>
+        <div>
+            <Link href="/scrappedData/ScrappedData/">
+              <span className={style.navitem}>News</span>
             </Link>
           </div>
           <div>
@@ -59,8 +60,27 @@ const SecondNavBar = () => {
             ))}
           </div>
           <div>
-            <Link href="/scrappedData/ScrappedData/">
-              <span className={style.navitem}>Scrapped News</span>
+            <Link href="/nFTPage">
+              <span className={style.navitem}>NFT News</span>
+            </Link>
+          </div>
+          
+
+          <div>
+            <Link href="/pressRelease">
+              <span className={style.navitem}>Submit Press Release</span>
+            </Link>
+          </div>
+
+          <div>
+            <Link href="/marketLivePage">
+              <span className={style.navitem}>Market Live</span>
+            </Link>
+          </div>
+
+          <div>
+            <Link href="/contact/MainContact">
+              <span className={style.navitem}>Contact</span>
             </Link>
           </div>
 
