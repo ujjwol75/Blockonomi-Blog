@@ -1,5 +1,5 @@
 import React from 'react';
-import { Container, Row, Button } from 'react-bootstrap';
+import { Container, Row } from 'react-bootstrap';
 import Footer from '../../src/components/Footer/Footer';
 import NewsHeading from '../../src/components/News/NewsHeading';
 import SecondNavBar from '../../src/components/SecondNavbar/SecondNavBar';
