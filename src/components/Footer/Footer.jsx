@@ -1,11 +1,13 @@
 import React from "react";
 import style from "./footer.module.css";
-import { BsFacebook } from "react-icons/bs";
+import { BsFacebook, BsLinkedin, BsInstagram, BsYoutube } from "react-icons/bs";
 import { AiFillTwitterCircle } from "react-icons/ai";
+import { FaTiktok } from "react-icons/fa";
 import InputEmail from "./InputEmail";
 import Link from "next/link";
 import usePostHook from "../CustomHooks/usePostHook";
 import { APIS } from "../../../pages/api/hello";
+// import { LinkedinIcon } from "next-share";
 
 const Footer = (props) => {
   // email post 
@@ -67,7 +69,19 @@ const Footer = (props) => {
           <BsFacebook style={{ fontSize: '26px', marginRight: '10px' }} />
         </Link>
         <Link href='https://twitter.com/nugenesisou'>
-          <AiFillTwitterCircle style={{ fontSize: '30px' }} />
+          <AiFillTwitterCircle style={{ fontSize: '30px', marginRight: '10px' }} />
+        </Link>
+        <Link href='https://au.linkedin.com/company/nugenesis'>
+          <BsLinkedin style={{ fontSize: '30px', marginRight: '10px' }} />
+        </Link>
+        <Link href='https://www.youtube.com/channel/UCUcwdvfmOUB9axXVaKKW4lA'>
+          <BsYoutube style={{ fontSize: '30px', marginRight: '10px' }} />
+        </Link>
+        <Link href='https://www.instagram.com/nugenesis.ou/'>
+          <BsInstagram style={{ fontSize: '30px', marginRight: '10px' }} />
+        </Link>
+        <Link href='https://www.tiktok.com/@nugenesis.ou'>
+          <FaTiktok style={{ fontSize: '30px', marginRight: '10px' }} />
         </Link>
 
       </div>
