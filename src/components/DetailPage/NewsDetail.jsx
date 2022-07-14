@@ -16,7 +16,7 @@ const NewsDetail = (props) => {
   )
   return (
     <>
-      <Container style={{ marginTop: '20px', flexWrap: 'wrap' }}>
+      <Container>
         <Row>
           <Col md={12} sm={12} lg={8}>
             <div style={{ maxWidth: '100%' }}>

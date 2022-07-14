@@ -28,12 +28,13 @@ const Detail = () => {
       </Head>
   
       <SecondNavBar />
-      <hr />
+   
       <Wrap />
       <Container>
         <Research
           singlePageLoader={singlePageLoader}
           singlePageData={singlePageData}
+          height="300px"
         />
       </Container>
       <Footer />

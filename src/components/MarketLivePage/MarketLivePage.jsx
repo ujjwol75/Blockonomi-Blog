@@ -1,6 +1,7 @@
 
 import axios from 'axios';
 import { useEffect, useState } from 'react';
+import { Container, Row } from 'react-bootstrap';
 import styles from '../MarketLivePage/Market.module.css';
 const MarketLivePage = () => {
 
@@ -35,7 +36,9 @@ const MarketLivePage = () => {
 
 
   return (
-    <div className='position-relative'>
+    <Container>
+     <Row>
+     <div className='position-relative'>
       <div className="container my-4" >
         <h3>Top 10 Grossing Coins of All Time</h3>
 
@@ -229,6 +232,9 @@ const MarketLivePage = () => {
       </div>
 
     </div>
+     </Row>
+    </Container>
+    
   )
 }
 

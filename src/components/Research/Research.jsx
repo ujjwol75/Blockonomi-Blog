@@ -21,7 +21,7 @@ const Research = (props) => {
                   <Link href={`/articles/${item?.slug}`}>
                     <a href="" style={{ textDecoration: 'none', color: 'black' }}>
                       <div className={style.imgdiv} style={{ cursor: 'pointer', maxHeight: "item??.height" }}>
-                        <img src={item?.image} alt="hero image" style={{ height: item?.height }} className={style.image} />
+                        <img src={item?.image} alt="hero image" className={style.image} style={{height:'250px'}}/>
                         <span className={style.textimage}>METAVERSE</span>
                       </div>
 

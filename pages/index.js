@@ -30,7 +30,6 @@ export default function Home() {
       </Head>
     <Container fluid>
       <SecondNavBar />
-      <hr />
       <Wrap />
       <NewsWrap />
       <News data={scribedPostCoinBitCoinList} page={page} setPage={setPage}/>

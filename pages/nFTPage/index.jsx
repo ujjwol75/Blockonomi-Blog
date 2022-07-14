@@ -13,7 +13,7 @@ const Nft = () => {
       </Head>
       
       <SecondNavBar />
-      <hr />
+  
       <Wrap />
       <Container>
         <NFTComponent />

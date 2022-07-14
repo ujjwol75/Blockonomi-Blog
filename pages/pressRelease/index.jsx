@@ -15,7 +15,6 @@ const index = () => {
       <Container fluid>
    
         <SecondNavBar />
-        <hr />
         <Wrap />
         <hr />
         <PressRelease />
