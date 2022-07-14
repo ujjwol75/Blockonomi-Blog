@@ -1,7 +1,7 @@
 import React from "react";
 import Footer from "../Footer/Footer";
 import SecondNavBar from "../SecondNavbar/SecondNavBar";
-import TopNavbar from "../TopNavbar/TopNavbar";
+
 import NewsImageTitle from "../News/NewsImage";
 import { Col, Container, Row } from "react-bootstrap";
 
@@ -9,8 +9,6 @@ const MainSearch = (props) => {
   console.log("props?.data?.results?", props?.data?.results);
   return (
     <div>
-      <TopNavbar />
-      <hr />
       <SecondNavBar />
       <hr />
       <Container>

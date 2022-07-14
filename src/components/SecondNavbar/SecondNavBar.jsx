@@ -32,7 +32,8 @@ const SecondNavBar = () => {
             <div style={{ width: "100px" }}>
               <img
                 src="../../mainLogo.png"
-                alt="" className={style.imglogo}
+                alt="" 
+                className={style.imglogo}
                 width="100%"
                 height="100%"
               />
@@ -113,7 +114,7 @@ const SecondNavBar = () => {
                         <div className={style.barListDiv}>
                           <a href="">About</a>
                         </div>
-                        <hr style={{ width: "200px" }} />
+                        {/* <hr style={{ width: "200px" }} /> */}
                         {/* <div className={style.barListDiv}>
                               <a href="">Advertise</a>
                             </div> */}
@@ -124,9 +125,30 @@ const SecondNavBar = () => {
                         <hr style={{ width: "200px" }} />
                         <div className={style.barListDiv}>
                           <Link href="/scrappedData/ScrappedData/">
-                            <a href="">Scrapped News</a>
+                            <a href="">News</a>
                           </Link>
                         </div>
+                        <hr style={{width:'200px'}}/>
+
+                        <div className={style.barListDiv}>
+                          <Link href="/scrappedData/ScrappedData/">
+                            <a href="/pressRelease">Submit Press Release</a>
+                          </Link>
+                        </div>
+                        <hr style={{width:'200px'}}/>
+
+                        
+                        {/* <hr style={{width:'200px'}}/> */}
+
+                        <div className={style.barListDiv}>
+                          <Link href="/contact/MainContact">
+                            <a >Contact</a>
+                          </Link>
+                        </div>
+                        {/* <hr style={{width:'200px'}}/> */}
+
+
+                        
                         {/* <hr style={{ width: "200px" }} />
                             <Button>Claim Free Crypto</Button>
                             <hr style={{ width: "200px" }} /> */}
