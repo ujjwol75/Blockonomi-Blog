@@ -38,7 +38,7 @@ const InputEmail = (props) => {
             Please provide a valid email.
           </Form.Control.Feedback>
         </Form.Group>
-        <Button variant="warning" type="submit" style={{ height: "38px" }}>Sign Me Up</Button>
+        <Button type="submit" style={{ height: "38px", backgroundColor:'#01696E' }}>Sign Me Up</Button>
       </Form>
     </Container>
   );

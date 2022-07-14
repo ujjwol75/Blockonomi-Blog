@@ -1,10 +1,8 @@
-
 import React from 'react';
 import { Container, Row } from 'react-bootstrap';
 import Footer from '../../src/components/Footer/Footer';
 import NewsHeading from '../../src/components/News/NewsHeading';
 import SecondNavBar from '../../src/components/SecondNavbar/SecondNavBar';
-import TopNavbar from '../../src/components/TopNavbar/TopNavbar';
 import Wrap from '../../src/components/Wrap/Wrap';
 import { APIS } from '../api/hello';
 import NewsDetail from '../../src/components/DetailPage/NewsDetail';
@@ -37,8 +35,7 @@ const Detail = (props) => {
         {/* <meta property="og:url" content={`https://insidecrypto.news`} /> */}
         <meta property="fb:app_id" content={"1144829116095615"} />
       </Head>
-      <TopNavbar />
-      <hr className="hrline" />
+  
       <SecondNavBar />
       <hr />
       <Wrap />

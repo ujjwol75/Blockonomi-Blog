@@ -5,7 +5,6 @@ import Contact from '../../src/components/contactcomponent/Contact'
 import usePostHook from '../../src/components/CustomHooks/usePostHook'
 import Footer from '../../src/components/Footer/Footer'
 import SecondNavBar from '../../src/components/SecondNavbar/SecondNavBar'
-import TopNavbar from '../../src/components/TopNavbar/TopNavbar'
 import Wrap from '../../src/components/Wrap/Wrap'
 import { APIS } from '../api/hello'
 
@@ -49,8 +48,7 @@ const MainContact = () => {
         <title>Contact:The Crypto Insider</title>
       </Head>
     <Container fluid>
-      <TopNavbar />
-      <hr />
+
       <SecondNavBar />
       <hr />
       <Wrap />
