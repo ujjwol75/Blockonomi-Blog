@@ -9,14 +9,17 @@
     padding: 5% 5%; 
     margin-bottom: 30px;
 }
-
+.newsimagediv{
+    height: 500px;
+}
 @media screen  and (max-width:640px){
     .newswrapcontainer{
         display: flex;
     }
-    .newsimage{
-        height: '200px';
+    .newsimagediv{
+        height: 250px;
     }
+
     .wrapcol{
         width: 100%;
     }
@@ -26,7 +29,3 @@
     }
 }
 
-
-.newswrapimg{
-    width: 100%;
-}
