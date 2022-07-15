@@ -17,7 +17,7 @@ const News = (props) => {
 
   return (
 
-    <Container className={style.container}>
+    <Container fluid className={style.newsmain}>
       <Row>
         <Col md={8} sm={12} lg={8} xl={8}>
           <Row>
@@ -26,15 +26,14 @@ const News = (props) => {
             {props?.search ?
 
               <>{props?.data?.results?.map((items, key) =>
-                <Col md={6} key={key}>
-                  <div>
-
+                <Col md={6} key={key} >
+                  <div className={style.newsimagediv}>
                     <NewsImage
                       description={items.description}
                       date={items.publish_date}
                       author={items.author}
                       image={items.image}
-                      height="250px"
+                      className={style.newsimage}
                       // id={items.id}
                       slug={items.slug}
                       title={items.title}
@@ -74,7 +73,7 @@ const News = (props) => {
         </Col>
         <>
 
-          <Col md={12} sm={12} lg={4}>
+          <Col md={4} sm={12} lg={4}>
 
             <p style={{ fontWeight: 'bold', fontSize: '20px', marginTop: '10px' }}>Latest News</p>
             {latestNewsData?.results?.slice(5, 15)?.map((curEle, index) =>

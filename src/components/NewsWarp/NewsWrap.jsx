@@ -16,7 +16,8 @@ const NewsWrap = () => {
       <div className={style.newswrapcontainer}>
         <Row>
           <Col md='12' sm='12' lg='6' xl='6'>
-          <NewsImage
+            <div>
+<NewsImage
               font="16px"
               description={newswrapdata?.results[0].description}
               title={newswrapdata?.results[0].title}
@@ -29,6 +30,8 @@ const NewsWrap = () => {
               slug={newswrapdata?.results[0].slug}
               height="400px"
             />
+            </div>
+          
           </Col>
 
 

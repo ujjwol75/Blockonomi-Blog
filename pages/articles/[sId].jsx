@@ -37,7 +37,6 @@ const Detail = (props) => {
       </Head>
   
       <SecondNavBar />
-      <hr />
       <Wrap />
       <Container>
         <Row>

@@ -50,7 +50,6 @@ const MainContact = () => {
     <Container fluid>
 
       <SecondNavBar />
-      <hr />
       <Wrap />
       <hr />
       <Contact handleContact={handleContact} />

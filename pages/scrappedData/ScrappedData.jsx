@@ -28,7 +28,6 @@ const ScrappedData = () => {
         <title>The Crypto Insider</title>
       </Head>
       <SecondNavBar />
-      <hr />
       <Wrap />
       <hr />
       <Container>

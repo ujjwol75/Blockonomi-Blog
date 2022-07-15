@@ -3,7 +3,7 @@ import React from 'react'
 const NewsHeading = (props) => {
   return (
     <>
-    <div style={{fontSize:'2rem', fontWeight:'bold'}}>
+    <div style={{fontSize:'2rem', fontWeight:'bold', marginTop:'15px'}}>
         {props?.title}
     </div>
     <div style={{fontSize:'1rem', color:'gray', marginTop:'8px'}}>

@@ -38,14 +38,15 @@ const Wrap = () => {
 
 
   return (
-    <div style={{ backgroundColor: "lightblue" }}>
+    <div style={{ backgroundColor: "lightblue", width:'100%' }}>
       <div className={style.wrap}>
-        <div >
+        {/* <div > */}
           <div>
             <Bitcoin
               title={"BTC"}
               price={`$${headerData?.RAW?.BTC?.USD?.PRICE}`}
               changeDay={parseFloat(headerData?.RAW?.BTC?.USD?.CHANGEDAY).toFixed(2)}
+              style={{marginLeft:'120px'}}
             />
           </div>
 
@@ -102,7 +103,7 @@ const Wrap = () => {
               </div>
             ))}
           </div>
-        </div>
+        {/* </div> */}
 
 
       </div>

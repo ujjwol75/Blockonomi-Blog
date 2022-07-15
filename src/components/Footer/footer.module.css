@@ -44,10 +44,6 @@
         margin-top: '20px';
     }
 
-    .footerlink a {
-        font-size: 13px;
-    }
-
     .icon {
         margin-top: 10px;
     }
@@ -56,10 +52,7 @@
         margin-top: 5px;
     }
 
-    .forminput input {
-        padding: 1px 1px;
 
-    }
 }
 
 @media only screen and (max-width:768px) {
@@ -68,15 +61,16 @@
         color: gray;
     }
 
+   
     .footerimg {
         width: "100%";
         color: "white";
         margin-top: '20px';
     }
 
-    .footerlink a {
+    /* .footerlink a {
         font-size: 13px;
-    }
+    } */
 
     .icon {
         margin-top: 10px;
@@ -86,14 +80,8 @@
         margin-top: 5px;
     }
 
-    .forminput input {
-        padding: 1px 1px;
 
-    }
-
-    .button {
-        font-size: 12px;
-    }
+   
 }
 
 @media only screen and (max-width:1024px) {
@@ -122,3 +110,7 @@
     /* margin-top: 25px; */
     display: flex;
 }
+.buttondiv{
+  height: 38px;
+}
+
