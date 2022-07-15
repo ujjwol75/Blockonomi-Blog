@@ -7,13 +7,13 @@ const Bitcoin = (props) => {
     <div className={style.wraprow}>
       <div className={style.wrapcol}>
         <div className={style.wraprow}>
-          <div className={style.wrapimg}>
+          {/* <div className={style.wrapimg}>
             <img
               src="../../bitcoin.webp"
               alt=""
               style={{ marginRight: "4px", width: "100%" }}
             />
-          </div>
+          </div> */}
 
           <span className={style.btcspan}>{title}</span>
         </div>
