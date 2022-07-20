@@ -22,6 +22,8 @@ const SecondNavBar = () => {
   const handleClick = () => {
     setSearch(!search);
   };
+
+
   return (
     <>
       <div className={style.secondnavbar}>
@@ -109,7 +111,7 @@ const SecondNavBar = () => {
           </Nav.Item>
         </div>
         <Link href="/">
-          <div style={{ width: "90px" }}>
+          <div style={{ width: "90px", cursor:'pointer' }}>
             <img
               src="../../mainLogo.png"
               alt=""
@@ -176,7 +178,8 @@ const SecondNavBar = () => {
                 <Link href="https://www.facebook.com/nutechcity">
                   <GrFacebookOption style={{ width: "2rem", color: "black" }} />
                 </Link>
-                <Link href="https://twitter.com/nugenesisou">
+                <Link href="https://twitter.com/nugenesisou" >
+                  
                   <FaTwitter style={{ width: "2rem", color: "black" }} />
                 </Link>
                 <Link href="https://www.linkedin.com/company/nugenesis/">

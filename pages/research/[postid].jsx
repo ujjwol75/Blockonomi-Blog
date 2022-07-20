@@ -20,15 +20,22 @@ const Detail = () => {
     queryKey: `singlePageData${postid}`,
     url: `${APIS.posts}?categories=${postid}`,
   });
-  console.log(singlePageData)
   return (
     <div>
       <Head>
-        <title>Research:The Crypto Insider</title>
+        <title>TheCryptoInsider-Research</title>
+        <meta property="og:title" content={"TheCryptoInsider-Research"} />
+        <meta property="og:image" content={"https://www.nepalitimes.com/wp-content/uploads/2022/02/cryptocurrency-banned-in-Nepal-NT-2.jpg"} />
+        <meta property="og:description" content={"All the latest content about Cryptocurrency of the world"} />
+        <meta name="twitter:title" content={"TheCryptoInsider-Research"} />
+        <meta name="twitter:description" content={"All the latest content about Cryptocurrency of the world"} />
+        <meta property="og:type" content="article" />
+        {/* <meta property="og:url" content={`https://insidecrypto.news`} /> */}
+        <meta property="fb:app_id" content={"1144829116095615"} />
       </Head>
-  
+
       <SecondNavBar />
-   
+
       <Wrap />
       <Container>
         <Research
