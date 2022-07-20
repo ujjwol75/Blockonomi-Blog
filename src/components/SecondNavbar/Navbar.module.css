@@ -61,7 +61,7 @@
     justify-content: space-between;
     align-items: center;
 
-    /* justify-content: space-between; */
+  
 
 }
 
@@ -103,10 +103,6 @@
 }
 
 @media only screen and (max-width:640px) {
-    /* .barIcon{
-        display: flex;
-       
-    } */
 
     .barListDiv a {
         text-decoration: none;
@@ -156,10 +152,7 @@
     top: 0;
     z-index: 10;
     padding-left: 10px;
-    /* padding-top: 10%; */
-    /* padding-left: 5%; */
     overflow-y: scroll;
-    /* justify-items: center; */
     color: black;
     font-size: 20px;
     overflow-x: hidden;
@@ -180,10 +173,6 @@
 
 }
 
-/* .barListdiv{
-   padding: 5%;
-
-} */
 
 .crossIcon {
     position: absolute;
@@ -208,57 +197,3 @@
 }
 
 
-/* 
-@media only screen and (max-width:1200px) {
-    .secondnavbar{
-        margin-top: 6px;
-    }
-    .barListDiv a {
-        text-decoration: none;
-        color: black;
-        font-size: 17px;
-        font-weight: bold;
-    }
-
-    .crossIcon {
-        color: white !important;
-        background-color: black;
-        padding: 3px;
-    }
-
-    .navbarlinks {
-        display: flex;
-        justify-content: center;
-        text-align: center;
-        align-items: center;
-        display: none;
-
-    }
-
-    .imglogo {
-        width: 100%;
-    }
-
-    .navitems {
-        display: flex;
-        flex-direction: row;
-    }
-
-    .socialmedia {
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        text-align: center;
-        align-items: center;
-        color: black;
-    }
-
-    .secondnavbar {
-        margin-bottom: 10px;
-        display: flex;
-
-        align-items: center;
-    }
-
-}
- */

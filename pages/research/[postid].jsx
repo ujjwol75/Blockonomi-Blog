@@ -20,7 +20,7 @@ const Detail = () => {
     queryKey: `singlePageData${postid}`,
     url: `${APIS.posts}?categories=${postid}`,
   });
-  console.log(singlePageData)
+
   return (
     <div>
       <Head>

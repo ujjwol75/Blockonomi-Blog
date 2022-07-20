@@ -40,7 +40,6 @@ const Contact = (props) => {
                                 <input type="phone" value={data.phone} placeholder='Phone Number' id='phone' onChange={(e) => handle(e)} required/>
                             </div>
                             <div className={style.contactform}>
-                                {/* <textarea name="message" value={data.message} cols="50" rows="4" placeholder='Message' style={{ marginBottom: '30px', paddingLeft: '10px', border: 'none', backgroundColor: '#F1F1F1' }} onChange={(e) => handle(e)} id='message' ></textarea> */}
                                 <input type="textarea" name='message' value={data.message} placeholder='Message' id='message' onChange={(e) => handle(e)} required  />
                             
                             </div>
