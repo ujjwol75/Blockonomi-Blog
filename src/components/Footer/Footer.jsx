@@ -4,10 +4,9 @@ import { BsFacebook, BsLinkedin, BsInstagram, BsYoutube } from "react-icons/bs";
 import { AiFillTwitterCircle } from "react-icons/ai";
 import { FaTiktok } from "react-icons/fa";
 import InputEmail from "./InputEmail";
-import Link from "next/link";
 import usePostHook from "../CustomHooks/usePostHook";
 import { APIS } from "../../../pages/api/hello";
-// import { LinkedinIcon } from "next-share";
+import Link from "next/link";
 
 const Footer = (props) => {
   // email post 
@@ -32,11 +31,11 @@ const Footer = (props) => {
     try {
       createMutate({ url, formData });
       if (successMessage) {
-       
+
         setEmail('')
       }
       if (errorMessage) {
-        
+
         setEmail('')
 
       }
@@ -65,24 +64,24 @@ const Footer = (props) => {
         <InputEmail handleNewsLetterClick={handleNewsLetterClick} />
       </div>
       <div className={style.icon}>
-        <a href='https://www.facebook.com/nutechcity' target="_blank" style={{color:'white'}}>
-          <BsFacebook style={{ fontSize: '28px', marginRight: '10px', cursor:'pointer' }} />
-        </a>
-        <a   href='https://twitter.com/nugenesisou' target="_blank" style={{color:'white'}}>
-          <AiFillTwitterCircle style={{ fontSize: '30px', marginRight: '10px',cursor:'pointer' }} />
-        </a>
-        <a href='https://au.linkedin.com/company/nugenesis' target="_blank" style={{color:'white'}}>
-          <BsLinkedin style={{ fontSize: '30px', marginRight: '10px',cursor:'pointer' }} />
-        </a>
-        <a href='https://www.youtube.com/channel/UCUcwdvfmOUB9axXVaKKW4lA' target="_blank" style={{color:'white'}}>
-          <BsYoutube style={{ fontSize: '30px', marginRight: '10px', cursor:'pointer' }} />
-        </a>
-        <a href='https://www.instagram.com/nugenesis.ou/' target="_blank" style={{color:'white'}}>
-          <BsInstagram style={{ fontSize: '30px', marginRight: '10px', cursor:'pointer' }} />
-        </a>
-        <a href='https://www.tiktok.com/@nugenesis.ou' target="_blank" style={{color:'white'}}>
-          <FaTiktok style={{ fontSize: '30px', marginRight: '10px', cursor:'pointer' }} />
-        </a>
+        <Link href='https://www.facebook.com/nutechcity' style={{ color: 'white' }}>
+          <BsFacebook style={{ fontSize: '28px', marginRight: '10px', cursor: 'pointer' }} />
+        </Link>
+        <Link href='https://twitter.com/nugenesisou' style={{ color: 'white' }}>
+          <AiFillTwitterCircle style={{ fontSize: '30px', marginRight: '10px', cursor: 'pointer' }} />
+        </Link>
+        <Link href='https://au.linkedin.com/company/nugenesis' style={{ color: 'white' }}>
+          <BsLinkedin style={{ fontSize: '30px', marginRight: '10px', cursor: 'pointer' }} />
+        </Link>
+        <Link href='https://www.youtube.com/channel/UCUcwdvfmOUB9axXVaKKW4lA' style={{ color: 'white' }}>
+          <BsYoutube style={{ fontSize: '30px', marginRight: '10px', cursor: 'pointer' }} />
+        </Link>
+        <Link href='https://www.instagram.com/nugenesis.ou/' style={{ color: 'white' }}>
+          <BsInstagram style={{ fontSize: '30px', marginRight: '10px', cursor: 'pointer' }} />
+        </Link>
+        <Link href='https://www.tiktok.com/@nugenesis.ou' style={{ color: 'white' }}>
+          <FaTiktok style={{ fontSize: '30px', marginRight: '10px', cursor: 'pointer' }} />
+        </Link>
 
       </div>
       <div style={{ fontSize: '12px', color: 'gray' }}>The Crypto Insider™ COPYRIGHT © 2017 - 2022 . ALL RIGHTS RESERVED.</div>
