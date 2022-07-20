@@ -2,7 +2,6 @@ import React from "react";
 import NewsImageTitle from "../News/NewsImage";
 
 const ScrappedMain = (props) => {
-  console.log(props)
   return (
     <div>
       <NewsImageTitle
