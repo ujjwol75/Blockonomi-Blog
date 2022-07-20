@@ -14,13 +14,15 @@ const Search = (props) => {
   const handleKeyPress = (e) => {
     e.preventDefault();
     router.push(`/searchpage/${searchKeyword}`);
-    // setSubmit(false)
+    setKeyPress(true)
+    props.setSearch(false)
+
     
   };
 
   return (
     <div>
-       <form action="" onSubmit={handleKeyPress}>
+      {setKeyPress && <form action="" onSubmit={handleKeyPress} >
         <input
           type="text"
           placeholder="Search..."
@@ -29,7 +31,8 @@ const Search = (props) => {
           onChange={searchHandler}
           
         />
-      </form>
+      </form>}
+       
       
     </div>
   );

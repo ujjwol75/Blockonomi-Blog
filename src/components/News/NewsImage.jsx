@@ -12,7 +12,7 @@ const NewsImageTitle = (props) => {
         <a href="" style={{ textDecoration: 'none', color: 'black' }}>
           <div className={style.imgdiv} style={{ cursor: 'pointer', maxHeight: "props?.height" }}>
             <img src={props.image} alt="hero image" style={{ height: props.height }} className={style.image} />
-            <span className={style.textimage}>METAVERSE</span>
+         
           </div>
 
           <NewsTitle width={props.width} font={props.font} description={props.description} date={props.date} author={props.author} title={props.title} color={props.color} content={props.content} contentlength={props.contentlength} />

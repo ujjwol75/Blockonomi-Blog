@@ -28,7 +28,8 @@ const NewsWrap = () => {
               id={newswrapdata?.results[0].id}
               contentlength="350"
               slug={newswrapdata?.results[0].slug}
-              height="400px"
+              // height="400px"
+              
             />
             </div>
           
@@ -44,10 +45,13 @@ const NewsWrap = () => {
                     width="100%"
                     title={curElem.title}
                     image={curElem.image}
-                    height="150px"
+                    // height="150px"
                     color="white"
                     id={curElem.id}
                     slug={curElem.slug}
+                    className={style.newsimageright}
+                    
+
                   />
                 </Col>
               ))}
