@@ -36,7 +36,7 @@ const ScrappedData = () => {
             <Col md="4" key={key}>
               <ScrappedMain
                 image={item.image}
-                height="200px"
+                // height="200px"
                 author={item.author}
                 date={item.date}
                 title={item.title}

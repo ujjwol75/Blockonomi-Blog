@@ -35,10 +35,7 @@ const MainContact = () => {
     } catch (e) {
 
     }
-    // if (successMessage) {
-    //   console.log('success: ', successMessage)
-    //   alert(successMessage)
-    // }
+  
   };
 
   return (

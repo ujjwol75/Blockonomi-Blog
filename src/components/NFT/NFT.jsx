@@ -30,7 +30,7 @@ const NFT = () => {
                     <a href="" style={{ textDecoration: 'none', color: 'black' }}>
                       <div className={style.imgdiv} style={{ cursor: 'pointer', maxHeight: "item??.height" }}>
                         <img src={item?.preview_image} alt="hero image" style={{ height: item?.height }} className={style.image} />
-                        <span className={style.textimage}>METAVERSE</span>
+                       
                       </div>
 
                       <NewsTitle width={item?.width} font={item?.font} description={item?.description} date={item?.date} author={item?.author} title={item?.title} color={item?.color} content={item?.content} contentlength={item?.contentlength} />

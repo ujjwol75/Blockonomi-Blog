@@ -18,13 +18,15 @@ const SearchPage = () => {
     url: `${APIS.posts}?search=${SearchPage}`
   });
 
+  console.log('gg', SearchPage)
+
   return (
     <>
       <Head>
         <title>Search:The Crypto Insider</title>
       </Head>
       <div style={{ width: '100%' }}>
-        <MainSearch data={searchpagedata} search={search} searchpage={SearchPage} />
+        <MainSearch data={searchpagedata} search={search} searchpage={SearchPage} SearchPage={SearchPage} />
       </div>
     </>
   )

@@ -22,7 +22,7 @@ const Research = (props) => {
                     <a href="" style={{ textDecoration: 'none', color: 'black' }}>
                       <div className={style.imgdiv} style={{ cursor: 'pointer', maxHeight: "item??.height" }}>
                         <img src={item?.image} alt="hero image" className={style.image} style={{height:'250px'}}/>
-                        <span className={style.textimage}>METAVERSE</span>
+                     
                       </div>
 
                       <NewsTitle width={item?.width} font={item?.font} description={item?.description} date={item?.date} author={item?.author} title={item?.title} color={item?.color} content={item?.content} contentlength={item?.contentlength} height="250px"/>
