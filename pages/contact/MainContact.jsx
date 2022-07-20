@@ -43,19 +43,26 @@ const MainContact = () => {
 
   return (
     <>
-    
-    <Head>
-        <title>Contact:The Crypto Insider</title>
+      <Head>
+        <title>TheCryptoInsider - Contact</title>
+        <meta property="og:title" content={" TheCryptoInsider - Contact"} />
+        <meta property="og:image" content={"https://www.nepalitimes.com/wp-content/uploads/2022/02/cryptocurrency-banned-in-Nepal-NT-2.jpg"} />
+        <meta property="og:description" content={"All the latest content about Cryptocurrency of the world"} />
+        <meta name="twitter:title" content={" TheCryptoInsider - Contact"} />
+        <meta name="twitter:description" content={"All the latest content about Cryptocurrency of the world"} />
+        <meta property="og:type" content="article" />
+        {/* <meta property="og:url" content={`https://insidecrypto.news`} /> */}
+        <meta property="fb:app_id" content={"1144829116095615"} />
       </Head>
-    <Container fluid>
+      <Container fluid>
 
-      <SecondNavBar />
-      <Wrap />
-      <hr />
-      <Contact handleContact={handleContact} />
-      <Footer />
+        <SecondNavBar />
+        <Wrap />
+        <hr />
+        <Contact handleContact={handleContact} />
+        <Footer />
       </Container>
-      </>
+    </>
   )
 }
 

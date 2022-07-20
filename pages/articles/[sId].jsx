@@ -30,12 +30,11 @@ const Detail = (props) => {
         <meta property="og:description" content={props?.pageScrapped?.description || props?.posts?.description} />
         <meta name="twitter:title" content={props?.pageScrapped?.title || props?.posts?.title} />
         <meta name="twitter:description" content={props?.pageScrapped?.description || props?.posts?.secription} />
-        <link rel="icon" type="image/x-icon" href="favicon.ico" />
         <meta property="og:type" content="article" />
         {/* <meta property="og:url" content={`https://insidecrypto.news`} /> */}
         <meta property="fb:app_id" content={"1144829116095615"} />
       </Head>
-  
+
       <SecondNavBar />
       <Wrap />
       <Container>
