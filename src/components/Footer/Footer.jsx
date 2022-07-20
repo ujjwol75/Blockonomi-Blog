@@ -18,7 +18,6 @@ const Footer = (props) => {
   } = usePostHook({
     queryKey: 'suscribeToNewsLetter',
   });
-  console.log(postData, "postData")
 
   const handleNewsLetterClick = (email, setEmail) => {
 

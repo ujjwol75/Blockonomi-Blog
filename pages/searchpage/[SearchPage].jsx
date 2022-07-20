@@ -18,7 +18,6 @@ const SearchPage = () => {
     url: `${APIS.posts}?search=${SearchPage}`
   });
 
-  console.log('gg', SearchPage)
 
   return (
     <>
