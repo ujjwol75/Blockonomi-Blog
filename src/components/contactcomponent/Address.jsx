@@ -28,7 +28,7 @@ const Address = () => {
                 </div>
                 <div className={style.address_row}>
                     <span style={{ marginRight: '20px' }}><RiEarthFill /></span>
-                    <p>Websites <br /><a href="https://blockonomi.com/" >blockonomi</a>  <br /> <a href="https://insidecrypto.news/"  >insidecrypto</a>  <br />
+                    <p>Websites <br /><a href="https://nucoin.com.au/" >NuCoin</a>  <br /> <a href="https://insidecrypto.news/"  >insidecrypto</a>  <br />
 
                         <a href="https://cryptoinsider.media/" >cryptoinsider</a> </p>
                 </div>

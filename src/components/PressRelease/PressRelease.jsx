@@ -163,7 +163,7 @@ const PressRelease = () => {
               </Form.Group>
 
             </Form.Group>
-            <Button type="submit">Submit form</Button>
+            <Button style={{backgroundColor:"#245557"}} type="submit">Submit form</Button>
           </Form>
         </div>
       </div>

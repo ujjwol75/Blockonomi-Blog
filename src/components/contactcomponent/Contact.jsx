@@ -44,7 +44,7 @@ const Contact = (props) => {
                                 <input type="textarea" name='message' value={data.message} placeholder='Message' id='message' onChange={(e) => handle(e)} required  />
                             
                             </div>
-                            <Button style={{ marginBottom: '30px', marginTop:'10px' }} onClick={handleSubmit}>Submit</Button>
+                            <Button style={{ marginBottom: '30px', marginTop:'10px',backgroundColor:"#245557" }} onClick={handleSubmit}>Submit</Button>
                         </form>
                     </div>
                 </Col>

@@ -48,7 +48,7 @@ const Footer = (props) => {
   return (
     <div className={style.footer}>
       <p style={{ fontSize: '14px', color: 'gray' }}>
-        All content on thecryptoinsider.news is provided solely for roduct, service or investment. The opinions expressed in this Site do not constitute investment.
+        All content on thecryptoinsider.news is provided solely for product, service or investment. The opinions expressed in this Site do not constitute investment.
       </p>
       <div style={{ width: '200px' }}>
         <img
@@ -62,7 +62,7 @@ const Footer = (props) => {
       <div style={{ marginTop: '20px', marginBottom: '20px' }}>
         <InputEmail handleNewsLetterClick={handleNewsLetterClick} />
       </div>
-      <div className={style.icon}>
+      <div className={style.icon} >
         <Link href='https://www.facebook.com/nutechcity' style={{ color: 'white' }}>
           <BsFacebook style={{ fontSize: '28px', marginRight: '10px', cursor: 'pointer' }} />
         </Link>
