@@ -65,22 +65,22 @@ const Footer = (props) => {
         <InputEmail handleNewsLetterClick={handleNewsLetterClick} />
       </div>
       <div className={style.icon}>
-        <a href='https://www.facebook.com/nutechcity' target="_blank" style={{color:'white'}} rel="noreferrer">
+        <a href='https://www.facebook.com/nutechcity' target="_blank" style={{color:'white'}} rel="noopener noreferrer">
           <BsFacebook style={{ fontSize: '28px', marginRight: '10px', cursor:'pointer' }} />
         </a>
-        <a   href='https://twitter.com/nugenesisou' target="_blank" style={{color:'white'}} rel="noreferrer">
+        <a   href='https://twitter.com/nugenesisou' target="_blank" style={{color:'white'}} rel="noopener noreferrer">
           <AiFillTwitterCircle style={{ fontSize: '30px', marginRight: '10px',cursor:'pointer' }} />
         </a>
-        <a href='https://au.linkedin.com/company/nugenesis' target="_blank" style={{color:'white'}} rel="noreferrer">
+        <a href='https://au.linkedin.com/company/nugenesis' target="_blank" style={{color:'white'}} rel="noopener noreferrer">
           <BsLinkedin style={{ fontSize: '30px', marginRight: '10px',cursor:'pointer' }} />
         </a>
-        <a href='https://www.youtube.com/channel/UCUcwdvfmOUB9axXVaKKW4lA' target="_blank" style={{color:'white'}} rel="noreferrer">
+        <a href='https://www.youtube.com/channel/UCUcwdvfmOUB9axXVaKKW4lA' target="_blank" style={{color:'white'}} rel="noopener noreferrer">
           <BsYoutube style={{ fontSize: '30px', marginRight: '10px', cursor:'pointer' }} />
         </a>
-        <a href='https://www.instagram.com/nugenesis.ou/' target="_blank" style={{color:'white'}} rel="noreferrer">
+        <a href='https://www.instagram.com/nugenesis.ou/' target="_blank" style={{color:'white'}} rel="noopener noreferrer">
           <BsInstagram style={{ fontSize: '30px', marginRight: '10px', cursor:'pointer' }} />
         </a>
-        <a href='https://www.tiktok.com/@nugenesis.ou' target="_blank" style={{color:'white'}} rel="noreferrer">
+        <a href='https://www.tiktok.com/@nugenesis.ou' target="_blank" style={{color:'white'}} rel="noopener noreferrer">
           <FaTiktok style={{ fontSize: '30px', marginRight: '10px', cursor:'pointer' }} />
         </a>
 

@@ -31,7 +31,7 @@ const Contact = (props) => {
                         <h3 style={{ marginLeft: '10%', marginTop: '0px' }}>Contact Form</h3>
                         <form action="" style={{ textAlign: 'center' }} onSubmit={handleSubmit}>
                             <div className={style.contactform}>
-                                <input type="text" value={data.fullname} placeholder='Full Name' onChange={(e) => handle(e)} id='fullname' />
+                                <input type="text" value={data.fullname} placeholder='Full Name' onChange={(e) => handle(e)} id='fullname' aria-required/>
                             </div>
                             <div className={style.contactform}>
                                 <input type="email" value={data.email} placeholder='Email' id='email' required onChange={(e) => handle(e)} />
@@ -43,7 +43,7 @@ const Contact = (props) => {
                                 <input type="textarea" name='message' value={data.message} placeholder='Message' id='message' onChange={(e) => handle(e)} required  />
                             
                             </div>
-                            <Button style={{ marginBottom: '30px', marginTop:'10px' }} onClick={handleSubmit}>Submit</Button>
+                            <Button style={{ marginBottom: '30px', marginTop:'10px', backgroundColor:'#01696E', border:'1px solid #01696E' }} onClick={handleSubmit}>Submit</Button>
                         </form>
                     </div>
                 </Col>
