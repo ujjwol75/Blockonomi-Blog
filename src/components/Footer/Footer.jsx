@@ -18,10 +18,6 @@ const Footer = (props) => {
   } = usePostHook({
     queryKey: 'suscribeToNewsLetter',
   });
-<<<<<<< HEAD
- 
-=======
->>>>>>> edb95703a261491e605d1f11f05689592fdf86e2
 
   const handleNewsLetterClick = (email, setEmail) => {
 
@@ -42,8 +38,6 @@ const Footer = (props) => {
         setEmail('')
 
       }
-
-
     } catch (e) {
 
     }
@@ -85,7 +79,6 @@ const Footer = (props) => {
         <Link href='https://www.tiktok.com/@nugenesis.ou' style={{ color: 'white' }}>
           <FaTiktok style={{ fontSize: '30px', marginRight: '10px', cursor: 'pointer' }} />
         </Link>
-
       </div>
       <div style={{ fontSize: '12px', color: 'gray' }}>The Crypto Insider™ COPYRIGHT © 2017 - 2022 . ALL RIGHTS RESERVED.</div>
     </div>
