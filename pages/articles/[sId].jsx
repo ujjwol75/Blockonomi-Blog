@@ -65,7 +65,7 @@ const Detail = (props) => {
           <div>
             <div
               className='fb-comments'
-              data-href='https://insidecrypto.news/'
+              data-href='https://thecryptoinsider.news/'
               data-width=''
               data-numposts='5'
             ></div>
