@@ -38,7 +38,7 @@ const InputEmail = (props) => {
             Please provide a valid email.
           </Form.Control.Feedback>
         </Form.Group>
-        <Button type="submit" style={{ display:'flex', alignItems:'center', marginLeft:'10px' }} className={style.buttondiv}>SignUp</Button>
+        <Button type="submit"  style={{backgroundColor:"#245557", display:'flex', alignItems:'center', marginLeft:'10px' }} className={style.buttondiv}>SignUp</Button>
       </Form>
     </Container>
   );

@@ -2,15 +2,19 @@
     background: red;
 }
 
-.secondnavbar{
+.secondnavbar {
     margin-top: 10px;
     margin-bottom: 10px;
     box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
     padding: 4px 0 8px 0;
+    /* background-color:#245557; */
+    opacity: 0.9;
 }
+
 .navbar>ul>li {
     position: relative;
     float: left;
+
 }
 
 .navbar>ul {
@@ -20,7 +24,7 @@
 .navbar>ul>li>a {
     font-size: 18px;
     padding: 10px 15px;
-    color: #000;
+    color: #fff;
     text-decoration: none;
     display: block;
 }
@@ -38,9 +42,10 @@
 
 }
 
-.barIcon{
+.barIcon {
     display: none;
 }
+
 @media only screen and (max-width:1200px) {
     .barIcon {
         display: none;
@@ -88,6 +93,7 @@
         cursor: pointer;
 
     }
+
     .navbarlinks {
         display: flex;
         justify-content: center;
@@ -96,6 +102,7 @@
         display: none;
 
     }
+
     .imglogo {
         width: 100%;
         cursor: pointer;
@@ -117,8 +124,8 @@
         padding: 3px;
     }
 
-    
-    
+
+
 
     .imglogo {
         width: 100%;
@@ -136,10 +143,10 @@
         justify-content: center;
         text-align: center;
         align-items: center;
-        color: black;
+        color: white;
     }
 
- 
+
 }
 
 .barDiv {
@@ -197,3 +204,60 @@
 }
 
 
+<<<<<<< HEAD
+=======
+/* 
+@media only screen and (max-width:1200px) {
+    .secondnavbar{
+        margin-top: 6px;
+    }
+    .barListDiv a {
+        text-decoration: none;
+        color: black;
+        font-size: 17px;
+        font-weight: bold;
+    }
+
+    .crossIcon {
+        color: white !important;
+        background-color: black;
+        padding: 3px;
+    }
+
+    .navbarlinks {
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        align-items: center;
+        display: none;
+
+    }
+
+    .imglogo {
+        width: 100%;
+    }
+
+    .navitems {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .socialmedia {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        text-align: center;
+        align-items: center;
+        color: black;
+    }
+
+    .secondnavbar {
+        margin-bottom: 10px;
+        display: flex;
+
+        align-items: center;
+    }
+
+}
+ */
+>>>>>>> 69a0734da86b280aaa57a6d4c63190777d4fdea7

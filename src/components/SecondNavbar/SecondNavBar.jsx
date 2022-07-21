@@ -33,7 +33,7 @@ const SecondNavBar = () => {
               <AiOutlineBars
                 onClick={() => setBarIcon(!barIcon)}
                 style={{
-                  color: "black",
+                  color: "white",
                   fontSize: "24px",
                   transitionDelay: "4s",
                 }}
@@ -101,7 +101,7 @@ const SecondNavBar = () => {
           </Nav.Item>
         </div>
         <Link href="/">
-          <div style={{ width: "90px", cursor:'pointer' }}>
+          <div style={{ width: "90px", cursor: 'pointer' }}>
             <img
               src="../../mainLogo.png"
               alt=""
@@ -160,7 +160,7 @@ const SecondNavBar = () => {
                   <GrFacebookOption style={{ width: "2rem", color: "black" }} />
                 </Link>
                 <Link href="https://twitter.com/nugenesisou" >
-                  
+
                   <FaTwitter style={{ width: "2rem", color: "black" }} />
                 </Link>
                 <Link href="https://www.linkedin.com/company/nugenesis/">
