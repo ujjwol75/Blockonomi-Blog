@@ -9,6 +9,7 @@ import NewsDetail from '../../src/components/DetailPage/NewsDetail';
 import SocialShare from '../../src/components/SocialShare/SocialShare';
 import { getApiData } from '../../src/components/Helper/AxiosInstance';
 import Head from 'next/head';
+import Script from 'next/script';
 
 
 const Detail = (props) => {
@@ -30,12 +31,11 @@ const Detail = (props) => {
         <meta property="og:description" content={props?.pageScrapped?.description || props?.posts?.description} />
         <meta name="twitter:title" content={props?.pageScrapped?.title || props?.posts?.title} />
         <meta name="twitter:description" content={props?.pageScrapped?.description || props?.posts?.secription} />
-        <link rel="icon" type="image/x-icon" href="favicon.ico" />
         <meta property="og:type" content="article" />
         {/* <meta property="og:url" content={`https://insidecrypto.news`} /> */}
         <meta property="fb:app_id" content={"1144829116095615"} />
       </Head>
-  
+
       <SecondNavBar />
       <Wrap />
       <Container>
@@ -55,6 +55,21 @@ const Detail = (props) => {
           <Container >
             <NewsDetail data={props?.posts?.detail ? props?.pageScrapped : props.posts} content="-1" height="250px" />
           </Container>
+          <Script
+            async
+            defer
+            crossorigin='anonymous'
+            src='https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v14.0'
+            nonce='bgs68QfT'
+          />
+          <div>
+            <div
+              className='fb-comments'
+              data-href='https://thecryptoinsider.news/'
+              data-width=''
+              data-numposts='5'
+            ></div>
+          </div>
 
         </Row>
       </Container>
