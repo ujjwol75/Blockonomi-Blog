@@ -9,6 +9,7 @@ import NewsDetail from '../../src/components/DetailPage/NewsDetail';
 import SocialShare from '../../src/components/SocialShare/SocialShare';
 import { getApiData } from '../../src/components/Helper/AxiosInstance';
 import Head from 'next/head';
+import Script from 'next/script';
 
 
 const Detail = (props) => {
@@ -54,6 +55,21 @@ const Detail = (props) => {
           <Container >
             <NewsDetail data={props?.posts?.detail ? props?.pageScrapped : props.posts} content="-1" height="250px" />
           </Container>
+          <Script
+            async
+            defer
+            crossorigin='anonymous'
+            src='https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v14.0'
+            nonce='bgs68QfT'
+          />
+          <div>
+            <div
+              className='fb-comments'
+              data-href='https://insidecrypto.news/'
+              data-width=''
+              data-numposts='5'
+            ></div>
+          </div>
 
         </Row>
       </Container>
