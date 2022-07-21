@@ -35,7 +35,6 @@ const MainContact = () => {
     } catch (e) {
 
     }
-  
   };
 
   return (

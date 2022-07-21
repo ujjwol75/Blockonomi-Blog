@@ -68,9 +68,7 @@
         margin-top: '20px';
     }
 
-    /* .footerlink a {
-        font-size: 13px;
-    } */
+   
 
     .icon {
         margin-top: 10px;
@@ -93,7 +91,7 @@
     .footerimg {
         width: "100%";
         color: "white";
-        /* margin-top:'20px'; */
+       
     }
 
     .footerlink a {
@@ -107,10 +105,12 @@
 }
 
 .forminput {
-    /* margin-top: 25px; */
+   
     display: flex;
 }
 .buttondiv{
   height: 38px;
+  background-color: #01696E;
+  border: 1px solid #01696E;
 }
 

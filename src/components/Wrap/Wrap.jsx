@@ -40,7 +40,7 @@ const Wrap = () => {
   return (
     <div style={{ backgroundColor: "lightblue", width:'100%' }}>
       <div className={style.wrap}>
-        {/* <div > */}
+        
           <div>
             <Bitcoin
               title={"BTC"}
@@ -103,7 +103,7 @@ const Wrap = () => {
               </div>
             ))}
           </div>
-        {/* </div> */}
+        
 
 
       </div>

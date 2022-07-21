@@ -48,10 +48,7 @@ const SecondNavBar = () => {
                             <a href="">NFT page</a>
                           </Link>
                         </div>
-                        {/* <hr style={{ width: "200px" }} /> */}
-                        {/* <div className={style.barListDiv}>
-                              <a href="">Advertise</a>
-                            </div> */}
+                       
                         <hr style={{ width: "200px" }} />
                         <div className={style.barListDiv}>
                           {navigationListData?.results?.map((item, index) => (
@@ -80,21 +77,14 @@ const SecondNavBar = () => {
                         </div>
                         <hr style={{ width: "200px" }} />
 
-                        {/* <hr style={{width:'200px'}}/> */}
+                        
 
                         <div className={style.barListDiv}>
                           <Link href="/contact/MainContact">
                             <a>Contact</a>
                           </Link>
                         </div>
-                        {/* <hr style={{width:'200px'}}/> */}
-
-                        {/* <hr style={{ width: "200px" }} />
-                            <Button>Claim Free Crypto</Button>
-                            <hr style={{ width: "200px" }} /> */}
-                        {/* <Button variant="warning">Buy Crypto</Button>
-                            <hr style={{ width: "200px" }} />
-                            <Button variant="dark">Gamble With Crypto</Button> */}
+                        
                         <hr style={{ width: "200px" }} />
                       </Col>
                       <Col>
@@ -159,16 +149,7 @@ const SecondNavBar = () => {
             </Link>
           </div>
 
-          {/* <Nav.Item>
-          <Nav.Link eventKey="3">
-            <Button variant="warning">Buy Crypto</Button>
-          </Nav.Link>
-        </Nav.Item>
-        <Nav.Item>
-          <Nav.Link eventKey="3">
-            <Button variant="dark">Gamble With Crypto</Button>
-          </Nav.Link>
-        </Nav.Item> */}
+         
         </div>
 
         <div>

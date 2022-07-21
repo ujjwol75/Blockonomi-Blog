@@ -38,8 +38,6 @@ const Footer = (props) => {
         setEmail('')
 
       }
-
-
     } catch (e) {
 
     }
@@ -81,7 +79,6 @@ const Footer = (props) => {
         <Link href='https://www.tiktok.com/@nugenesis.ou' style={{ color: 'white' }}>
           <FaTiktok style={{ fontSize: '30px', marginRight: '10px', cursor: 'pointer' }} />
         </Link>
-
       </div>
       <div style={{ fontSize: '12px', color: 'gray' }}>The Crypto Insider™ COPYRIGHT © 2017 - 2022 . ALL RIGHTS RESERVED.</div>
     </div>

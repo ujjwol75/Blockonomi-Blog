@@ -6,6 +6,7 @@ import styles from '../MarketLivePage/Market.module.css';
 const MarketLivePage = () => {
 
   const [limit, setLimit] = useState(10)
+  const [view, setView] = useState(true)
 
   const [marketListData, setMarketListData] = useState()
   const url = `https://min-api.cryptocompare.com/data/top/mktcapfull?limit=${limit}&tsym=USD`;
@@ -208,10 +209,10 @@ const MarketLivePage = () => {
             </tr>
           </tfoot>
         </table>
-        <button
+        {view ? <button
           href='#'
           style={{
-            backgroundColor: '#fabf2c',
+            backgroundColor: '#01696E',
             boxSizing: 'border-box',
             color: '#1a1b1d',
             textAlign: 'center',
@@ -225,10 +226,35 @@ const MarketLivePage = () => {
             margin: "8px",
             alignItems: 'center'
           }}
-          onClick={() => setLimit(100)}
+          onClick={() => {setLimit(100)
+          setView(false)
+          }}
         >
           View All
-        </button>
+        </button> : <button
+          href='#'
+          style={{
+            backgroundColor: '#01696E',
+            boxSizing: 'border-box',
+            color: '#1a1b1d',
+            textAlign: 'center',
+            textDecoration: 'none',
+            transition: '.25s ease-out',
+            padding: '4px',
+            minWidth: '110px',
+            border: 'none',
+            cursor: 'pointer',
+            borderRadius: '0 5px 5px 0',
+            margin: "8px",
+            alignItems: 'center'
+          }}
+          onClick={() => {setLimit(10)
+          setView(true)
+          }}
+        >
+          View less
+        </button> }
+        
       </div>
 
     </div>

@@ -40,17 +40,16 @@ const NewsWrap = () => {
             <div className={style.newswrapimg}>
             <Row>
               {newswrapdata?.results?.slice(4, 8).map((curElem, index) => (
-                <Col md='6' sm='6' xs='6' xl='6' key={index}>
+                <Col md='6' sm='6' xs='6' xl='6' key={index} >
                   <NewsImage
                     width="100%"
                     title={curElem.title}
                     image={curElem.image}
-                    // height="150px"
+                    height="150px"
                     color="white"
                     id={curElem.id}
                     slug={curElem.slug}
                     className={style.newsimageright}
-                    
 
                   />
                 </Col>

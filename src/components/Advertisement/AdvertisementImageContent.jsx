@@ -12,7 +12,6 @@ const AdvertisementImageContent = () => {
           placeholder="Type and hit enter"
           style={{ paddingLeft: "30px" }}
         />
-        {/* <BiSearch className={style.search} /> */}
       </div>
       <p style={{ marginTop: "20px", fontSize: "13px", textAlign: "center" }}>
         ADVERTISEMENT

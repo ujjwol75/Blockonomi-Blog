@@ -16,7 +16,6 @@
     padding:30px 30px;
     font-size: 60px;
     color: black;
-    /* outline: none; */
     top:100px;
     left: 14%;
     outline: white;
@@ -24,13 +23,12 @@
     border-bottom: 1px solid gray;
 }
 
-@media only screen and (max-width:800px){
+@media only screen and (max-width:768px){
     .search input{
         position: absolute;
         padding:30px 30px;
         font-size: 30px;
         color: black;
-        /* outline: none; */
         top:100px;
         left: 14%;
         outline: white;
@@ -45,7 +43,6 @@
         padding:30px 30px;
         font-size: 20px;
         color: black;
-        /* outline: none; */
         top:100px;
         left: 14%;
         outline: white;

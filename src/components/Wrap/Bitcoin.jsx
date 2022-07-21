@@ -7,13 +7,7 @@ const Bitcoin = (props) => {
     <div className={style.wraprow}>
       <div className={style.wrapcol}>
         <div className={style.wraprow}>
-          {/* <div className={style.wrapimg}>
-            <img
-              src="../../bitcoin.webp"
-              alt=""
-              style={{ marginRight: "4px", width: "100%" }}
-            />
-          </div> */}
+          
 
           <span className={style.btcspan}>{title}</span>
         </div>
@@ -28,7 +22,7 @@ const Bitcoin = (props) => {
         )}
       </div>
       <span className="p-2">{price}</span>
-      {/* <img src="../../chart.png" alt="" /> */}
+    
     </div>
   )
 }
