@@ -39,7 +39,6 @@ const Wrap = () => {
   return (
     <div style={{ backgroundColor: "#245557", width: '100%' }}>
       <div className={style.wrap}>
-        {/* <div > */}
         <div>
           <Bitcoin
             title={"BTC"}
@@ -54,8 +53,6 @@ const Wrap = () => {
             title={"ETH"}
             price={`$${headerData?.RAW?.ETH?.USD?.PRICE}`}
             changeDay={parseFloat(headerData?.RAW?.ETH?.USD?.CHANGEDAY).toFixed(2)}
-
-
           />
         </div>
         <div>
@@ -63,8 +60,6 @@ const Wrap = () => {
             title={"BNB"}
             price={`$${headerData?.RAW?.BNB?.USD?.PRICE}`}
             changeDay={parseFloat(headerData?.RAW?.BNB?.USD?.CHANGEDAY).toFixed(2)}
-
-
           />
         </div>
         <div>
@@ -72,7 +67,6 @@ const Wrap = () => {
             title={"SOL"}
             price={`$${headerData?.RAW?.SOL?.USD?.PRICE}`}
             changeDay={parseFloat(headerData?.RAW?.BNB?.USD?.CHANGEDAY).toFixed(2)}
-
           />
         </div>
         <div>
@@ -87,8 +81,6 @@ const Wrap = () => {
             title={"DOGE"}
             price={`$${headerData?.RAW?.DOGE?.USD?.PRICE}`}
             changeDay={parseFloat(headerData?.RAW?.DOGE?.USD?.CHANGEDAY).toFixed(2)}
-
-
           />
         </div>
         <div>
@@ -102,9 +94,6 @@ const Wrap = () => {
             </div>
           ))}
         </div>
-        {/* </div> */}
-
-
       </div>
     </div>
   );

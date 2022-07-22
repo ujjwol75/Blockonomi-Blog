@@ -21,34 +21,36 @@ const Contact = (props) => {
     const handleSubmit = (e) => {
         e.preventDefault()
         props.handleContact(data.fullname, data.email, data.phone, data.message)
-        setData({...data , fullname:"", email:"", phone:"", message:""})
+        setData({ ...data, fullname: "", email: "", phone: "", message: "" })
     }
     return (
         <Container>
-            <Row>
+            <Row >
                 <Col lg={8} >
-                    <div className={style.contact}>
+                    <div className={style.contact} style={{ marginTop: "40px", marginBottom: "40px" }}>
                         <h3 style={{ marginLeft: '10%', marginTop: '0px' }}>Contact Form</h3>
                         <form action="" style={{ textAlign: 'center' }} onSubmit={handleSubmit}>
                             <div className={style.contactform}>
-                                <input type="text" value={data.fullname} placeholder='Full Name' onChange={(e) => handle(e)} id='fullname' aria-required/>
+                                <input type="text" value={data.fullname} placeholder='Full Name' onChange={(e) => handle(e)} id='fullname' aria-required />
                             </div>
                             <div className={style.contactform}>
                                 <input type="email" value={data.email} placeholder='Email' id='email' required onChange={(e) => handle(e)} />
                             </div>
                             <div className={style.contactform}>
-                                <input type="phone" value={data.phone} placeholder='Phone Number' id='phone' onChange={(e) => handle(e)} required/>
+                                <input type="phone" value={data.phone} placeholder='Phone Number' id='phone' onChange={(e) => handle(e)} required />
                             </div>
                             <div className={style.contactform}>
-                                <input type="textarea" name='message' value={data.message} placeholder='Message' id='message' onChange={(e) => handle(e)} required  />
-                            
+                                <input type="textarea" name='message' value={data.message} placeholder='Message' id='message' onChange={(e) => handle(e)} required />
+
                             </div>
-                            <Button style={{ marginBottom: '30px', marginTop:'10px',backgroundColor:"#245557" }} onClick={handleSubmit}>Submit</Button>
+                            <Button style={{ marginBottom: '30px', marginTop: '10px', backgroundColor: "#245557" }} onClick={handleSubmit}>Submit</Button>
                         </form>
                     </div>
                 </Col>
                 <Col lg={4}>
-                    <Address />
+                    <div style={{ marginTop: "40px", marginBottom: "40px" }}>
+                        <Address />
+                    </div>
                 </Col>
             </Row>
         </Container>

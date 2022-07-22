@@ -7,22 +7,23 @@ const Bitcoin = (props) => {
     <div className={style.wraprow}>
       <div className={style.wrapcol}>
         <div className={style.wraprow}>
-          
+
 
           <span className={style.btcspan}>{title}</span>
         </div>
         {changeDay >= 0 ? (
           <span className={style.perc}>
-            {parseFloat(changeDay).toFixed(2)}
+            {!isNaN(changeDay) ? parseFloat(changeDay).toFixed(2) : "N/A"}
           </span>
         ) : (
           <span className={style.percentage}>
-            {parseFloat(changeDay).toFixed(2)}
+            {!isNaN(changeDay) ? parseFloat(changeDay).toFixed(2) : "N/A"}
+
           </span>
         )}
       </div>
       <span className="p-2">{price}</span>
-    
+
     </div>
   )
 }
