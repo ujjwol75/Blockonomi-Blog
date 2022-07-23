@@ -6,7 +6,7 @@ const LatestNews = (props) => {
   return (
     <div>
       <hr />
-      <Link href={`/articles/${props.slug}`}>
+      <Link href={`/article/${props.slug}`}>
         <a href="">
           <LatestNewsCard image={props?.image} title={props?.title} created={props?.created} id={props?.id} contentlength={props.contentlength} />
         </a>

@@ -8,7 +8,7 @@ const NewsImageTitle = (props) => {
 
   return (
     <div className={style.newsbox}>
-      <Link href={`/articles/${props.slug}`}>
+      <Link href={`/article/${props.slug}`}>
         <a href="" style={{ textDecoration: 'none', color: 'black' }}>
           <div className={style.imgdiv} style={{ cursor: 'pointer', height: props?.height }}>
             <img src={props.image} alt="hero image" className={style.image} />

@@ -26,7 +26,7 @@ const NFT = () => {
             {allScribbedPosts?.results?.map((item, key) => (
               <Col md="4" key={key}>
                 <div className={style.newsbox}>
-                  <Link href={`/articles/${item?.slug}`}>
+                  <Link href={`/article/${item?.slug}`}>
                     <a href="" style={{ textDecoration: 'none', color: 'black' }}>
                       <div className={style.imgdiv} style={{ cursor: 'pointer', maxHeight: "item??.height" }}>
                         <img src={item?.preview_image} alt="hero image" style={{ height: item?.height }} className={style.image} />
