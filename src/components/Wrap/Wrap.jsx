@@ -88,7 +88,7 @@ const Wrap = () => {
             <div key={key}>
               <Bitcoin
                 title={item?.name}
-                price={item?.price_rate}
+                price={`$${item?.price_rate}`}
                 changeDay={parseFloat(item?.price_change).toFixed(2)}
               />
             </div>
