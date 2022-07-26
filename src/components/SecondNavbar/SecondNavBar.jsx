@@ -48,13 +48,13 @@ const SecondNavBar = () => {
                             <a href="">NFT page</a>
                           </Link>
                         </div>
-                       
+
                         <hr style={{ width: "200px" }} />
                         <div className={style.barListDiv}>
                           {navigationListData?.results?.map((item, index) => (
                             <Link
                               key={index}
-                              href={`/research/${item.category_id}`}
+                              href={`/research/${item.category}`}
                             >
                               <a >
                                 {item.title}
@@ -77,14 +77,14 @@ const SecondNavBar = () => {
                         </div>
                         <hr style={{ width: "200px" }} />
 
-                        
+
 
                         <div className={style.barListDiv}>
                           <Link href="/contact/MainContact">
                             <a>Contact</a>
                           </Link>
                         </div>
-                        
+
                         <hr style={{ width: "200px" }} />
                       </Col>
                       <Col>
@@ -120,7 +120,7 @@ const SecondNavBar = () => {
           </div>
           <div>
             {navigationListData?.results?.map((item, index) => (
-              <Link key={index} href={`/research/${item.category_id}`}>
+              <Link key={index} href={`/research/${item.category}`}>
                 <span className={style.navitem}>{item.title}</span>
               </Link>
             ))}
@@ -149,7 +149,7 @@ const SecondNavBar = () => {
             </Link>
           </div>
 
-         
+
         </div>
 
         <div>
