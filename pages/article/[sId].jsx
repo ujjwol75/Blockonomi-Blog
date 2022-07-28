@@ -25,12 +25,12 @@ const Detail = (props) => {
   return (
     <>
       <Head>
-        <title>{props?.pageScrapped?.title || props?.posts?.title}</title>
-        <meta property="og:title" content={props?.pageScrapped?.title || props?.posts?.title} />
-        <meta property="og:image" content={props?.pageScrapped?.preview_image || props?.posts?.image} />
-        <meta property="og:description" content={props?.pageScrapped?.description || props?.posts?.description} />
-        <meta name="twitter:title" content={props?.pageScrapped?.title || props?.posts?.title} />
-        <meta name="twitter:description" content={props?.pageScrapped?.description || props?.posts?.secription} />
+        <title>{props?.posts?.title}</title>
+        <meta property="og:title" content={props?.posts?.title} />
+        <meta property="og:image" content={props?.posts?.image} />
+        <meta property="og:description" content={props?.posts?.description} />
+        <meta name="twitter:title" content={props?.posts?.title} />
+        <meta name="twitter:description" content={props?.posts?.secription} />
         <meta property="og:type" content="article" />
         {/* <meta property="og:url" content={`https://insidecrypto.news`} /> */}
         <meta property="fb:app_id" content={"1144829116095615"} />
