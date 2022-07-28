@@ -14,21 +14,23 @@ import Script from 'next/script';
 
 const Detail = (props) => {
 
-  let urlPage = "https://cryptodigest.news/"
+
+  let urlPage = "https://thecryptoinsider.news/"
   if (typeof window !== "undefined") {
     // Client-side-only code
     urlPage = window.location.href;
   }
 
+
   return (
     <>
       <Head>
-        <title>{props?.posts?.title}</title>
-        <meta property="og:title" content={props?.posts?.title} />
-        <meta property="og:image" content={props?.posts?.image} />
-        <meta property="og:description" content={props?.posts?.description} />
-        <meta name="twitter:title" content={props?.posts?.title} />
-        <meta name="twitter:description" content={props?.posts?.secription} />
+        <title>{props?.pageScrapped?.title || props?.posts?.title}</title>
+        <meta property="og:title" content={props?.pageScrapped?.title || props?.posts?.title} />
+        <meta property="og:image" content={props?.pageScrapped?.preview_image || props?.posts?.image} />
+        <meta property="og:description" content={props?.pageScrapped?.description || props?.posts?.description} />
+        <meta name="twitter:title" content={props?.pageScrapped?.title || props?.posts?.title} />
+        <meta name="twitter:description" content={props?.pageScrapped?.description || props?.posts?.secription} />
         <meta property="og:type" content="article" />
         {/* <meta property="og:url" content={`https://insidecrypto.news`} /> */}
         <meta property="fb:app_id" content={"1144829116095615"} />
@@ -45,9 +47,9 @@ const Detail = (props) => {
           <div>
             <SocialShare
               url={urlPage}
-              image={props?.posts?.image || props?.pageScrapped?.image}
-              title={props?.posts?.title || props?.pageScrapped?.title}
-              hashtag={props?.posts?.title || props?.pageScrapped?.title}
+              image={props?.pageScrapped?.image || props?.posts?.image}
+              title={props?.pageScrapped?.title || props?.posts?.title}
+              hashtag={props?.pageScrapped?.title || props?.posts?.title}
             />
           </div>
           <Container >

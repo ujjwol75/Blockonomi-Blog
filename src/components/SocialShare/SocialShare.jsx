@@ -25,9 +25,6 @@ import {
 
 const SocialShare = (props) => {
   const { url, title, hashtag, image } = props
-  console.log(url, "url")
-  console.log(title, "title")
-  console.log(image, "image")
   return (
     <div style={{ display: "flex", gap: "20px", marginLeft: "24px", padding: "4px", justifyContent: "start", flexWrap: 'wrap' }}>
       <FacebookShareButton
