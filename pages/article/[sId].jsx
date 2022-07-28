@@ -47,9 +47,9 @@ const Detail = (props) => {
           <div>
             <SocialShare
               url={urlPage}
-              image={props?.pageScrapped?.image || props?.posts?.image}
-              title={props?.pageScrapped?.title || props?.posts?.title}
-              hashtag={props?.pageScrapped?.title || props?.posts?.title}
+              image={props?.posts?.image || props?.pageScrapped?.image}
+              title={props?.posts?.title || props?.pageScrapped?.title}
+              hashtag={props?.posts?.title || props?.pageScrapped?.title}
             />
           </div>
           <Container >
