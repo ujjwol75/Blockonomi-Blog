@@ -14,13 +14,11 @@ import Script from 'next/script';
 
 const Detail = (props) => {
 
-
-  let urlPage = "https://thecryptoinsider.news/"
+  let urlPage = "https://cryptodigest.news/"
   if (typeof window !== "undefined") {
     // Client-side-only code
     urlPage = window.location.href;
   }
-
 
   return (
     <>
