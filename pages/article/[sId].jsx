@@ -15,7 +15,7 @@ import Script from 'next/script';
 const Detail = (props) => {
 
 
-  let urlPage = "https://thecryptoinsider.news/"
+  let urlPage = "https://test.insidecrypto.news/"
   if (typeof window !== "undefined") {
     // Client-side-only code
     urlPage = window.location.href;
@@ -65,7 +65,7 @@ const Detail = (props) => {
           <div>
             <div
               className='fb-comments'
-              data-href='https://thecryptoinsider.news/'
+              data-href='https://test.insidecrypto.news/'
               data-width=''
               data-numposts='5'
             ></div>

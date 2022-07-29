@@ -1,5 +1,5 @@
 import Axios from 'axios';
-const API_ROOT = `https://thecryptoinsider.news/api/`;
+const API_ROOT = `https://test.insidecrypto.news/api/`;
 
 //create axios instance
 export const instance = Axios.create({
