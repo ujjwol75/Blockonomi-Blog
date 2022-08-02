@@ -10,14 +10,14 @@ const InputEmail = (props) => {
 
   const handleClick = (e) => {
     e.preventDefault();
-    setValidated(true);
+    // setValidated(true);
     props.handleNewsLetterClick(formValue, setFormValue)
   };
 
   return (
     <Container>
       <Form
-        validated={validated}
+        // validated={validated}
         onSubmit={handleClick}
         className={style.forminput}
 
