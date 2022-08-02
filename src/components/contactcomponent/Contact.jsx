@@ -37,7 +37,7 @@ const Contact = (props) => {
                                 <input type="email" value={data.email} placeholder='Email' id='email' required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" onChange={(e) => handle(e)} />
                             </div>
                             <div className={style.contactform}>
-                                <input type="phone" value={data.phone} placeholder='Phone Number' id='phone' onChange={(e) => handle(e)} required pattern="[0-9]{9}"
+                                <input type="phone" value={data.phone} placeholder='Phone Number' id='phone' onChange={(e) => handle(e)} required
 
                                 />
                             </div>
