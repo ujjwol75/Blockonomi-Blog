@@ -9,6 +9,12 @@ import { RiEarthFill } from "react-icons/ri";
 
 
 const Address = () => {
+    // const Mailto = ({ email, subject = '', body = '', children }) => {
+    //     let params = subject || body ? '?' : '';
+    //     if (subject) params += `subject=${encodeURIComponent(subject)}`;
+    //     if (body) params += `${subject ? '&' : ''}body=${encodeURIComponent(body)}`;
+    //     return <a href={`mailto:${email}${params}`}>{children}</a>;
+    //   };
     return (
         <div className={style.addressmain}>
             <h3>Contact Us</h3>
@@ -19,9 +25,26 @@ const Address = () => {
                 </div>
                 <div className={style.address_row}>
                     <span style={{ marginRight: '20px' }}><TbPhoneCall /></span>
-                    <p>Phone <br />+61 437 234 243</p>
+                    <p>Phone <br />
+                        <a
+                            href='tel:+61 437 234 243'
+                        >
+                            +61 437 234 243
+                        </a>
+                    </p>
+
                 </div>
                 <div className={style.address_row}>
+                    {/* <Mailto
+                email='examkosathi21@gmail.com'
+                subject='Hello & Welcome'
+                body='Hello world!'
+              >
+                <MdOutlineEmail
+                  title='support@example.com'
+                  className=' w-[2rem] cursor-pointer h-[2rem]  text-Orange m-2 '
+                />
+              </Mailto> */}
                     <span style={{ marginRight: '20px' }}><MdOutlineEmail /></span>
 
                     <p>Email <br /> <a href="mailto:admin@cryptoblockonomi.com" >admin@cryptoblockonomi.com</a> </p>

@@ -18,3 +18,45 @@ a {
   margin: 0;
   padding: 0;
 }
+
+.pagination {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  justify-items: center;
+  margin-top: 8px;
+  /* font-size: 40px;  */
+}
+
+
+.pagination a {
+  color: black;
+  float: left;
+  padding: 4px 16px;
+  text-decoration: none;
+}
+
+.pagination-item {
+  padding: 0 8px;
+  height: 32px;
+  text-align: center;
+  margin: auto 4px;
+  color: rgba(0, 0, 0, 0.87);
+  display: flex;
+  box-sizing: border-box;
+  align-items: center;
+  letter-spacing: 0.01071em;
+  border-radius: 16px;
+  line-height: 1.43;
+  font-size: 24px;
+  min-width: 32px;
+  cursor: pointer;
+}
+
+
+.active {
+  background-color: #245557;
+  color: white;
+  padding: 0px 12px;
+  border-radius: 5px;
+}

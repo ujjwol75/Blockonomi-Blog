@@ -4,16 +4,21 @@ import { Col, Nav, Row } from "react-bootstrap";
 import { GrFacebookOption } from "react-icons/gr";
 import { AiOutlineBars } from "react-icons/ai";
 import { ImCross } from "react-icons/im";
+import { FaSearch } from 'react-icons/fa';
 
-import { FaTwitter, FaLinkedinIn, FaSearchengin } from "react-icons/fa";
+
+import { FaTwitter, FaLinkedinIn } from "react-icons/fa";
 import style from "./Navbar.module.css";
 import useGetHook from "../CustomHooks/useGetHook";
 import { APIS } from "../../../pages/api/hello";
-import SearchPopover from "../Search/SearchPopover";
+import { useRouter } from "next/router";
 
 const SecondNavBar = () => {
+  const router = useRouter()
   const [barIcon, setBarIcon] = useState(false);
   const [search, setSearch] = useState(false);
+  const [name, setName] = useState("");
+
   const { data: navigationListData } = useGetHook({
     queryKey: "navigationListData",
     url: APIS.navigation,
@@ -22,6 +27,15 @@ const SecondNavBar = () => {
   const handleClick = () => {
     setSearch(!search);
   };
+  function HandleSubmit(e) {
+    e.preventDefault();
+    {
+      name !== "" &&
+        router.push(`/searchpage/${name}`);
+    }
+    setName("");
+    setSearch(false)
+  }
 
 
   return (
@@ -30,22 +44,30 @@ const SecondNavBar = () => {
         <div>
           <Nav.Item>
             <Nav.Link eventKey="2" title="Item" className={style.barIcon}>
-              <AiOutlineBars
-                onClick={() => setBarIcon(!barIcon)}
-                style={{
-                  color: "white",
-                  fontSize: "24px",
-                  transitionDelay: "4s",
-                }}
-              />
+              {!search &&
+                <AiOutlineBars
+                  onClick={() => setBarIcon(!barIcon)}
+                  style={{
+                    color: "black",
+                    fontSize: "24px",
+                    transitionDelay: "4s",
+                  }}
+                />
+              }
               {barIcon && (
                 <>
                   <div className={style.barDiv}>
                     <Row>
                       <Col className={style.barList}>
                         <div className={style.barListDiv}>
+                          <Link href="/news">
+                            <a href="">News</a>
+                          </Link>
+                        </div>
+                        <hr style={{ width: "200px" }} />
+                        <div className={style.barListDiv}>
                           <Link href="/nFTPage">
-                            <a href="">NFT page</a>
+                            <a href="">NFT News</a>
                           </Link>
                         </div>
 
@@ -63,12 +85,7 @@ const SecondNavBar = () => {
                           ))}
                         </div>
                         <hr style={{ width: "200px" }} />
-                        <div className={style.barListDiv}>
-                          <Link href="/scrappedData/ScrappedData/">
-                            <a href="">News</a>
-                          </Link>
-                        </div>
-                        <hr style={{ width: "200px" }} />
+
 
                         <div className={style.barListDiv}>
                           <Link href="/pressRelease">
@@ -81,11 +98,12 @@ const SecondNavBar = () => {
 
                         <div className={style.barListDiv}>
                           <Link href="/contact/MainContact">
-                            <a>Contact</a>
+                            <a>Contact Us</a>
                           </Link>
                         </div>
 
-                        <hr style={{ width: "200px" }} />
+                        <hr style={{ width: "180px" }} />
+
                       </Col>
                       <Col>
                         <ImCross
@@ -93,7 +111,9 @@ const SecondNavBar = () => {
                           className={style.crossIcon}
                         />
                       </Col>
+
                     </Row>
+
                   </div>
                 </>
               )}
@@ -101,7 +121,7 @@ const SecondNavBar = () => {
           </Nav.Item>
         </div>
         <Link href="/">
-          <div style={{ width: "90px", cursor: 'pointer' }}>
+          <div style={{ width: "80px", cursor: 'pointer' }}>
             <img
               src="../../mainLogo.png"
               alt=""
@@ -114,7 +134,7 @@ const SecondNavBar = () => {
 
         <div className={style.navbarlinks}>
           <div>
-            <Link href="/scrappedData/ScrappedData/">
+            <Link href="/news">
               <span className={style.navitem}>News</span>
             </Link>
           </div>
@@ -145,45 +165,42 @@ const SecondNavBar = () => {
 
           <div>
             <Link href="/contact/MainContact">
-              <span className={style.navitem}>Contact</span>
+              <span className={style.navitem}>Contact Us</span>
             </Link>
           </div>
-
-
         </div>
 
+        <div className={style.socialmedia}>
+          <Link href="https://www.facebook.com/nutechcity">
+            <GrFacebookOption className={style.navitem} />
+          </Link>
+          <Link href="https://twitter.com/nugenesisou" >
+
+            <FaTwitter className={style.navitem} />
+          </Link>
+          <Link href="https://www.linkedin.com/company/nugenesis/">
+            <FaLinkedinIn
+              className={style.navitem}
+            />
+          </Link>
+        </div>
         <div>
-          <Nav.Item>
-            <Nav.Link eventKey="3">
-              <div className={style.socialmedia}>
-                <Link href="https://www.facebook.com/nutechcity">
-                  <GrFacebookOption style={{ width: "2rem", color: "black" }} />
-                </Link>
-                <Link href="https://twitter.com/nugenesisou" >
+          {search ? <ImCross style={{ width: "4rem", color: "black" }} onClick={() =>
+            setSearch(!search)
+          } /> :
+            <FaSearch style={{ width: "4rem", color: "black" }} onClick={handleClick} />}
 
-                  <FaTwitter style={{ width: "2rem", color: "black" }} />
-                </Link>
-                <Link href="https://www.linkedin.com/company/nugenesis/">
-                  <FaLinkedinIn
-                    style={{
-                      width: "2rem",
-                      borderRight: "1px solid gray",
-                      color: "black",
-                    }}
-                  />
-                </Link>
+          {search &&
+            <form style={{ margin: "10px" }} onSubmit={HandleSubmit}>
+              <input type="text" placeholder='Search...' value={name} onChange={(e) => setName(e.target.value)} />
+              <button className='searchbutton' type='submit' style={{ "opacity": "0.5" }}>
+                <FaSearch />
+              </button>
+            </form>
+          }
 
-                <FaSearchengin
-                  style={{ width: "2rem", color: "black" }}
-                  onClick={handleClick}
-                />
-                {search && (
-                  <SearchPopover search={search} setSearch={setSearch} />
-                )}
-              </div>
-            </Nav.Link>
-          </Nav.Item>
         </div>
+
       </div>
     </>
   );

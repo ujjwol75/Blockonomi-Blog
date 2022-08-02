@@ -20,41 +20,48 @@ const Footer = (props) => {
   });
 
   const handleNewsLetterClick = (email, setEmail) => {
-
-
     const url = APIS.newsLetter;
+    // alert(email)
     const formData = {
       email: email,
     };
-
     try {
       createMutate({ url, formData });
-      if (successMessage) {
-
-        setEmail('')
-      }
-      if (errorMessage) {
-
-        setEmail('')
-
-      }
+      alert('Successfully Subscribed')
+      setEmail('')
     } catch (e) {
-
+      console.log(e);
+      alert('Error')
     }
+
+    // try {
+    //   createMutate({ url, formData });
+    //   if (successMessage) {
+    //     setEmail('')
+    //   }
+    //   if (errorMessage) {
+    //     setEmail('')
+    //   }
+    // } catch (e) {
+
+    // }
 
   };
   return (
     <div className={style.footer}>
-      <p style={{ fontSize: '14px', color: 'gray' }}>
+      <p style={{ fontSize: '14px', color: 'gray',cursor: 'pointer' }}>
         All content on thecryptoinsider.news is provided solely for product, service or investment. The opinions expressed in this Site do not constitute investment.
       </p>
       <div style={{ width: '200px' }}>
-        <img
-          src="../../mainLogo.png"
-          alt=""
-          className={style.footerimg}
-          style={{ width: '100%' }}
-        />
+        <Link href='/' style={{ cursor: 'pointer' }}>
+          <img
+            src="../../mainLogo.png"
+            alt=""
+            className={style.footerimg}
+            style={{ width: '100%' }}
+          />
+        </Link>
+
       </div>
 
       <div style={{ marginTop: '20px', marginBottom: '20px' }}>
@@ -81,6 +88,7 @@ const Footer = (props) => {
         </Link>
       </div>
       <div style={{ fontSize: '12px', color: 'gray' }}>The Crypto Insider™ COPYRIGHT © 2017 - 2022 . ALL RIGHTS RESERVED.</div>
+      <p style={{ fontSize: '12px', color: 'gray' }}> Powered by <a href="https://www.dibtech.com.au/" style={{ color: "#245557" }}> Dibtech</a></p>
     </div>
   );
 };

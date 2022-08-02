@@ -20,7 +20,7 @@ const Contact = (props) => {
     }
     const handleSubmit = (e) => {
         e.preventDefault()
-        props.handleContact(data.fullname, data.email, data.phone, data.message)
+        props.handleContact(data)
         setData({ ...data, fullname: "", email: "", phone: "", message: "" })
     }
     return (
@@ -29,21 +29,23 @@ const Contact = (props) => {
                 <Col lg={8} >
                     <div className={style.contact} style={{ marginTop: "40px", marginBottom: "40px" }}>
                         <h3 style={{ marginLeft: '10%', marginTop: '0px' }}>Contact Form</h3>
-                        <form action="" style={{ textAlign: 'center' }} onSubmit={handleSubmit}>
+                        <form style={{ textAlign: 'center' }} onSubmit={handleSubmit}>
                             <div className={style.contactform}>
-                                <input type="text" value={data.fullname} placeholder='Full Name' onChange={(e) => handle(e)} id='fullname' aria-required />
+                                <input type="text" value={data.fullname} placeholder='Full Name' onChange={(e) => handle(e)} id='fullname' required />
                             </div>
                             <div className={style.contactform}>
-                                <input type="email" value={data.email} placeholder='Email' id='email' required onChange={(e) => handle(e)} />
+                                <input type="email" value={data.email} placeholder='Email' id='email' required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" onChange={(e) => handle(e)} />
                             </div>
                             <div className={style.contactform}>
-                                <input type="phone" value={data.phone} placeholder='Phone Number' id='phone' onChange={(e) => handle(e)} required />
+                                <input type="phone" value={data.phone} placeholder='Phone Number' id='phone' onChange={(e) => handle(e)} required pattern="[0-9]{9}"
+
+                                />
                             </div>
+                            {/* <span style={{ fontSize: "10px", display: "flex", alignItems: "center" }}>Must be less than 16 digits</span> */}
                             <div className={style.contactform}>
                                 <input type="textarea" name='message' value={data.message} placeholder='Message' id='message' onChange={(e) => handle(e)} required />
-
                             </div>
-                            <Button style={{ marginBottom: '30px', marginTop: '10px', backgroundColor: "#245557" }} onClick={handleSubmit}>Submit</Button>
+                            <Button type="submit" style={{ marginBottom: '30px', marginTop: '10px', backgroundColor: "#245557" }}>Submit</Button>
                         </form>
                     </div>
                 </Col>

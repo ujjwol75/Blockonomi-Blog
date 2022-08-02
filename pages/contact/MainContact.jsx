@@ -18,22 +18,23 @@ const MainContact = () => {
     queryKey: 'contactUsForm',
   });
 
-  const handleContact = (fullname, email, phone, message) => {
+  const handleContact = (data) => {
 
 
     const url = APIS.contactUs;
     const formData = {
-      full_name: fullname,
-      email: email,
-      phone_number: phone,
-      message: message
+      full_name: data?.fullname,
+      email: data?.email,
+      phone_number: data?.phone,
+      message: data?.message
     };
 
     try {
       createMutate({ url, formData });
+      alert("Succesfully Submitted")
 
     } catch (e) {
-
+      alert("Error Submitting Form")
     }
   };
 
