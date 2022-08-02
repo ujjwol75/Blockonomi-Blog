@@ -31,10 +31,10 @@ const InputEmail = (props) => {
             onChange={(e) => setFormValue(e.target.value)}
             required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
           />
-          <Form.Control.Feedback type="valid">Looks good!</Form.Control.Feedback>
+          {/* <Form.Control.Feedback type="valid">Looks good!</Form.Control.Feedback>
           <Form.Control.Feedback type="invalid">
             Please provide a valid email.
-          </Form.Control.Feedback>
+          </Form.Control.Feedback> */}
         </Form.Group>
         <Button type="submit" style={{ backgroundColor: "#245557", display: 'flex', alignItems: 'center', marginLeft: '10px' }} className={style.buttondiv}>SignUp</Button>
       </Form>
