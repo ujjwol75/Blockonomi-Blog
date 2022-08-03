@@ -1,5 +1,5 @@
 import React from 'react';
-import { Container, Row } from 'react-bootstrap';
+import { Col, Container, Row } from 'react-bootstrap';
 import Footer from '../../src/components/Footer/Footer';
 import NewsHeading from '../../src/components/News/NewsHeading';
 import SecondNavBar from '../../src/components/SecondNavbar/SecondNavBar';
@@ -10,10 +10,10 @@ import SocialShare from '../../src/components/SocialShare/SocialShare';
 import { getApiData } from '../../src/components/Helper/AxiosInstance';
 import Head from 'next/head';
 import Script from 'next/script';
+import NewsImageTitle from '../../src/components/News/NewsImage';
 
 
 const Detail = (props) => {
-
 
   let urlPage = "https://test.insidecrypto.news/"
   if (typeof window !== "undefined") {
@@ -70,6 +70,48 @@ const Detail = (props) => {
               data-numposts='5'
             ></div>
           </div>
+          {props?.posts?.related_posts?.length ?
+            <Row>
+              {props?.posts?.related_posts?.map((items, key) =>
+                <Col md={6} key={key} >
+                  <h2>Related Posts</h2>
+                  <NewsImageTitle
+                    image={items.image}
+                    height="250px"
+                    author={items.author}
+                    date={items.date}
+                    content={items.description}
+                    title={items.title}
+                    contentlength={items.contentlength}
+                    id={items.id}
+                    slug={items.slug}
+                  />
+                </Col>
+              )}
+            </Row>
+            :
+            null}
+          {props?.pageScrapped?.related_posts?.length ?
+            <div>
+              {props?.pageScrapped?.related_posts?.map((items, key) =>
+                <Col md={6} key={key} >
+                  <h2>Related Posts</h2>
+                  <NewsImageTitle
+                    image={items.preview_image}
+                    height="250px"
+                    author={items.author}
+                    date={items.date}
+                    content={items.description}
+                    title={items.title}
+                    contentlength={items.contentlength}
+                    id={items.id}
+                    slug={items.slug}
+                  />
+                </Col>
+              )}
+            </div>
+            :
+            null}
 
         </Row>
       </Container>

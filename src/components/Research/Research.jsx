@@ -27,7 +27,6 @@ const Research = (props) => {
     queryKey: `singlePageData${props?.postid}`,
     url: `${APIS.posts}?categories=${props?.postid}&page=${currentPage}`,
   });
-  console.log(singlePageData, "singlePageData")
   return (
     <>
       <div className="m-2">

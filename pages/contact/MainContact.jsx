@@ -19,8 +19,6 @@ const MainContact = () => {
   });
 
   const handleContact = (data) => {
-
-
     const url = APIS.contactUs;
     const formData = {
       full_name: data?.fullname,
