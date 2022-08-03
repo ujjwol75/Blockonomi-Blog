@@ -96,21 +96,12 @@ const News = (props) => {
 
           <Col md={4} sm={12} lg={4}>
 
-            <p style={{ fontWeight: 'bold', fontSize: '20px', marginTop: '10px' }}>Latest News</p>
-            {latestNewsData?.results?.slice(5, 15)?.map((curEle, index) =>
-              <LatestNews image={curEle?.image} title={curEle?.title} created={curEle?.created} key={index} id={curEle?.id} slug={curEle?.slug} />
-            )}
-
             <p style={{ fontWeight: 'bold', fontSize: '20px', marginTop: '10px' }}>Popular News</p>
-            {latestNewsData?.results?.slice(0, 5)?.map((curEle, index) =>
-              <LatestNews image={curEle?.image} title={curEle?.title} created={curEle?.created} key={index} id={curEle?.id} slug={curEle?.slug} />
-            )}
+
+            <LatestNews />
 
 
-            <p style={{ fontWeight: 'bold', fontSize: '20px', marginTop: '10px' }}>Featured News</p>
-            {latestNewsData?.results?.slice(15, 27)?.map((curEle, index) =>
-              <LatestNews image={curEle?.image} title={curEle?.title} created={curEle?.created} key={index} id={curEle?.id} slug={curEle?.slug} />
-            )}
+
           </Col>
         </>
       </Row>

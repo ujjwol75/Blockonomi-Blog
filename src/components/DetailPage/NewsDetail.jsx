@@ -27,10 +27,9 @@ const NewsDetail = (props) => {
           </Col>
 
           <Col md={12} sm={12} lg={4}>
-            <p style={{ fontWeight: 'bold', fontSize: '20px', marginTop: '10px' }}>Latest News</p>
-            {latestNewsData?.results?.slice(0, 7)?.map((curEle, index) =>
-              <LatestNews image={curEle?.image} title={curEle?.title} created={curEle?.created} key={index} id={curEle?.id} slug={curEle?.slug} />
-            )}
+            <p style={{ fontWeight: 'bold', fontSize: '20px', marginTop: '10px' }}>Popular News</p>
+
+            <LatestNews />
           </Col>
         </Row>
 
