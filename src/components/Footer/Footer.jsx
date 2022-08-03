@@ -52,8 +52,8 @@ const Footer = (props) => {
       <p style={{ fontSize: '14px', color: 'gray',cursor: 'pointer' }}>
         All content on thecryptoinsider.news is provided solely for product, service or investment. The opinions expressed in this Site do not constitute investment.
       </p>
-      <div style={{ width: '200px' }}>
-        <Link href='/' style={{ cursor: 'pointer' }}>
+      <div style={{ width: '200px',cursor: 'pointer' }}>
+        <Link href='/'>
           <img
             src="../../mainLogo.png"
             alt=""

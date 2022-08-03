@@ -16,10 +16,10 @@ const LatestNews = (props) => {
   return (
     <div>
       <hr />
-   
-      <div style={{ margin: '20px 0 20px 0' }}>
+
+      <div style={{ margin: '20px 0 20px 0', cursor: 'pointer' }}>
         {popularPostsData?.results?.map((item, key) =>
-          <Link href={`/article/${props.slug}`} key={key}>
+          <Link href={`/article/${item.slug}`} key={key}>
             <Row>
               <Col style={{ height: '50px', width: '100px' }} lg="2">
                 <img src={item?.image} alt="" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />

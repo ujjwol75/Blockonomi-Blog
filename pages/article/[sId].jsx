@@ -72,9 +72,9 @@ const Detail = (props) => {
           </div>
           {props?.posts?.related_posts?.length ?
             <Row>
+              <h2>Related Posts</h2>
               {props?.posts?.related_posts?.map((items, key) =>
-                <Col md={6} key={key} >
-                  <h2>Related Posts</h2>
+                <Col md={4} key={key} >
                   <NewsImageTitle
                     image={items.image}
                     height="250px"

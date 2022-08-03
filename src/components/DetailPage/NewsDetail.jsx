@@ -23,7 +23,6 @@ const NewsDetail = (props) => {
               <img src={props?.data?.image || props?.data?.preview_image} alt="" style={{ width: '100%', boxShadow: '0px 5px 10px 0px rgba(0, 0, 0, 0.5), height:{props.height}' }} />
             </div>
             <NewsDetailParagraph content={props?.data?.content} contentlength={props.contentlength} />
-
           </Col>
 
           <Col md={12} sm={12} lg={4}>
