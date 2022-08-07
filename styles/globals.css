@@ -111,7 +111,6 @@ hr {
     top: 70px;
   }
   .liveMarket{
-    max-width: 500px;
-    overflow-x: scroll;
+    font-size: 10px;
   }
 }
