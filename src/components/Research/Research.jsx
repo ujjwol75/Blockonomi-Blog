@@ -24,7 +24,7 @@ const Research = (props) => {
     data: singlePageData,
     isError,
   } = useGetHook({
-    queryKey: `singlePageData${props?.postid}`,
+    queryKey: `singlePageData${props?.postid}${currentPage}`,
     url: `${APIS.posts}?categories=${props?.postid}&page=${currentPage}`,
   });
   return (

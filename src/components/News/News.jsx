@@ -8,8 +8,10 @@ import Paginate from "../Pagination/Paginate";
 import LatestNews from "../DetailPage/LatestNews";
 import useGetHook from "../CustomHooks/useGetHook";
 import { APIS } from "../../../pages/api/hello";
+import { useRouter } from 'next/router';
 
 const News = (props) => {
+  const router = useRouter();
   const { data: latestNewsData } = useGetHook(
     {
       queryKey: 'latestNewsData',

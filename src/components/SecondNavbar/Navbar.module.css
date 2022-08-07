@@ -155,7 +155,7 @@
 .barDiv {
     padding-top: 12%;
     width: 250px;
-    height: 100vh;
+    height: fit-content;
     background-color: white;
     position: fixed;
     left: 0;

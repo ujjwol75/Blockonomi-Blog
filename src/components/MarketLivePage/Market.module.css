@@ -8,9 +8,6 @@
   text-align: center;
 
 }
-
-
-
 .table tr:nth-child(2n):hover,
 .table tr:hover {
   background-color: #fffef4;

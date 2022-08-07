@@ -10,18 +10,31 @@ const index = () => {
   return (
     <>
       <Head>
-        <title>TheCryptoDigest -PressRelease</title>
-        <meta property="og:title" content={" TheCryptoDigest -PressRelease"} />
-        <meta property="og:image" content={"https://www.nepalitimes.com/wp-content/uploads/2022/02/cryptocurrency-banned-in-Nepal-NT-2.jpg"} />
-        <meta property="og:description" content={"All the latest content about Cryptocurrency of the world"} />
-        <meta name="twitter:title" content={" TheCryptoDigest -PressRelease"} />
-        <meta name="twitter:description" content={"All the latest content about Cryptocurrency of the world"} />
-        <meta property="og:type" content="article" />
+        <title>TheCryptoInsider -PressRelease</title>
+        <meta property='og:title' content={' TheCryptoInsider -PressRelease'} />
+        <meta
+          property='og:image'
+          content={
+            'https://www.nepalitimes.com/wp-content/uploads/2022/02/cryptocurrency-banned-in-Nepal-NT-2.jpg'
+          }
+        />
+        <meta
+          property='og:description'
+          content={'All the latest content about Cryptocurrency of the world'}
+        />
+        <meta
+          name='twitter:title'
+          content={' TheCryptoInsider -PressRelease'}
+        />
+        <meta
+          name='twitter:description'
+          content={'All the latest content about Cryptocurrency of the world'}
+        />
+        <meta property='og:type' content='article' />
         {/* <meta property="og:url" content={`https://insidecrypto.news`} /> */}
-        <meta property="fb:app_id" content={"1144829116095615"} />
+        <meta property='fb:app_id' content={'1144829116095615'} />
       </Head>
       <Container fluid>
-
         <SecondNavBar />
         <Wrap />
         <hr />

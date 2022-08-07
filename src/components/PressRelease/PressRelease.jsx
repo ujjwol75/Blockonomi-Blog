@@ -1,10 +1,10 @@
-import React, { useRef, useState } from 'react'
-import { Button, Col, Row } from 'react-bootstrap';
+import 'react-datepicker/dist/react-datepicker.css';
+import React, { useRef, useState } from 'react';
 
-import Form from 'react-bootstrap/Form';
 import DatePicker from 'react-datepicker';
-import StyledEditor from '../Reusable/StyledEditor'
-
+import { Button, Col, Row } from 'react-bootstrap';
+import Form from 'react-bootstrap/Form';
+import StyledEditor from '../Reusable/StyledEditor';
 import axios from 'axios';
 
 const PressRelease = () => {
@@ -21,11 +21,10 @@ const PressRelease = () => {
 
   const [validated, setValidated] = useState(false);
   const upload = (e) => {
-    console.warn(e.target.files)
-    const files = e.target.files
-    setImage(files)
-  }
-
+    console.warn(e.target.files);
+    const files = e.target.files;
+    setImage(files);
+  };
 
   //handle pressRelease
   const handlePressRelease = async (event) => {
@@ -39,27 +38,38 @@ const PressRelease = () => {
 
     setValidated(true);
 
-    let formData = new FormData();    //formdata object
-    formData.append('email', email);   //append the values with key, value pair
+    let formData = new FormData(); //formdata object
+    formData.append('email', email); //append the values with key, value pair
     if (image) {
-
-      formData.append('image', image[0])
+      formData.append('image', image[0]);
     }
     formData.append('title', title);
-    formData.append('publish_date', new Date(publishDate).toISOString().slice(0, 10));
-    formData.append('expiry_date', new Date(expireDate).toISOString().slice(0, 10));
-    formData.append('content', (content));
+    formData.append(
+      'publish_date',
+      new Date(publishDate).toISOString().slice(0, 10)
+    );
+    formData.append(
+      'expiry_date',
+      new Date(expireDate).toISOString().slice(0, 10)
+    );
+    formData.append('content', content);
 
     const config = {
       headers: {
         'content-type': 'multipart/form-data',
-        'authorization': 'Apikey d9f896f0f08de8c0c908909ff30f330ff8a16a7bffd2cd00995f177b54ca6f2c'
-      }
-    }
-    axios.post(`https://insidecrypto.news/api/posts/public-post/`, formData, config)
-      .then(response => {
+        authorization:
+          'Apikey d9f896f0f08de8c0c908909ff30f330ff8a16a7bffd2cd00995f177b54ca6f2c',
+      },
+    };
+    axios
+      .post(
+        `https://insidecrypto.news/api/posts/public-post/`,
+        formData,
+        config
+      )
+      .then((response) => {
         if (response.status === 200) {
-          alert("Succesfully Created")
+          alert('Succesfully Created');
           setTitle('');
           setEmail('');
           setContent('');
@@ -68,32 +78,32 @@ const PressRelease = () => {
           setExpireDate(today);
         }
       })
-      .catch(error => {
+      .catch((error) => {
         console.log(error);
       });
-  };
+  };;
 
   return (
     <div className='container my-4 '>
       <div className='row'>
         <div className='col-xl-12 .col-sm-12'>
-          <Form noValidate
-            validated={validated}
-            onSubmit={handlePressRelease}
-          >
-            <Form.Group className="m-0">
+          <Form noValidate validated={validated} onSubmit={handlePressRelease}>
+            <Form.Group className='m-0'>
               <Form.Group className='my-3'>
                 <Form.Label>Email address</Form.Label>
                 <Form.Control
-                  rows="3"
+                  rows='3'
                   type='email'
                   placeholder='name@example.com'
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
-                  required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
+                  required
+                  pattern='[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$'
                 />
-                <Form.Control.Feedback type="valid">Looks good!</Form.Control.Feedback>
-                <Form.Control.Feedback type="invalid">
+                <Form.Control.Feedback type='valid'>
+                  Looks good!
+                </Form.Control.Feedback>
+                <Form.Control.Feedback type='invalid'>
                   Please provide a valid email.
                 </Form.Control.Feedback>
               </Form.Group>
@@ -107,7 +117,7 @@ const PressRelease = () => {
                   required
                 />
                 <Form.Control.Feedback>Looks good!</Form.Control.Feedback>
-                <Form.Control.Feedback type="invalid">
+                <Form.Control.Feedback type='invalid'>
                   Please provide a title.
                 </Form.Control.Feedback>
               </Form.Group>
@@ -122,7 +132,7 @@ const PressRelease = () => {
               </Form.Group>
               <Row>
                 <Col>
-                  <Form.Group controlId='form.Date' className='my-3'>
+                  <Form.Group controlId='form.Date' className='my-3 relative'>
                     <Form.Label>Published Date</Form.Label>
                     <DatePicker
                       selected={publishDate}
@@ -156,19 +166,86 @@ const PressRelease = () => {
               </Row>
               <Form.Group className='my-3'>
                 <Form.Label>Content</Form.Label>
-                <StyledEditor
-                  content={content}
-                  setContent={setContent}
-                />
+                <StyledEditor content={content} setContent={setContent} />
               </Form.Group>
-
             </Form.Group>
-            <Button style={{backgroundColor:"#245557"}} type="submit">Submit form</Button>
+            <Button style={{ backgroundColor: '#245557' }} type='submit'>
+              Submit form
+            </Button>
           </Form>
+          {/* <form
+            onSubmit={handlePressRelease}
+            style={{ width: '100%', display: 'flex', flexDirection: 'column' }}
+          >
+            <input
+              type='email'
+              placeholder='name@example.com'
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              className='articleInput'
+              required
+              pattern='[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$'
+            />
+
+            <input
+              type='text'
+              placeholder='Enter title'
+              value={title}
+              onChange={(e) => setTitle(e.target.value)}
+              className='articleInput'
+              required
+            />
+
+            <input
+              ref={fileInput}
+              type='file'
+              filename={image}
+              onChange={(e) => upload(e)}
+              className='articleInput'
+            />
+
+            <DatePicker
+              selected={publishDate}
+              onChange={(e) => {
+                setPublishDate(e);
+              }}
+              className='articleInput'
+              minDate={publishDate}
+              customInput={<input type='text' id='validationCustom01' />}
+            />
+
+            <DatePicker
+              selected={expireDate}
+              onChange={(e) => {
+                setExpireDate(e);
+              }}
+              className='articleInput'
+              minDate={expireDate}
+              customInput={<input type='text' id='validationCustom01' />}
+            />
+
+            <StyledEditor content={content} setContent={setContent} />
+
+            <button
+              type='submit'
+              style={{
+                width: '120px',
+                margin: '10px',
+                padding: '10px',
+                cursor: 'pointer',
+                borderRadius: '10px',
+                backgroundColor: '#FED319',
+                borderColor: '#FED319',
+              }}
+              className='button-submit'
+            >
+              Submit form
+            </button>
+          </form> */}
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default PressRelease
+export default PressRelease;

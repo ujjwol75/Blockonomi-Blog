@@ -4,40 +4,45 @@ import style from "./footer.module.css";
 import Form from 'react-bootstrap/Form';
 
 const InputEmail = (props) => {
-
-  const [formValue, setFormValue] = useState("");
-  const [validated, setValidated] = useState(false);
+  const [formValue, setFormValue] = useState('');
 
   const handleClick = (e) => {
     e.preventDefault();
-    // setValidated(true);
-    props.handleNewsLetterClick(formValue, setFormValue)
+    props.handleNewsLetterClick(formValue, setFormValue);
+  };
+
+  const emailChangeHandler = (e) => {
+    setFormValue(e.target.value);
+    props?.setError(false);
   };
 
   return (
     <Container>
-      <Form
-        // validated={validated}
-        onSubmit={handleClick}
-        className={style.forminput}
-
-      >
+      <Form onSubmit={handleClick} className={style.forminput}>
         <Form.Group>
           <Form.Control
-            rows="3"
+            ref={props?.isFocus ? (input) => input && input.focus() : null}
+            rows='3'
             type='email'
             placeholder='name@example.com'
             value={formValue}
-            onChange={(e) => setFormValue(e.target.value)}
-            required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
+            onChange={emailChangeHandler}
           />
-          {/* <Form.Control.Feedback type="valid">Looks good!</Form.Control.Feedback>
-          <Form.Control.Feedback type="invalid">
-            Please provide a valid email.
-          </Form.Control.Feedback> */}
         </Form.Group>
-        <Button type="submit" style={{ backgroundColor: "#245557", display: 'flex', alignItems: 'center', marginLeft: '10px' }} className={style.buttondiv}>SignUp</Button>
+        <Button
+          type='submit'
+          style={{
+            backgroundColor: '#245557',
+            display: 'flex',
+            alignItems: 'center',
+            marginLeft: '10px',
+          }}
+          className={style.buttondiv}
+        >
+          SignUp
+        </Button>
       </Form>
+      {props?.error && <p className='text-white'>Enter valid email address</p>}
     </Container>
   );
 };
