@@ -1,74 +1,117 @@
-.wrap{
-    background-color: black;
+.wrap {
+    background-color: #245557;
     display: flex;
     flex-direction: row;
     color: white;
-    padding: 10px;
+    /* padding: 4px; */
+    /* margin:4px; */
     align-items: center;
     text-align: center;
     justify-content: center;
 }
 
+.wrap>div {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.wrap>div>div {
+    margin-right: 6px;
+}
+
 @media only screen and (max-width:640px) {
-    .bitcoincol{
+    .bitcoincol {
         display: none;
     }
-    .barimg{
+
+    .barimg {
         width: 100px;
     }
-    .wrap{
+
+    .wrap {
         display: flex;
         flex-direction: row;
         justify-content: center;
         text-align: center;
         align-items: center;
+        overflow-x: scroll;
+        padding-left: 292px;
     }
-
 }
 
 
 @media only screen and (max-width:768px) {
-    .bitcoincol{
+    .bitcoincol {
         display: none;
     }
-    .barimg{
+
+    .barimg {
         width: 100px;
     }
-    .wrap{
+
+    .wrap {
         display: flex;
         flex-direction: row;
         justify-content: center;
         text-align: center;
         align-items: center;
+        overflow-x: scroll;
     }
 
 }
 
 @media only screen and (max-width:1024px) {
-    .wraprow{
+    .wraprow {
         display: flex;
         flex-direction: row;
-        justify-content: center;
+        justify-content: space-around;
     }
-    .barimg{
+
+    .barimg {
         width: 100px;
     }
 
-}
-.wraprow{
-    flex-direction: row;
-    display: flex;
+    .wrap {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        text-align: center;
+        align-items: center;
+        overflow-x: scroll;
+
+    }
+
+
 }
 
-.wrapimg{
+.wraprow {
+    flex-direction: row;
+    display: flex;
+    justify-content: space-around;
+    margin-left: 8px;
+    padding: 4px;
+}
+
+.wrapimg {
     width: 20px;
 }
 
-.wrapcol{
+.wrapcol {
     display: flex;
     flex-direction: column;
 }
 
-.btcspan{
+.btcspan {
     color: gray;
+}
+
+.percentage {
+    color: #F14865;
+    /* margin-left: 4px; */
+}
+
+.perc {
+    color: yellowgreen;
+    /* margin-left: 4px; */
+
 }

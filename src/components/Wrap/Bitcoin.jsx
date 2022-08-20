@@ -1,26 +1,28 @@
 import React from 'react'
 import style from "./wrap.module.css";
 
-const Bitcoin = () => {
+const Bitcoin = (props) => {
+  const { title, price, changeDay } = props;
   return (
     <div className={style.wraprow}>
-              <div className={style.wrapcol}>
-              <div className={style.wraprow}>
-                <div className={style.wrapimg}>
-                  <img
-                    src="../../bitcoin.webp"
-                    alt=""
-                    style={{ marginRight: "4px", width: "100%" }}
-                  />
-                </div>
+      <div className={style.wrapcol}>
+        <div className={style.wraprow}>
+          <span className={style.btcspan}>{title}</span>
+        </div>
+      <span className="p-0">{price}</span>
+        {changeDay >= 0 ? (
+          <span className={style.perc}>
+            {!isNaN(changeDay) ? parseFloat(changeDay).toFixed(2) : "N/A"}
+          </span>
+        ) : (
+          <span className={style.percentage}>
+            {!isNaN(changeDay) ? parseFloat(changeDay).toFixed(2) : "N/A"}
 
-                <span className={style.btcspan}>BTC/USD</span>
-              </div>
-              <span>$ 19,095.13</span>
-              </div>
-              
-              <img src="../../chart.png" alt="" />
-            </div>
+          </span>
+        )}
+      </div>
+
+    </div>
   )
 }
 

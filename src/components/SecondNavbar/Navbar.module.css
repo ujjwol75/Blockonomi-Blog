@@ -1,137 +1,180 @@
-.navbar{
-    background:red;
+.navbar {
+    background: red;
 }
-.navbar > ul >li{
+
+.secondnavbar {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
+    padding: 4px 0 8px 0;
+    /* background-color:#245557; */
+    opacity: 0.9;
+}
+
+.navbar>ul>li {
     position: relative;
     float: left;
+
 }
-.navbar >ul {
+
+.navbar>ul {
     list-style: none;
 }
-.navbar > ul >li>a{
-    font-size:18px;
-    padding:10px 15px;
-    color:#000;
+
+.navbar>ul>li>a {
+    font-size: 18px;
+    padding: 10px 15px;
+    color: #fff;
     text-decoration: none;
     display: block;
 }
-.navbar > ul >li>a:hover{
-background-color: #253137;
-  color: #fff;
+
+.navbar>ul>li>a:hover {
+    background-color: #253137;
+    color: #fff;
 
 }
 
-.navbar >ul >li>ul>li{
+.navbar>ul>li>ul>li {
     position: absolute;
     background-color: #fff;
     display: block;
 
 }
 
-
-@media only screen and (min-width:1200px) {
-    .barIcon{
-        display: none;
-       
-    }
-    .imglogo{
-        width: 100%;
-    }
-    
+.barIcon {
+    display: none;
 }
 
-.navitems{
+@media only screen and (max-width:1200px) {
+    .barIcon {
+        display: none;
+
+    }
+
+    .imglogo {
+        width: 100%;
+        cursor: pointer;
+    }
+
+}
+
+.navitems {
     display: flex;
     flex-direction: row;
     text-align: center;
     justify-content: space-between;
     align-items: center;
 
-    /* justify-content: space-between; */
+
 
 }
-.navbarlinks{
-    display: flex;
+
+.navbarlinks {
+    display: inline-flex;
     flex-direction: row;
     text-align: center;
     justify-content: center;
     align-items: center;
     justify-content: space-between;
 
+
 }
 
-@media only screen and (max-width:640px) {
-    /* .barIcon{
-        display: flex;
-       
-    } */
-    
-    .barListDiv a{
-        text-decoration: none;
-        color: black;
-        font-size: 17px;
-        font-weight: bold;
+.navbarlinks>div {
+    margin: 6px;
+}
+
+
+
+@media only screen and (max-width:768px) {
+    .socialmedia{
+        display:none
     }
-    .crossIcon{
-        color: white !important;
-        background-color: black;
-        padding: 3px;
+    .barIcon {
+        display: block;
+        cursor: pointer;
+
     }
-    .navbarlinks{
+
+    .navbarlinks {
         display: flex;
         justify-content: center;
         text-align: center;
         align-items: center;
         display: none;
-        
+
     }
-    .imglogo{
+
+    .imglogo {
         width: 100%;
+        cursor: pointer;
     }
-    .navitems{
+}
+
+@media only screen and (max-width:640px) {
+
+    .barListDiv a {
+        text-decoration: none;
+        color: black;
+        font-size: 17px;
+        font-weight: bold;
+    }
+
+    .crossIcon {
+        color: white !important;
+        background-color: black;
+        padding: 3px;
+    }
+
+
+
+
+    .imglogo {
+        width: 100%;
+        cursor: pointer;
+    }
+
+    .navitems {
         display: flex;
         flex-direction: row;
     }
-    .socialmedia{
-        display: flex;
+
+    .socialmedia {
+        display: none;
         flex-direction: row;
         justify-content: center;
         text-align: center;
         align-items: center;
-        color: black;
+        color: white;
     }
-    .secondnavbar{
-        margin-bottom: 10px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
+
+
 }
 
-.barDiv{
+.barDiv {
     padding-top: 12%;
     width: 250px;
-    height: 100vh;
+    height: fit-content;
     background-color: white;
     position: fixed;
     left: 0;
     top: 0;
     z-index: 10;
     padding-left: 10px;
-    /* padding-top: 10%; */
-    /* padding-left: 5%; */
     overflow-y: scroll;
-    /* justify-items: center; */
     color: black;
     font-size: 20px;
     overflow-x: hidden;
-    
-    
+
+
 }
-.barListdiv a{
+
+.barListdiv a {
     text-decoration: none;
 }
-.barList{
+
+.barList {
     display: flex;
     text-align: center;
     justify-content: center;
@@ -139,63 +182,69 @@ background-color: #253137;
     margin-bottom: 30px;
 
 }
-/* .barListdiv{
-   padding: 5%;
 
-} */
 
-.crossIcon{
+.crossIcon {
     position: absolute;
     top: 6px;
     right: 8px;
     color: black;
 
 }
-.navitem{
+
+.navitem {
     cursor: pointer;
     color: black;
+    margin-right: 14px;
+    font-weight: bold;
 }
 
-.secondnavbar{
+.secondnavbar {
     display: flex;
     flex-direction: row;
-    justify-content: center;
-
-}
-
-.secondnavbar{
-    display: flex;
     justify-content: space-between;
+    align-items: center;
+
 }
 
-@media only screen and (max-width:1120px) {
-    .barListDiv a{
+
+/* 
+@media only screen and (max-width:1200px) {
+    .secondnavbar{
+        margin-top: 6px;
+    }
+    .barListDiv a {
         text-decoration: none;
         color: black;
         font-size: 17px;
         font-weight: bold;
     }
-    .crossIcon{
+
+    .crossIcon {
         color: white !important;
         background-color: black;
         padding: 3px;
     }
-    .navbarlinks{
+
+    .navbarlinks {
         display: flex;
         justify-content: center;
         text-align: center;
         align-items: center;
         display: none;
-        
+
     }
-    .imglogo{
+
+    .imglogo {
         width: 100%;
     }
-    .navitems{
+
+    .navitems {
         display: flex;
         flex-direction: row;
     }
-    .socialmedia{
+
+    .socialmedia {
         display: flex;
         flex-direction: row;
         justify-content: center;
@@ -203,11 +252,13 @@ background-color: #253137;
         align-items: center;
         color: black;
     }
-    .secondnavbar{
+
+    .secondnavbar {
         margin-bottom: 10px;
         display: flex;
-        /* justify-content: center; */
+
         align-items: center;
     }
 
 }
+ */

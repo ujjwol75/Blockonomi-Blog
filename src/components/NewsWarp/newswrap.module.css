@@ -3,20 +3,26 @@
     background-color: #151515;
     color: white;
     width: 100%;
-    overflow-x: scroll;
+
     justify-content: center;
-    min-height: 100vh;
-    padding: 5% 5%; 
+    height: full;
+    padding: 3% 3%; 
     margin-bottom: 30px;
 }
-
+.newsimagediv{
+    height: 500px;
+}
+.newsimageright{
+    height: 220px;
+}
 @media screen  and (max-width:640px){
     .newswrapcontainer{
         display: flex;
     }
-    .newsimage{
-        height: '200px';
+    .newsimagediv{
+        height: 250px;
     }
+
     .wrapcol{
         width: 100%;
     }
@@ -24,9 +30,12 @@
         display: flex;
         flex-direction: row;
     }
+    .newsimage{
+        height: 200px !important;
+    }
+    .newsimageright{
+        height: 220px;
+      
+    }
 }
 
-
-.newswrapimg{
-    width: 100%;
-}

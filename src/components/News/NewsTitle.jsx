@@ -28,16 +28,8 @@ const NewsTitle = (props) => {
           </span>{" "}
           <span>{props?.date ? <span>{props?.date}</span> : ""}</span>
         </h3>
-        {/* <span>{props?.description ? <p>{props?.description}</p> : ""}</span> */}
-        <div className={style.contenthtmldiv}>
-          <div
-            className={style.contenthtml}
-            dangerouslySetInnerHTML={{
-              __html: props?.content?.slice(0, props.contentlength),
-            }}
-          />
-        </div>
-        
+       
+
       </div>
     </>
   );

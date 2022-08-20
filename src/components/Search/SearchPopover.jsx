@@ -11,7 +11,7 @@ const SearchPopover = (props) => {
     const handleClick=()=>{
         props.setSearch(false)
     }
-    const [value, setValue] = useState()
+   
   return (
     <>
      {submit && <div className={style.searchdiv}>
@@ -19,8 +19,9 @@ const SearchPopover = (props) => {
             <ImCross className={style.cross} onClick={handleClick}/>
             {(props.search==false) && <Home /> }
 
-            <Search submit={props.submit} setSubmit={props.setSubmit}/>
-            {/* <span>Type above and press Enter to search. Press Esc to cancel.</span> */}
+
+           <Search submit={props.submit} setSubmit={props.setSubmit} search={props.search} setSearch={props.setSearch}/>
+
         
         </div>
         

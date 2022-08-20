@@ -1,16 +1,18 @@
-
-
 html,
 body {
   padding: 0;
-  margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  max-width: 1250px;
+  margin: auto;
 }
 
 a {
   color: inherit;
   text-decoration: none;
+}
+hr {
+  z-index: -1;
 }
 
 * {
@@ -19,3 +21,96 @@ a {
   padding: 0;
 }
 
+.pagination {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  justify-items: center;
+  margin-top: 8px;
+  /* font-size: 40px;  */
+}
+
+.pagination a {
+  color: black;
+  float: left;
+  padding: 4px 16px;
+  text-decoration: none;
+}
+
+.pagination-item {
+  padding: 0 8px;
+  height: 32px;
+  text-align: center;
+  margin: auto 4px;
+  color: rgba(0, 0, 0, 0.87);
+  display: flex;
+  box-sizing: border-box;
+  align-items: center;
+  letter-spacing: 0.01071em;
+  border-radius: 16px;
+  line-height: 1.43;
+  font-size: 24px;
+  min-width: 32px;
+  cursor: pointer;
+}
+
+.active {
+  background-color: #245557;
+  color: white;
+  padding: 0px 12px;
+  border-radius: 5px;
+}
+
+.news_newsmain__FWESc {
+  padding: 0 !important;
+}
+
+.articleInput {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  /* position: absolute; */
+  z-index: 0;
+}
+.tox-tinymce {
+  z-index: 0;
+}
+.react-datepicker-popper {
+  inset: unset !important;
+  transform: none !important;
+}
+.liveMarketSection {
+  max-width: 99%;
+  overflow-y: scroll;
+}
+.searchForm {
+  margin: 10px;
+  position: absolute;
+  right: 340px;
+  z-index: 9999 !important;
+  top: 70px;
+  background-color: white;
+  border-radius: 10px;
+}
+.searchInput {
+  padding: 10px;
+  background-color: transparent;
+  outline: none;
+  border: none;
+  border-radius: 10px;
+  color: black;
+}
+
+@media (max-width: 768px) {
+  .searchForm {
+    right: 0;
+    top: 70px;
+  }
+  .liveMarket{
+    font-size: 10px;
+  }
+}

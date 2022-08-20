@@ -1,48 +1,19 @@
 import News from "../src/components/News/News";
 import SecondNavBar from "../src/components/SecondNavbar/SecondNavBar";
-import TopNavbar from "../src/components/TopNavbar/TopNavbar";
+
 import Wrap from "../src/components/Wrap/Wrap";
 import NewsWrap from "../src/components/NewsWarp/NewsWrap";
 import Footer from "../src/components/Footer/Footer";
-import NewsCategory from "../src/components/NewsCategory/NewsCategory";
-import usePostHook from "../src/components/CustomHooks/usePostHook";
 import { APIS } from "./api/hello";
-import { Col, Container, Row } from "react-bootstrap";
-import PaginationComponent from "../src/components/Pagination/PaginationComponent";
+import { Container, } from "react-bootstrap";
 import useGetHook from "../src/components/CustomHooks/useGetHook";
 import { useState } from "react";
+import Head from "next/head";
 
 export default function Home() {
   const [page, setPage] = useState(1)
 
-  // email post 
-  const {
-    mutate: createMutate,
-    isPostError: errorMessage,
-    isPostSuccess: successMessage,
-    postData: postData,
-  } = usePostHook({
-    queryKey: 'suscribeToNewsLetter',
-  });
 
-  const handleNewsLetterClick = (email) => {
-  
-   
-    const url = APIS.newsLetter;
-    const formData = {
-      email: email,
-    };
-
-    try {
-      createMutate({ url, formData });
-      
-    } catch (e) {
-
-    }
-    if(successMessage){
-      consoe.log('success: ' , successMessage)
-    }
-  };
 
   // pagination 
   const { data: scribedPostCoinBitCoinList } = useGetHook({
@@ -53,19 +24,26 @@ export default function Home() {
 
 
   return (
-    <Container fluid>
-      <TopNavbar />
-      <hr className="hrline" />
-      <SecondNavBar />
-      <hr />
-      <Wrap />
-      <NewsWrap />
+    <>
+      <Head>
+        <title>TheCryptoInsider - Home</title>
+        <meta property="og:title" content={"TheCryptoInsider - Home<"} />
+        <meta property="og:image" content={"https://www.nepalitimes.com/wp-content/uploads/2022/02/cryptocurrency-banned-in-Nepal-NT-2.jpg"} />
+        <meta property="og:description" content={"All the latest content about Cryptocurrency of the world"} />
+        <meta name="twitter:title" content={"TheCryptoInsider - Home<"} />
+        <meta name="twitter:description" content={"All the latest content about Cryptocurrency of the world"} />
+        <meta property="og:type" content="article" />
+        {/* <meta property="og:url" content={`https://insidecrypto.news`} /> */}
+        <meta property="fb:app_id" content={"1144829116095615"} />
+      </Head>
+      <Container fluid>
+        <SecondNavBar />
+        <Wrap />
+        <NewsWrap />
+        <News data={scribedPostCoinBitCoinList} page={page} setPage={setPage} />
+        <Footer />
+      </Container>
+    </>
 
-      <News data={scribedPostCoinBitCoinList} page={page} setPage={setPage}/>
-      {/* <NewsCategory /> */}
-      
-      <Footer handleNewsLetterClick={handleNewsLetterClick}/>
-    </Container>
-    
   );
 }

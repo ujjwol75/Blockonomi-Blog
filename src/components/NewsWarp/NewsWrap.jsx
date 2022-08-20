@@ -16,7 +16,8 @@ const NewsWrap = () => {
       <div className={style.newswrapcontainer}>
         <Row>
           <Col md='12' sm='12' lg='6' xl='6'>
-          <NewsImage
+            <div>
+<NewsImage
               font="16px"
               description={newswrapdata?.results[0].description}
               title={newswrapdata?.results[0].title}
@@ -27,8 +28,11 @@ const NewsWrap = () => {
               id={newswrapdata?.results[0].id}
               contentlength="350"
               slug={newswrapdata?.results[0].slug}
-              height="400px"
+              // height="400px"
+              
             />
+            </div>
+          
           </Col>
 
 
@@ -36,7 +40,7 @@ const NewsWrap = () => {
             <div className={style.newswrapimg}>
             <Row>
               {newswrapdata?.results?.slice(4, 8).map((curElem, index) => (
-                <Col md='6' sm='6' xs='6' xl='6' key={index}>
+                <Col md='6' sm='6' xs='6' xl='6' key={index} >
                   <NewsImage
                     width="100%"
                     title={curElem.title}
@@ -45,6 +49,8 @@ const NewsWrap = () => {
                     color="white"
                     id={curElem.id}
                     slug={curElem.slug}
+                    className={style.newsimageright}
+
                   />
                 </Col>
               ))}
